@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="uk" xmlns:th="http://www.thymeleaf.org">
+<body>
+<tr th:fragment="row" th:id="'room-' + ${room?.id}" th:classappend="${!room.active ? 'is-inactive' : ''}">
+  <td th:text="${room.name}"></td>
+  <td class="cell-numeric" th:text="${room.floor}"></td>
+  <td class="cell-numeric" th:text="${room.capacity}"></td>
+  <td class="cell-equipment" th:text="${room.equipment ?: ''}"></td>
+  <td th:text="${room.active ? 'Активна' : 'Неактивна'}"></td>
+  <td class="cell-actions">
+    <div class="row-actions">
+      <a class="link-action" th:href="@{/admin/rooms/{id}/edit(id=${room.id})}" th:text="Змінити"></a>
+      <form th:if="${room.active}" th:action="@{/admin/rooms/{id}/deactivate(id=${room.id})}" method="post"
+            th:hx-post="@{/admin/rooms/{id}/deactivate(id=${room.id})}" th:hx-target="'#room-' + ${room.id}" hx-swap="outerHTML" hx-disabled-elt="button"
+            hx-confirm="Деактивувати кімнату? Після цього її не можна буде забронювати.">
+        <button class="link-danger" type="submit">Деактивувати</button>
+      </form>
+      <form th:if="${!room.active}" th:action="@{/admin/rooms/{id}/activate(id=${room.id})}" method="post"
+            th:hx-post="@{/admin/rooms/{id}/activate(id=${room.id})}" th:hx-target="'#room-' + ${room.id}" hx-swap="outerHTML" hx-disabled-elt="button">
+        <button class="link-action" type="submit">Активувати</button>
+      </form>
+    </div>
+  </td>
+</tr>
+</body>
+</html>

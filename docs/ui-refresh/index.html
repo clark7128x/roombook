@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="uk">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Вхід · RoomBook</title><link rel="stylesheet" href="fonts.css"><link rel="stylesheet" href="style.css?v=3"></head>
+<body class="login-page">
+<a class="skip" href="#main">До змісту</a>
+<section class="welcome" aria-label="Про RoomBook">
+  <a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true">r<span>·</span></span>RoomBook</a>
+  <div class="welcome-copy"><span class="eyebrow">Простір для спільних ідей</span><h1>Хороша зустріч <br>починається <br>з вільної кімнати.</h1><p>Знайдіть своє місце в розкладі.<br>Решту часу присвятіть команді.</p></div>
+  <div class="room-art" aria-hidden="true"><div class="art-head"><span>Ваш офіс, без накладок</span><span class="art-dots">•••</span></div><div class="plan"><div class="plan-room a"><small>01 / Переговорна</small><strong>Альфа</strong><div class="desk"></div><span class="art-pill">Вільна до 14:00</span></div><div class="plan-room b"><small>02 / Командна</small><strong>Калина</strong><div class="desk round"></div><span class="art-pill occupied">Зустріч команди</span></div><div class="plan-corridor"><i></i><span>Є місце для вашої наступної ідеї</span></div></div></div>
+  <p class="welcome-footer">Менше пошуків. Більше часу разом.</p>
+</section>
+<main id="main" class="login-main">
+ <div class="login-top">Робочий простір вашої команди <span class="tiny-dot"></span></div>
+ <div class="login-content"><span class="eyebrow">Раді бачити вас</span><h2>Увійти в RoomBook</h2><p class="subtext">Ваші кімнати, зустрічі та плани на день.</p>
+ <form id="login-form"><label for="username">Логін</label><input id="username" name="username" autocomplete="username" placeholder="Ваш робочий логін" required><div class="label-row"><label for="password">Пароль</label><button class="text-button" type="button" data-help="password">Не пам’ятаю пароль</button></div><div class="password-wrap"><input id="password" name="password" type="password" autocomplete="current-password" placeholder="Введіть пароль" required><button type="button" id="show-password" aria-label="Показати пароль">Показати</button></div><button class="primary wide" type="submit">Увійти <span aria-hidden="true">↗</span></button><p id="login-message" class="inline-message" role="status" hidden></p></form>
+ <div class="access-box"><span class="access-symbol" aria-hidden="true">+</span><div><h3>Ще немає облікового запису?</h3><p>Приєднайтеся до робочого простору за запрошенням адміністратора.</p><button type="button" class="text-button" data-help="invite">Як отримати запрошення <span aria-hidden="true">↗</span></button></div></div>
+ <a class="demo-link" href="occupancy.html">Переглянути демо без входу <span aria-hidden="true">→</span></a>
+ </div><footer class="login-footer"><span>Доступ лише для вашої команди</span><span>Концепт 03</span></footer>
+</main>
+<dialog id="help-dialog" aria-labelledby="help-title"><button class="dialog-close" aria-label="Закрити" type="button">×</button><span class="eyebrow">Доступ до простору</span><h2 id="help-title">Отримайте запрошення</h2><div id="help-content"></div><button class="primary close-help" type="button">Зрозуміло</button></dialog>
+<script src="login.js"></script>
+</body></html>
+

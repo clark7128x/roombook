@@ -1,0 +1,10 @@
+[Unit]
+Description=RoomBook encrypted off-host backup
+[Service]
+Type=oneshot
+User=roombook-backup
+UMask=0077
+EnvironmentFile=/etc/roombook/backup.env
+ExecStart=/usr/bin/python3 /opt/roombook/ops/backup/backup.py --destination /mnt/roombook-offhost --key-file /etc/roombook/backup.key --state /var/lib/roombook-backup/state.json --image-version ${ROOMBOOK_VERSION} --schema-version ${ROOMBOOK_SCHEMA_VERSION}
+NoNewPrivileges=true
+PrivateTmp=true

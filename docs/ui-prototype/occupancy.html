@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Зайнятість: Переговорні</title>
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/fonts.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/timeline.css">
+  <!-- Лише перша кімната має посилання у вільних слотах, щоб скоротити статичний макет. -->
+</head>
+<body>
+  <a class="skip-link" href="#main">До змісту</a>
+  <header class="app-header">
+    <a class="app-name" href="occupancy.html">Переговорні</a>
+    <nav class="app-nav" aria-label="Основна навігація">
+      <a class="nav-link" href="occupancy.html" aria-current="page">Зайнятість</a>
+      <a class="nav-link" href="rooms.html">Кімнати</a>
+      <a class="nav-link" href="my-bookings.html">Мої бронювання</a>
+    </nav>
+    <div class="app-user">
+      <span class="app-user-name">Олена Коваль</span>
+      <button class="btn" type="button">Вийти</button>
+    </div>
+  </header>
+  <main id="main" class="page-shell">
+    <div class="page-head">
+      <h1>Зайнятість</h1>
+    </div>
+    <div id="alerts" class="alerts" aria-live="polite"></div>
+    <p class="page-note text-numeric">вівторок, 20.10.2026. Стан на 10:07</p>
+    <form class="filters" action="occupancy.html" method="get">
+      <nav class="date-links" aria-label="Перехід між датами">
+        <a href="occupancy.html?date=2026-10-19">Попередній день</a>
+        <a href="occupancy.html?date=2026-10-20">Сьогодні</a>
+        <a href="occupancy.html?date=2026-10-21">Наступний день</a>
+      </nav>
+      <div class="field filter-field">
+        <label class="field-label" for="date">Дата</label>
+        <input class="field-control" type="date" id="date" name="date" value="2026-10-20">
+      </div>
+      <div class="field filter-field">
+        <label class="field-label" for="floor">Поверх</label>
+        <select class="field-control" id="floor" name="floor">
+          <option value="" selected>Усі</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+        </select>
+      </div>
+      <div class="field filter-field">
+        <label class="field-label" for="capacity">Місткість від</label>
+        <input class="field-control" type="number" id="capacity" name="capacity" min="1" step="1">
+      </div>
+      <div class="filter-actions">
+        <button class="btn btn-primary" type="submit">Показати</button>
+      </div>
+    </form>
+    <div class="tl-scroll">
+      <table class="tl-table">
+        <caption>Зайнятість кімнат на 20.10.2026</caption>
+        <thead>
+          <tr>
+            <th class="tl-corner tl-floor-head" scope="col" rowspan="2">Час</th>
+            <th class="tl-floor-head tl-floor-start" scope="colgroup" colspan="3">Поверх 2</th>
+            <th class="tl-floor-head tl-floor-start" scope="colgroup" colspan="3">Поверх 3</th>
+            <th class="tl-floor-head tl-floor-start" scope="colgroup" colspan="2">Поверх 4</th>
+          </tr>
+          <tr>
+            <th class="tl-room-head tl-floor-start" scope="col">
+              <span class="tl-room-name" title="Проєктор, дошка, відеозв’язок">Дніпро</span>
+              <span class="tl-room-meta">місткість 8</span>
+              <a class="tl-room-action" href="booking-new.html?roomId=dnipro&amp;date=2026-10-20">Забронювати</a>
+            </th>
+            <th class="tl-room-head" scope="col">
+              <span class="tl-room-name" title="Екран, дошка">Десна</span>
+              <span class="tl-room-meta">місткість 6</span>
+              <a class="tl-room-action" href="booking-new.html?roomId=desna&amp;date=2026-10-20">Забронювати</a>
+            </th>
+            <th class="tl-room-head" scope="col">
+              <span class="tl-room-name" title="Монітор, відеозв’язок">Прут</span>
+              <span class="tl-room-meta">місткість 4</span>
+              <a class="tl-room-action" href="booking-new.html?roomId=prut&amp;date=2026-10-20">Забронювати</a>
+            </th>
+            <th class="tl-room-head tl-floor-start" scope="col">
+              <span class="tl-room-name" title="Проєктор, конференц-зв’язок">Говерла</span>
+              <span class="tl-room-meta">місткість 12</span>
+              <a class="tl-room-action" href="booking-new.html?roomId=hoverla&amp;date=2026-10-20">Забронювати</a>
+            </th>
+            <th class="tl-room-head" scope="col">
+              <span class="tl-room-name" title="Проєктор, дошка">Карпати</span>
+              <span class="tl-room-meta">місткість 10</span>
+              <a class="tl-room-action" href="booking-new.html?roomId=karpaty&amp;date=2026-10-20">Забронювати</a>
+            </th>
+            <th class="tl-room-head" scope="col">
+              <span class="tl-room-name" title="Телевізор, відеозв’язок">Дністер</span>
+              <span class="tl-room-meta">місткість 6</span>
+              <a class="tl-room-action" href="booking-new.html?roomId=dnister&amp;date=2026-10-20">Забронювати</a>
+            </th>
+            <th class="tl-room-head tl-floor-start" scope="col">
+              <span class="tl-room-name" title="Проєктор, звук, дві дошки">Ґорґани</span>
+              <span class="tl-room-meta">місткість 14</span>
+              <a class="tl-room-action" href="booking-new.html?roomId=gorgany&amp;date=2026-10-20">Забронювати</a>
+            </th>
+            <th class="tl-room-head" scope="col">
+              <span class="tl-room-name" title="Екран, дошка">Бескиди</span>
+              <span class="tl-room-meta">місткість 8</span>
+              <a class="tl-room-action" href="booking-new.html?roomId=beskydy&amp;date=2026-10-20">Забронювати</a>
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="tl-past tl-hour">
+            <th class="tl-time" scope="row" rowspan="4">08:00</th>
+            <td class="tl-booking tl-len-4 tl-floor-start" rowspan="4" title="08:00–09:00, Операційна нарада, Дарина Лисенко">              <div class="tl-booking-body tl-len-4"><span class="tl-booking-time">08:00–09:00</span><span class="tl-booking-title">Операційна нарада</span><span class="tl-booking-author">Дарина Лисенко</span></div></td>
+            <td class="tl-slot"></td>
+            <td class="tl-slot"></td>
+            <td class="tl-slot tl-floor-start"></td>
+            <td class="tl-slot"></td>
+            <td class="tl-slot"></td>
+            <td class="tl-slot tl-floor-start"></td>
+            <td class="tl-slot"></td>
+          </tr>
+          <tr class="tl-past">
+            <td class="tl-slot"></td>
+            <td class="tl-slot"></td>
+            <td class="tl-slot tl-floor-start"></td>
+            <td class="tl-booking tl-len-4" rowspan="4" title="08:15–09:15, Щотижнева зустріч відділу, Андрій Мельник">              <div class="tl-booking-body tl-len-4"><span class="tl-booking-time">08:15–09:15</span><span class="tl-booking-title">Щотижнева зустріч відділу</span><span class="tl-booking-author">Андрій Мельник</span></div></td>
+            <td class="tl-slot"></td>
+            <td class="tl-slot tl-floor-start"></td>
+            <td class="tl-slot"></td>
+          </tr>
+          <tr class="tl-past">
+            <td class="tl-booking tl-len-4" rowspan="4" title="08:30–09:30, Синхронізація команди, Тарас Бойко">              <div class="tl-booking-body tl-len-4"><span class="tl-booking-time">08:30–09:30</span><span class="tl-booking-title">Синхронізація команди</span><span class="tl-booking-author">Тарас Бойко</span></div></td>
+            <td class="tl-slot"></td>
+            <td class="tl-slot tl-floor-start"></td>
+            <td class="tl-slot"></td>
+            <td class="tl-slot tl-floor-start"></td>
+            <td class="tl-slot"></td>
+          </tr>
+          <tr class="tl-past">
+            <td class="tl-slot"></td>
+            <td class="tl-slot tl-floor-start"></td>
+            <td class="tl-slot"></td>
+            <td class="tl-slot tl-floor-start"></td>
+            <td class="tl-slot"></td>
+          </tr>
+          <tr class="tl-past tl-hour">
+            <th class="tl-time" scope="row" rowspan="4">09:00</th>
+            <td class="tl-slot tl-floor-start"></td>
+            <td class="tl-booking tl-len-4" rowspan="4" title="09:00–10:00, Підготовка демонстрації, Марія Шевчук">              <div class="tl-booking-body tl-len-4"><span class="tl-booking-time">09:00–10:00</span><span class="tl-booking-title">Підготовка демонстрації</span><span class="tl-booking-author">Марія Шевчук</span></div></td>
+            <td class="tl-slot tl-floor-start"></td>
+            <td class="tl-slot"></td>
+            <td class="tl-slot tl-floor-start"></td>
+            <td class="tl-slot"></td>
+          </tr>
+          <tr class="tl-past">
+            <td class="tl-slot tl-floor-start"></td>
+            <td class="tl-slot tl-floor-start"></td>
+            <td class="tl-slot"></td>
+            <td class="tl-booking tl-len-3" rowspan="3" title="09:15–10:00, Уточнення вимог, Роман Ковальчук">              <div class="tl-booking-body tl-len-3"><span class="tl-booking-time">09:15–10:00</span><span class="tl-booking-title">Уточнення вимог</span></div></td>
+            <td class="tl-slot tl-floor-start"></td>
+            <td class="tl-slot"></td>
+          </tr>
+          <tr class="tl-past">
+            <td class="tl-slot tl-floor-start"></td>
+            <td class="tl-slot"></td>
+            <td class="tl-slot tl-floor-start"></td>
+            <td class="tl-slot"></td>
+            <td class="tl-slot tl-floor-start"></td>
+            <td class="tl-slot"></td>
+          </tr>
+          <tr class="tl-past">
+            <td class="tl-slot tl-floor-start"></td>
+            <td class="tl-slot"></td>
+            <td class="tl-slot tl-floor-start"></td>
+            <td class="tl-slot"></td>
+            <td class="tl-slot tl-floor-start"></td>
+            <td class="tl-slot"></td>
+          </tr>
+          <tr class="tl-now tl-hour">
+            <th class="tl-time" scope="row" rowspan="4">10:00</th>
+            <td class="tl-slot tl-floor-start"></td>
+            <td class="tl-booking tl-len-4 tl-mine" rowspan="4" title="10:00–11:00, Планування спринту, Олена Коваль">              <div class="tl-booking-body tl-len-4"><span class="sr-only">Ваше бронювання</span><span class="tl-booking-time">10:00–11:00</span><span class="tl-booking-title">Планування спринту</span><span class="tl-booking-author">Олена Коваль</span></div></td>
+            <td class="tl-slot"></td>
+            <td class="tl-slot tl-floor-start"></td>
+            <td class="tl-slot"></td>
+            <td class="tl-slot"></td>
+            <td class="tl-slot tl-floor-start"></td>
+            <td class="tl-slot"></td>
+          </tr>
+          <tr>
+            <td class="tl-slot tl-floor-start">              <a class="tl-slot-link" href="booking-new.html?roomId=dnipro&amp;date=2026-10-20&amp;start=10:15" tabindex="-1" aria-hidden="true" aria-label="Забронювати Дніпро з 10:15"></a></td>
+            <td class="tl-slot"></td>
+            <td class="tl-slot tl-floor-start"></td>
+            <td class="tl-slot"></td>
+            <td class="tl-slot"></td>
+            <td class="tl-slot tl-floor-start"></td>
+            <td class="tl-slot"></td>
+          </tr>
+          <tr>
+            <td class="tl-slot tl-floor-start">              <a class="tl-slot-link" href="booking-new.html?roomId=dnipro&amp;date=2026-10-20&amp;start=10:30" tabindex="-1" aria-hidden="true" aria-label="Забронювати Дніпро з 10:30"></a></td>
+            <td class="tl-slot"></td>
+            <td class="tl-slot tl-floor-start"></td>
+            <td class="tl-slot"></td>
+            <td class="tl-slot"></td>
+            <td class="tl-slot tl-floor-start"></td>
+            <td class="tl-slot"></td>
+          </tr>
+          <tr>
+            <td class="tl-slot tl-floor-start">              <a class="tl-slot-link" href="booking-new.html?roomId=dnipro&amp;date=2026-10-20&amp;start=10:45" tabindex="-1" aria-hidden="true" aria-label="Забронювати Дніпро з 10:45"></a></td>
+            <td class="tl-slot"></td>
+            <td class="tl-slot tl-floor-start"></td>
+            <td class="tl-slot"></td>
+            <td class="tl-slot"></td>
+            <td class="tl-slot tl-floor-start"></td>
+            <td class="tl-slot"></td>
+          </tr>
+          <tr class="tl-hour">
+            <th class="tl-time" scope="row" rowspan="4">11:00</th>
+            <td class="tl-slot tl-floor-start">              <a class="tl-slot-link" href="booking-new.html?roomId=dnipro&amp;date=2026-10-20&amp;start=11:00" tabindex="-1" aria-hidden="true" aria-label="Забронювати Дніпро з 11:00"></a></td>
+            <td class="tl-slot"></td>
+            <td class="tl-slot"></td>
+            <td class="tl-booking tl-len-8 tl-mine tl-floor-start" rowspan="8" title="11:00–13:00, Підготовка релізу, Олена Коваль">              <div class="tl-booking-body tl-len-8"><span class="sr-only">Ваше бронювання</span><span class="tl-booking-time">11:00–13:00</span><span class="tl-booking-title">Підготовка релізу</span><span class="tl-booking-author">Олена Коваль</span></div></td>
+            <td class="tl-slot"></td>
+            <td class="tl-slot"></td>
+            <td class="tl-slot tl-floor-start"></td>
+            <td class="tl-slot"></td>
+          </tr>
+          <tr>
+            <td class="tl-slot tl-floor-start">              <a class="tl-slot-link" href="booking-new.html?roomId=dnipro&amp;date=2026-10-20&amp;start=11:15" tabindex="-1" aria-hidden="true" aria-label="Забронювати Дніпро з 11:15"></a></td>
+            <td class="tl-slot"></td>
+            <td class="tl-slot"></td>
+            <td class="tl-slot"></td>
+            <td class="tl-slot"></td>
+            <td class="tl-slot tl-floor-start"></td>
+            <td class="tl-slot"></td>
+          </tr>
+          <tr>
+            <td class="tl-slot tl-floor-start">              <a class="tl-slot-link" href="booking-new.html?roomId=dnipro&amp;date=2026-10-20&amp;start=11:30" tabindex="-1" aria-hidden="true" aria-label="Забронювати Дніпро з 11:30"></a></td>
+            <td class="tl-slot"></td>
+            <td class="tl-slot"></td>
+            <td class="tl-slot"></td>
+            <td class="tl-slot"></td>
+            <td class="tl-slot tl-floor-start"></td>
+            <td class="tl-slot"></td>
+          </tr>
+          <tr>
+            <td class="tl-slot tl-floor-start">              <a class="tl-slot-link" href="booking-new.html?roomId=dnipro&amp;date=2026-10-20&amp;start=11:45" tabindex="-1" aria-hidden="true" aria-label="Забронювати Дніпро з 11:45"></a></td>
+            <td class="tl-slot"></td>
+            <td class="tl-slot"></td>
+            <td class="tl-slot"></td>
+            <td class="tl-slot"></td>
+            <td class="tl-slot tl-floor-start"></td>
+            <td class="tl-slot"></td>
+          </tr>
+          <tr class="tl-hour">
+            <th class="tl-time" scope="row" rowspan="4">12:00</th>
+            <td class="tl-slot tl-floor-start">              <a class="tl-slot-link" href="booking-new.html?roomId=dnipro&amp;date=2026-10-20&amp;start=12:00" tabindex="-1" aria-hidden="true" aria-label="Забронювати Дніпро з 12:00"></a></td>
+            <td class="tl-slot"></td>
+            <td class="tl-slot"></td>
+            <td class="tl-slot"></td>
+            <td class="tl-slot"></td>
+            <td class="tl-booking tl-len-16 tl-floor-start" rowspan="16" title="12:00–16:00, Стратегічна сесія: план розвитку напрямку на наступний рік і бюджетні обмеження, Олег Савченко">              <div class="tl-booking-body tl-len-16"><span class="tl-booking-time">12:00–16:00</span><span class="tl-booking-title">Стратегічна сесія: план розвитку напрямку на наступний рік і бюджетні обмеження</span><span class="tl-booking-author">Олег Савченко</span></div></td>
+            <td class="tl-slot"></td>
+          </tr>
+          <tr>
+            <td class="tl-slot tl-floor-start">              <a class="tl-slot-link" href="booking-new.html?roomId=dnipro&amp;date=2026-10-20&amp;start=12:15" tabindex="-1" aria-hidden="true" aria-label="Забронювати Дніпро з 12:15"></a></td>
+            <td class="tl-slot"></td>
+            <td class="tl-slot"></td>
+            <td class="tl-slot"></td>
+            <td class="tl-slot"></td>
+            <td class="tl-slot"></td>
+          </tr>
+          <tr>
+            <td class="tl-slot tl-floor-start">              <a class="tl-slot-link" href="booking-new.html?roomId=dnipro&amp;date=2026-10-20&amp;start=12:30" tabindex="-1" aria-hidden="true" aria-label="Забронювати Дніпро з 12:30"></a></td>
+            <td class="tl-slot"></td>
+            <td class="tl-slot"></td>
+            <td class="tl-slot"></td>
+            <td class="tl-slot"></td>
+            <td class="tl-slot"></td>
+          </tr>
+          <tr>
+            <td class="tl-slot tl-floor-start">              <a class="tl-slot-link" href="booking-new.html?roomId=dnipro&amp;date=2026-10-20&amp;start=12:45" tabindex="-1" aria-hidden="true" aria-label="Забронювати Дніпро з 12:45"></a></td>
+            <td class="tl-slot"></td>
+            <td class="tl-slot"></td>
+            <td class="tl-slot"></td>
+            <td class="tl-slot"></td>
+            <td class="tl-slot"></td>
+          </tr>
+          <tr class="tl-hour">
+            <th class="tl-time" scope="row" rowspan="4">13:00</th>
+            <td class="tl-slot tl-floor-start">              <a class="tl-slot-link" href="booking-new.html?roomId=dnipro&amp;date=2026-10-20&amp;start=13:00" tabindex="-1" aria-hidden="true" aria-label="Забронювати Дніпро з 13:00"></a></td>
+            <td class="tl-slot"></td>
+            <td class="tl-booking tl-len-8" rowspan="8" title="13:00–15:00, Огляд архітектури сервісу, Богдан Кравець">              <div class="tl-booking-body tl-len-8"><span class="tl-booking-time">13:00–15:00</span><span class="tl-booking-title">Огляд архітектури сервісу</span><span class="tl-booking-author">Богдан Кравець</span></div></td>
+            <td class="tl-slot tl-floor-start"></td>
+            <td class="tl-slot"></td>
+            <td class="tl-slot"></td>
+            <td class="tl-slot"></td>
+          </tr>
+          <tr>
+            <td class="tl-slot tl-floor-start">              <a class="tl-slot-link" href="booking-new.html?roomId=dnipro&amp;date=2026-10-20&amp;start=13:15" tabindex="-1" aria-hidden="true" aria-label="Забронювати Дніпро з 13:15"></a></td>
+            <td class="tl-slot"></td>
+            <td class="tl-slot tl-floor-start"></td>
+            <td class="tl-slot"></td>
+            <td class="tl-slot"></td>
+            <td class="tl-slot"></td>
+          </tr>
+          <tr>
+            <td class="tl-slot tl-floor-start">              <a class="tl-slot-link" href="booking-new.html?roomId=dnipro&amp;date=2026-10-20&amp;start=13:30" tabindex="-1" aria-hidden="true" aria-label="Забронювати Дніпро з 13:30"></a></td>
+            <td class="tl-slot"></td>
+            <td class="tl-slot tl-floor-start"></td>
+            <td class="tl-slot"></td>
+            <td class="tl-slot"></td>
+            <td class="tl-slot"></td>
+          </tr>
+          <tr>
+            <td class="tl-slot tl-floor-start">              <a class="tl-slot-link" href="booking-new.html?roomId=dnipro&amp;date=2026-10-20&amp;start=13:45" tabindex="-1" aria-hidden="true" aria-label="Забронювати Дніпро з 13:45"></a></td>
+            <td class="tl-slot"></td>
+            <td class="tl-slot tl-floor-start"></td>
+            <td class="tl-slot"></td>
+            <td class="tl-slot"></td>
+            <td class="tl-slot"></td>
+          </tr>
+          <tr class="tl-hour">
+            <th class="tl-time" scope="row" rowspan="4">14:00</th>
+            <td class="tl-booking tl-len-4 tl-mine tl-floor-start" rowspan="4" title="14:00–15:00, Огляд бюджету на четвертий квартал, Олена Коваль">              <div class="tl-booking-body tl-len-4"><span class="sr-only">Ваше бронювання</span><span class="tl-booking-time">14:00–15:00</span><span class="tl-booking-title">Огляд бюджету на четвертий квартал</span><span class="tl-booking-author">Олена Коваль</span></div></td>
+            <td class="tl-slot"></td>
+            <td class="tl-slot tl-floor-start"></td>
+            <td class="tl-slot"></td>
+            <td class="tl-slot"></td>
+            <td class="tl-slot"></td>
+          </tr>
+          <tr>
+            <td class="tl-booking tl-len-1" rowspan="1" title="14:15–14:30, Коротке узгодження, Микола Сорока">              <div class="tl-booking-body tl-len-1"><span class="tl-booking-title">Коротке узгодження</span></div></td>
+            <td class="tl-slot tl-floor-start"></td>
+            <td class="tl-slot"></td>
+            <td class="tl-slot"></td>
+            <td class="tl-slot"></td>
+          </tr>
+          <tr>
+            <td class="tl-slot"></td>
+            <td class="tl-slot tl-floor-start"></td>
+            <td class="tl-slot"></td>
+            <td class="tl-slot"></td>
+            <td class="tl-slot"></td>
+          </tr>
+          <tr>
+            <td class="tl-slot"></td>
+            <td class="tl-slot tl-floor-start"></td>
+            <td class="tl-slot"></td>
+            <td class="tl-slot"></td>
+            <td class="tl-slot"></td>
+          </tr>
+          <tr class="tl-hour">
+            <th class="tl-time" scope="row" rowspan="4">15:00</th>
+            <td class="tl-slot tl-floor-start">              <a class="tl-slot-link" href="booking-new.html?roomId=dnipro&amp;date=2026-10-20&amp;start=15:00" tabindex="-1" aria-hidden="true" aria-label="Забронювати Дніпро з 15:00"></a></td>
+            <td class="tl-slot"></td>
+            <td class="tl-slot"></td>
+            <td class="tl-slot tl-floor-start"></td>
+            <td class="tl-booking tl-len-4" rowspan="4" title="15:00–16:00, Співбесіда: бекенд-розробник, Наталія Романюк">              <div class="tl-booking-body tl-len-4"><span class="tl-booking-time">15:00–16:00</span><span class="tl-booking-title">Співбесіда: бекенд-розробник</span><span class="tl-booking-author">Наталія Романюк</span></div></td>
+            <td class="tl-slot"></td>
+            <td class="tl-slot"></td>
+          </tr>
+          <tr>
+            <td class="tl-slot tl-floor-start">              <a class="tl-slot-link" href="booking-new.html?roomId=dnipro&amp;date=2026-10-20&amp;start=15:15" tabindex="-1" aria-hidden="true" aria-label="Забронювати Дніпро з 15:15"></a></td>
+            <td class="tl-slot"></td>
+            <td class="tl-slot"></td>
+            <td class="tl-slot tl-floor-start"></td>
+            <td class="tl-slot"></td>
+            <td class="tl-slot"></td>
+          </tr>
+          <tr>
+            <td class="tl-slot tl-floor-start">              <a class="tl-slot-link" href="booking-new.html?roomId=dnipro&amp;date=2026-10-20&amp;start=15:30" tabindex="-1" aria-hidden="true" aria-label="Забронювати Дніпро з 15:30"></a></td>
+            <td class="tl-slot"></td>
+            <td class="tl-slot"></td>
+            <td class="tl-slot tl-floor-start"></td>
+            <td class="tl-slot"></td>
+            <td class="tl-slot"></td>
+          </tr>
+          <tr>
+            <td class="tl-slot tl-floor-start">              <a class="tl-slot-link" href="booking-new.html?roomId=dnipro&amp;date=2026-10-20&amp;start=15:45" tabindex="-1" aria-hidden="true" aria-label="Забронювати Дніпро з 15:45"></a></td>
+            <td class="tl-slot"></td>
+            <td class="tl-slot"></td>
+            <td class="tl-slot tl-floor-start"></td>
+            <td class="tl-slot"></td>
+            <td class="tl-slot"></td>
+          </tr>
+          <tr class="tl-hour">
+            <th class="tl-time" scope="row" rowspan="4">16:00</th>
+            <td class="tl-slot tl-floor-start">              <a class="tl-slot-link" href="booking-new.html?roomId=dnipro&amp;date=2026-10-20&amp;start=16:00" tabindex="-1" aria-hidden="true" aria-label="Забронювати Дніпро з 16:00"></a></td>
+            <td class="tl-slot"></td>
+            <td class="tl-slot"></td>
+            <td class="tl-booking tl-len-4 tl-floor-start" rowspan="4" title="16:00–17:00, Робоча зустріч команди продукту, Вікторія Гнатюк">              <div class="tl-booking-body tl-len-4"><span class="tl-booking-time">16:00–17:00</span><span class="tl-booking-title">Робоча зустріч команди продукту</span><span class="tl-booking-author">Вікторія Гнатюк</span></div></td>
+            <td class="tl-slot"></td>
+            <td class="tl-slot"></td>
+            <td class="tl-slot tl-floor-start"></td>
+            <td class="tl-booking tl-len-8 tl-mine" rowspan="8" title="16:00–18:00, Обговорення пріоритетів команди, Олена Коваль">              <div class="tl-booking-body tl-len-8"><span class="sr-only">Ваше бронювання</span><span class="tl-booking-time">16:00–18:00</span><span class="tl-booking-title">Обговорення пріоритетів команди</span><span class="tl-booking-author">Олена Коваль</span></div></td>
+          </tr>
+          <tr>
+            <td class="tl-slot tl-floor-start">              <a class="tl-slot-link" href="booking-new.html?roomId=dnipro&amp;date=2026-10-20&amp;start=16:15" tabindex="-1" aria-hidden="true" aria-label="Забронювати Дніпро з 16:15"></a></td>
+            <td class="tl-slot"></td>
+            <td class="tl-slot"></td>
+            <td class="tl-slot"></td>
+            <td class="tl-slot"></td>
+            <td class="tl-slot tl-floor-start"></td>
+          </tr>
+          <tr>
+            <td class="tl-slot tl-floor-start">              <a class="tl-slot-link" href="booking-new.html?roomId=dnipro&amp;date=2026-10-20&amp;start=16:30" tabindex="-1" aria-hidden="true" aria-label="Забронювати Дніпро з 16:30"></a></td>
+            <td class="tl-slot"></td>
+            <td class="tl-slot"></td>
+            <td class="tl-slot"></td>
+            <td class="tl-slot"></td>
+            <td class="tl-slot tl-floor-start"></td>
+          </tr>
+          <tr>
+            <td class="tl-slot tl-floor-start">              <a class="tl-slot-link" href="booking-new.html?roomId=dnipro&amp;date=2026-10-20&amp;start=16:45" tabindex="-1" aria-hidden="true" aria-label="Забронювати Дніпро з 16:45"></a></td>
+            <td class="tl-slot"></td>
+            <td class="tl-slot"></td>
+            <td class="tl-slot"></td>
+            <td class="tl-slot"></td>
+            <td class="tl-slot tl-floor-start"></td>
+          </tr>
+          <tr class="tl-hour">
+            <th class="tl-time" scope="row" rowspan="4">17:00</th>
+            <td class="tl-slot tl-floor-start">              <a class="tl-slot-link" href="booking-new.html?roomId=dnipro&amp;date=2026-10-20&amp;start=17:00" tabindex="-1" aria-hidden="true" aria-label="Забронювати Дніпро з 17:00"></a></td>
+            <td class="tl-slot"></td>
+            <td class="tl-slot"></td>
+            <td class="tl-slot tl-floor-start"></td>
+            <td class="tl-slot"></td>
+            <td class="tl-booking tl-len-4" rowspan="4" title="17:00–18:00, Планування навчання, Катерина Поліщук">              <div class="tl-booking-body tl-len-4"><span class="tl-booking-time">17:00–18:00</span><span class="tl-booking-title">Планування навчання</span><span class="tl-booking-author">Катерина Поліщук</span></div></td>
+            <td class="tl-slot tl-floor-start"></td>
+          </tr>
+          <tr>
+            <td class="tl-slot tl-floor-start">              <a class="tl-slot-link" href="booking-new.html?roomId=dnipro&amp;date=2026-10-20&amp;start=17:15" tabindex="-1" aria-hidden="true" aria-label="Забронювати Дніпро з 17:15"></a></td>
+            <td class="tl-slot"></td>
+            <td class="tl-slot"></td>
+            <td class="tl-slot tl-floor-start"></td>
+            <td class="tl-slot"></td>
+            <td class="tl-slot tl-floor-start"></td>
+          </tr>
+          <tr>
+            <td class="tl-slot tl-floor-start">              <a class="tl-slot-link" href="booking-new.html?roomId=dnipro&amp;date=2026-10-20&amp;start=17:30" tabindex="-1" aria-hidden="true" aria-label="Забронювати Дніпро з 17:30"></a></td>
+            <td class="tl-slot"></td>
+            <td class="tl-slot"></td>
+            <td class="tl-slot tl-floor-start"></td>
+            <td class="tl-slot"></td>
+            <td class="tl-slot tl-floor-start"></td>
+          </tr>
+          <tr>
+            <td class="tl-slot tl-floor-start">              <a class="tl-slot-link" href="booking-new.html?roomId=dnipro&amp;date=2026-10-20&amp;start=17:45" tabindex="-1" aria-hidden="true" aria-label="Забронювати Дніпро з 17:45"></a></td>
+            <td class="tl-slot"></td>
+            <td class="tl-slot"></td>
+            <td class="tl-slot tl-floor-start"></td>
+            <td class="tl-slot"></td>
+            <td class="tl-slot tl-floor-start"></td>
+          </tr>
+          <tr class="tl-hour">
+            <th class="tl-time" scope="row" rowspan="4">18:00</th>
+            <td class="tl-slot tl-floor-start">              <a class="tl-slot-link" href="booking-new.html?roomId=dnipro&amp;date=2026-10-20&amp;start=18:00" tabindex="-1" aria-hidden="true" aria-label="Забронювати Дніпро з 18:00"></a></td>
+            <td class="tl-slot"></td>
+            <td class="tl-slot"></td>
+            <td class="tl-slot tl-floor-start"></td>
+            <td class="tl-slot"></td>
+            <td class="tl-slot"></td>
+            <td class="tl-slot tl-floor-start"></td>
+            <td class="tl-slot"></td>
+          </tr>
+          <tr>
+            <td class="tl-slot tl-floor-start">              <a class="tl-slot-link" href="booking-new.html?roomId=dnipro&amp;date=2026-10-20&amp;start=18:15" tabindex="-1" aria-hidden="true" aria-label="Забронювати Дніпро з 18:15"></a></td>
+            <td class="tl-slot"></td>
+            <td class="tl-slot"></td>
+            <td class="tl-slot tl-floor-start"></td>
+            <td class="tl-slot"></td>
+            <td class="tl-slot"></td>
+            <td class="tl-slot tl-floor-start"></td>
+            <td class="tl-slot"></td>
+          </tr>
+          <tr>
+            <td class="tl-slot tl-floor-start">              <a class="tl-slot-link" href="booking-new.html?roomId=dnipro&amp;date=2026-10-20&amp;start=18:30" tabindex="-1" aria-hidden="true" aria-label="Забронювати Дніпро з 18:30"></a></td>
+            <td class="tl-slot"></td>
+            <td class="tl-slot"></td>
+            <td class="tl-slot tl-floor-start"></td>
+            <td class="tl-slot"></td>
+            <td class="tl-slot"></td>
+            <td class="tl-slot tl-floor-start"></td>
+            <td class="tl-slot"></td>
+          </tr>
+          <tr>
+            <td class="tl-slot tl-floor-start">              <a class="tl-slot-link" href="booking-new.html?roomId=dnipro&amp;date=2026-10-20&amp;start=18:45" tabindex="-1" aria-hidden="true" aria-label="Забронювати Дніпро з 18:45"></a></td>
+            <td class="tl-slot"></td>
+            <td class="tl-slot"></td>
+            <td class="tl-slot tl-floor-start"></td>
+            <td class="tl-slot"></td>
+            <td class="tl-slot"></td>
+            <td class="tl-slot tl-floor-start"></td>
+            <td class="tl-slot"></td>
+          </tr>
+          <tr class="tl-hour">
+            <th class="tl-time" scope="row" rowspan="4">19:00</th>
+            <td class="tl-slot tl-floor-start">              <a class="tl-slot-link" href="booking-new.html?roomId=dnipro&amp;date=2026-10-20&amp;start=19:00" tabindex="-1" aria-hidden="true" aria-label="Забронювати Дніпро з 19:00"></a></td>
+            <td class="tl-slot"></td>
+            <td class="tl-slot"></td>
+            <td class="tl-slot tl-floor-start"></td>
+            <td class="tl-slot"></td>
+            <td class="tl-slot"></td>
+            <td class="tl-slot tl-floor-start"></td>
+            <td class="tl-slot"></td>
+          </tr>
+          <tr>
+            <td class="tl-slot tl-floor-start">              <a class="tl-slot-link" href="booking-new.html?roomId=dnipro&amp;date=2026-10-20&amp;start=19:15" tabindex="-1" aria-hidden="true" aria-label="Забронювати Дніпро з 19:15"></a></td>
+            <td class="tl-slot"></td>
+            <td class="tl-slot"></td>
+            <td class="tl-slot tl-floor-start"></td>
+            <td class="tl-slot"></td>
+            <td class="tl-slot"></td>
+            <td class="tl-slot tl-floor-start"></td>
+            <td class="tl-slot"></td>
+          </tr>
+          <tr>
+            <td class="tl-slot tl-floor-start">              <a class="tl-slot-link" href="booking-new.html?roomId=dnipro&amp;date=2026-10-20&amp;start=19:30" tabindex="-1" aria-hidden="true" aria-label="Забронювати Дніпро з 19:30"></a></td>
+            <td class="tl-slot"></td>
+            <td class="tl-slot"></td>
+            <td class="tl-slot tl-floor-start"></td>
+            <td class="tl-slot"></td>
+            <td class="tl-slot"></td>
+            <td class="tl-slot tl-floor-start"></td>
+            <td class="tl-slot"></td>
+          </tr>
+          <tr>
+            <td class="tl-slot tl-floor-start">              <a class="tl-slot-link" href="booking-new.html?roomId=dnipro&amp;date=2026-10-20&amp;start=19:45" tabindex="-1" aria-hidden="true" aria-label="Забронювати Дніпро з 19:45"></a></td>
+            <td class="tl-slot"></td>
+            <td class="tl-slot"></td>
+            <td class="tl-slot tl-floor-start"></td>
+            <td class="tl-slot"></td>
+            <td class="tl-slot"></td>
+            <td class="tl-slot tl-floor-start"></td>
+            <td class="tl-slot"></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </main>
+</body>
+</html>

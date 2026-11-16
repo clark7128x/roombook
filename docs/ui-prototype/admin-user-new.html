@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Новий користувач: Переговорні</title>
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/fonts.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/timeline.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">До змісту</a>
+  <header class="app-header">
+    <a class="app-name" href="occupancy.html">Переговорні</a>
+    <nav class="app-nav" aria-label="Основна навігація">
+      <a class="nav-link" href="occupancy.html">Зайнятість</a>
+      <a class="nav-link" href="rooms.html">Кімнати</a>
+      <a class="nav-link" href="my-bookings.html">Мої бронювання</a>
+      <div class="nav-admin">
+        <a class="nav-link" href="admin-bookings.html">Усі бронювання</a>
+        <a class="nav-link" href="admin-rooms.html">Керування кімнатами</a>
+        <a class="nav-link" href="admin-users.html" aria-current="page">Користувачі</a>
+      </div>
+    </nav>
+    <div class="app-user">
+      <span class="app-user-name">Андрій Мельник</span>
+      <button class="btn" type="button">Вийти</button>
+    </div>
+  </header>
+
+  <main id="main" class="page-shell">
+    <div class="page-head">
+      <h1>Новий користувач</h1>
+    </div>
+    <div id="alerts" class="alerts" aria-live="polite"></div>
+
+    <form id="user-form" class="form-stack" action="admin-users.html" method="post">
+      <div class="field">
+        <label class="field-label" for="user-login">Логін</label>
+        <input
+          class="field-control"
+          id="user-login"
+          name="login"
+          type="text"
+          autocomplete="off"
+          required
+        >
+      </div>
+
+      <div class="field">
+        <label class="field-label" for="user-name">Ім'я</label>
+        <input
+          class="field-control"
+          id="user-name"
+          name="name"
+          type="text"
+          autocomplete="off"
+          required
+        >
+      </div>
+
+      <div class="field">
+        <label class="field-label" for="user-role">Роль</label>
+        <select class="field-control" id="user-role" name="role" required>
+          <option value="employee" selected>Працівник</option>
+          <option value="admin">Адміністратор</option>
+        </select>
+      </div>
+
+      <div class="field">
+        <label class="field-label" for="user-password">Пароль</label>
+        <input
+          class="field-control"
+          id="user-password"
+          name="password"
+          type="password"
+          autocomplete="new-password"
+          minlength="10"
+          aria-describedby="password-hint"
+          required
+        >
+        <span class="field-hint" id="password-hint">Від 10 символів.</span>
+      </div>
+
+      <div class="form-actions">
+        <button class="btn btn-primary" type="submit">Створити користувача</button>
+      </div>
+    </form>
+  </main>
+</body>
+</html>

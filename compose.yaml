@@ -1,0 +1,28 @@
+services:
+  app:
+    image: ${ROOMBOOK_IMAGE:?Set an immutable RoomBook image reference}
+    user: "10001:10001"
+    read_only: true
+    tmpfs:
+      - /tmp:rw,noexec,nosuid,size=128m,uid=10001,gid=10001
+    mem_limit: 1g
+    cpus: 2
+    cap_drop: [ALL]
+    security_opt: [no-new-privileges:true]
+    restart: unless-stopped
+    expose: ["8080", "8081"]
+    environment:
+      ROOMBOOK_DB_URL: ${ROOMBOOK_DB_URL:?Required}
+      ROOMBOOK_DB_USERNAME: ${ROOMBOOK_DB_USERNAME:?Required}
+      ROOMBOOK_DB_PASSWORD: ${ROOMBOOK_DB_PASSWORD:?Required}
+      ROOMBOOK_FLYWAY_URL: ${ROOMBOOK_FLYWAY_URL:-${ROOMBOOK_DB_URL}}
+      ROOMBOOK_FLYWAY_USERNAME: ${ROOMBOOK_FLYWAY_USERNAME:?Required}
+      ROOMBOOK_FLYWAY_PASSWORD: ${ROOMBOOK_FLYWAY_PASSWORD:?Required}
+      ROOMBOOK_ADMIN_USERNAME: ${ROOMBOOK_ADMIN_USERNAME:-}
+      ROOMBOOK_ADMIN_PASSWORD: ${ROOMBOOK_ADMIN_PASSWORD:-}
+      ROOMBOOK_VERSION: ${ROOMBOOK_VERSION:?Required}
+    networks: [private]
+networks:
+  private:
+    external: true
+    name: ${ROOMBOOK_NETWORK:?Private network shared with proxy and DB}

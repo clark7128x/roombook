@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Кімнати: Переговорні</title>
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/fonts.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/timeline.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">До змісту</a>
+  <header class="app-header">
+    <a class="app-name" href="occupancy.html">Переговорні</a>
+    <nav class="app-nav" aria-label="Основна навігація">
+      <a class="nav-link" href="occupancy.html">Зайнятість</a>
+      <a class="nav-link" href="rooms.html" aria-current="page">Кімнати</a>
+      <a class="nav-link" href="my-bookings.html">Мої бронювання</a>
+    </nav>
+    <div class="app-user">
+      <span class="app-user-name">Олена Коваль</span>
+      <button class="btn" type="button">Вийти</button>
+    </div>
+  </header>
+
+  <main id="main" class="page-shell">
+    <div class="page-head">
+      <h1>Кімнати</h1>
+    </div>
+    <div id="alerts" class="alerts" aria-live="polite"></div>
+
+    <section aria-labelledby="availability-title">
+      <div class="section-head">
+        <h2 id="availability-title">Вільні на інтервал</h2>
+      </div>
+      <form class="filters" action="rooms.html" method="get">
+        <div class="field filter-field">
+          <label class="field-label" for="date">Дата</label>
+          <input class="field-control" id="date" name="date" type="date" value="2026-10-21" required>
+        </div>
+        <div class="field filter-field">
+          <label class="field-label" for="start">З</label>
+          <select class="field-control" id="start" name="start" required>
+            <option value="08:00">08:00</option>
+            <option value="08:15">08:15</option>
+            <option value="08:30">08:30</option>
+            <option value="08:45">08:45</option>
+            <option value="09:00">09:00</option>
+            <option value="09:15">09:15</option>
+            <option value="09:30">09:30</option>
+            <option value="09:45">09:45</option>
+            <option value="10:00">10:00</option>
+            <option value="10:15">10:15</option>
+            <option value="10:30">10:30</option>
+            <option value="10:45">10:45</option>
+            <option value="11:00">11:00</option>
+            <option value="11:15">11:15</option>
+            <option value="11:30">11:30</option>
+            <option value="11:45">11:45</option>
+            <option value="12:00">12:00</option>
+            <option value="12:15">12:15</option>
+            <option value="12:30">12:30</option>
+            <option value="12:45">12:45</option>
+            <option value="13:00">13:00</option>
+            <option value="13:15">13:15</option>
+            <option value="13:30">13:30</option>
+            <option value="13:45">13:45</option>
+            <option value="14:00" selected>14:00</option>
+            <option value="14:15">14:15</option>
+            <option value="14:30">14:30</option>
+            <option value="14:45">14:45</option>
+            <option value="15:00">15:00</option>
+            <option value="15:15">15:15</option>
+            <option value="15:30">15:30</option>
+            <option value="15:45">15:45</option>
+            <option value="16:00">16:00</option>
+            <option value="16:15">16:15</option>
+            <option value="16:30">16:30</option>
+            <option value="16:45">16:45</option>
+            <option value="17:00">17:00</option>
+            <option value="17:15">17:15</option>
+            <option value="17:30">17:30</option>
+            <option value="17:45">17:45</option>
+            <option value="18:00">18:00</option>
+            <option value="18:15">18:15</option>
+            <option value="18:30">18:30</option>
+            <option value="18:45">18:45</option>
+            <option value="19:00">19:00</option>
+            <option value="19:15">19:15</option>
+            <option value="19:30">19:30</option>
+            <option value="19:45">19:45</option>
+          </select>
+        </div>
+        <div class="field filter-field">
+          <label class="field-label" for="end">До</label>
+          <select class="field-control" id="end" name="end" required>
+            <option value="08:15">08:15</option>
+            <option value="08:30">08:30</option>
+            <option value="08:45">08:45</option>
+            <option value="09:00">09:00</option>
+            <option value="09:15">09:15</option>
+            <option value="09:30">09:30</option>
+            <option value="09:45">09:45</option>
+            <option value="10:00">10:00</option>
+            <option value="10:15">10:15</option>
+            <option value="10:30">10:30</option>
+            <option value="10:45">10:45</option>
+            <option value="11:00">11:00</option>
+            <option value="11:15">11:15</option>
+            <option value="11:30">11:30</option>
+            <option value="11:45">11:45</option>
+            <option value="12:00">12:00</option>
+            <option value="12:15">12:15</option>
+            <option value="12:30">12:30</option>
+            <option value="12:45">12:45</option>
+            <option value="13:00">13:00</option>
+            <option value="13:15">13:15</option>
+            <option value="13:30">13:30</option>
+            <option value="13:45">13:45</option>
+            <option value="14:00">14:00</option>
+            <option value="14:15">14:15</option>
+            <option value="14:30">14:30</option>
+            <option value="14:45">14:45</option>
+            <option value="15:00" selected>15:00</option>
+            <option value="15:15">15:15</option>
+            <option value="15:30">15:30</option>
+            <option value="15:45">15:45</option>
+            <option value="16:00">16:00</option>
+            <option value="16:15">16:15</option>
+            <option value="16:30">16:30</option>
+            <option value="16:45">16:45</option>
+            <option value="17:00">17:00</option>
+            <option value="17:15">17:15</option>
+            <option value="17:30">17:30</option>
+            <option value="17:45">17:45</option>
+            <option value="18:00">18:00</option>
+            <option value="18:15">18:15</option>
+            <option value="18:30">18:30</option>
+            <option value="18:45">18:45</option>
+            <option value="19:00">19:00</option>
+            <option value="19:15">19:15</option>
+            <option value="19:30">19:30</option>
+            <option value="19:45">19:45</option>
+            <option value="20:00">20:00</option>
+          </select>
+        </div>
+        <div class="field filter-field">
+          <label class="field-label" for="floor">Поверх</label>
+          <select class="field-control" id="floor" name="floor">
+            <option value="" selected>Усі</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+          </select>
+        </div>
+        <div class="field filter-field">
+          <label class="field-label" for="capacity">Місткість від</label>
+          <input class="field-control" id="capacity" name="capacity" type="number" min="1" step="1">
+        </div>
+        <div class="filter-actions">
+          <button class="btn btn-primary" type="submit">Знайти вільні</button>
+        </div>
+      </form>
+
+      <div class="table-wrap">
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th scope="col">Назва</th>
+              <th scope="col">Поверх</th>
+              <th scope="col">Місткість</th>
+              <th scope="col">Обладнання</th>
+              <th scope="col"><span class="sr-only">Дія</span></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Дніпро</td>
+              <td class="cell-numeric">2</td>
+              <td class="cell-numeric">8</td>
+              <td class="cell-equipment">Проєктор, дошка, відеозв’язок</td>
+              <td class="cell-actions"><a class="link-action" href="booking-new.html?roomId=dnipro&amp;date=2026-10-21&amp;start=14:00&amp;end=15:00">Забронювати</a></td>
+            </tr>
+            <tr>
+              <td>Десна</td>
+              <td class="cell-numeric">2</td>
+              <td class="cell-numeric">6</td>
+              <td class="cell-equipment">Екран, дошка</td>
+              <td class="cell-actions"><a class="link-action" href="booking-new.html?roomId=desna&amp;date=2026-10-21&amp;start=14:00&amp;end=15:00">Забронювати</a></td>
+            </tr>
+            <tr>
+              <td>Прут</td>
+              <td class="cell-numeric">2</td>
+              <td class="cell-numeric">4</td>
+              <td class="cell-equipment">Монітор, відеозв’язок</td>
+              <td class="cell-actions"><a class="link-action" href="booking-new.html?roomId=prut&amp;date=2026-10-21&amp;start=14:00&amp;end=15:00">Забронювати</a></td>
+            </tr>
+            <tr>
+              <td>Говерла</td>
+              <td class="cell-numeric">3</td>
+              <td class="cell-numeric">12</td>
+              <td class="cell-equipment">Проєктор, конференц-зв’язок</td>
+              <td class="cell-actions"><a class="link-action" href="booking-new.html?roomId=hoverla&amp;date=2026-10-21&amp;start=14:00&amp;end=15:00">Забронювати</a></td>
+            </tr>
+            <tr>
+              <td>Карпати</td>
+              <td class="cell-numeric">3</td>
+              <td class="cell-numeric">10</td>
+              <td class="cell-equipment">Проєктор, дошка</td>
+              <td class="cell-actions"><a class="link-action" href="booking-new.html?roomId=karpaty&amp;date=2026-10-21&amp;start=14:00&amp;end=15:00">Забронювати</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

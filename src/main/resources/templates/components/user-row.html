@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="uk" xmlns:th="http://www.thymeleaf.org">
+<body>
+<tr th:fragment="row" th:id="'user-' + ${user.id}" th:classappend="${!user.enabled ? 'is-inactive' : ''}">
+  <td><a class="link-action" th:href="@{/admin/users/{id}(id=${user.id})}" th:text="${user.displayName}"></a></td>
+  <td th:text="${user.username}"></td>
+  <td th:text="${user.role == T(roombook.kernel.Role).ADMIN ? 'Адміністратор' : 'Працівник'}"></td>
+  <td th:text="${user.enabled ? 'Активний' : 'Деактивований'}"></td>
+  <td class="cell-actions">
+    <form th:if="${user.enabled}" th:action="@{/admin/users/{id}/disable(id=${user.id})}" method="post"
+          th:hx-post="@{/admin/users/{id}/disable(id=${user.id})}" th:hx-target="'#user-' + ${user.id}" hx-swap="outerHTML" hx-disabled-elt="button"
+          hx-confirm="Деактивувати користувача? Після цього вони не зможуть увійти.">
+      <button class="link-danger" type="submit">Деактивувати</button>
+    </form>
+    <form th:if="${!user.enabled}" th:action="@{/admin/users/{id}/enable(id=${user.id})}" method="post"
+          th:hx-post="@{/admin/users/{id}/enable(id=${user.id})}" th:hx-target="'#user-' + ${user.id}" hx-swap="outerHTML" hx-disabled-elt="button">
+      <button class="link-action" type="submit">Активувати</button>
+    </form>
+  </td>
+</tr>
+</body>
+</html>

@@ -1,0 +1,10 @@
+<!doctype html>
+<html lang="uk" xmlns:th="http://www.thymeleaf.org" th:replace="~{layout/shell :: page(${pageTitle}, ~{::section})}">
+<section>
+    <div class="page-head"><h1 th:text="${pageTitle}"></h1></div>
+    <p th:if="${status == 403 and code != 'CSRF_INVALID'}">Ця сторінка доступна лише адміністраторам.</p>
+    <p th:if="${status != 500}" th:text="${message}"></p>
+    <p th:if="${status == 500}">Повторіть дію. Якщо помилка лишається, повідомте адміністратора й назвіть код запиту: <span th:text="${requestId}"></span>.</p>
+    <p th:if="${status != 500}" class="page-note">Код запиту: <span th:text="${requestId}"></span></p>
+</section>
+</html>

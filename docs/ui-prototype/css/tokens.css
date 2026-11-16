@@ -1,0 +1,48 @@
+:root {
+  color-scheme: light;
+  --board: #FFFFFF;
+  --page: #F2F4F6;
+  --ink: #1E2A36;
+  --graphite: #566370;
+  --line: #C8CED5;
+  --line-strong: #7A8792;
+  --blue: #1D4E9E;
+  --blue-hover: #173F80;
+  --blue-tint: #E3ECF8;
+  --busy: #D6DEE8;
+  --past: #EEF0F3;
+  --error: #B3261E;
+  --ok: #1B7F4B;
+  --s1: 4px;
+  --s2: 8px;
+  --s3: 12px;
+  --s4: 16px;
+  --s5: 24px;
+  --s6: 32px;
+  --s7: 48px;
+  --body-size: 15px;
+  --small-size: 13px;
+  --label-size: 14px;
+  --app-name-size: 17px;
+  --h1-size: 26px;
+  --h2-size: 20px;
+  --control-h: 36px;
+  --row-h: 40px;
+  --header-h: 52px;
+  --radius-booking: 2px;
+  --radius-control: 4px;
+  --form-w: 520px;
+  --login-w: 360px;
+  --table-w: 1100px;
+  --slot-h: 20px;
+  --time-w: 56px;
+  --room-w: 160px;
+  --page-gutter: var(--s6);
+  --transition-time: 120ms;
+}
+
+@media (max-width: 1279px) {
+  :root {
+    --page-gutter: var(--s5);
+  }
+}

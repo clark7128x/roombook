@@ -1,0 +1,8 @@
+[Unit]
+Description=RoomBook daily encrypted backup
+[Timer]
+OnCalendar=*-*-* 01:00:00 Europe/Kyiv
+Persistent=true
+Unit=roombook-backup.service
+[Install]
+WantedBy=timers.target

@@ -1,0 +1,2744 @@
+{
+  "runId": "roombook-check-5c98c9001b0c",
+  "profile": "full",
+  "baselineBookings": 1000000,
+  "rooms": 50,
+  "users": 300,
+  "limits": {
+    "memoryBytes": 1073741824,
+    "cpus": 2,
+    "pool": 10,
+    "bcryptCost": 12
+  },
+  "results": [
+    {
+      "stage": "P1",
+      "method": "GET",
+      "path": "/admin/bookings",
+      "status": 200,
+      "count": 1096,
+      "p95ServerMs": 29
+    },
+    {
+      "stage": "P1",
+      "method": "GET",
+      "path": "/api/v1/me/bookings",
+      "status": 200,
+      "count": 5677,
+      "p95ServerMs": 8
+    },
+    {
+      "stage": "P1",
+      "method": "GET",
+      "path": "/api/v1/occupancy",
+      "status": 200,
+      "count": 5420,
+      "p95ServerMs": 11
+    },
+    {
+      "stage": "P1",
+      "method": "GET",
+      "path": "/api/v1/rooms",
+      "status": 200,
+      "count": 4509,
+      "p95ServerMs": 5
+    },
+    {
+      "stage": "P1",
+      "method": "GET",
+      "path": "/fragments/room-day",
+      "status": 200,
+      "count": 2182,
+      "p95ServerMs": 13
+    },
+    {
+      "stage": "P1",
+      "method": "GET",
+      "path": "/occupancy",
+      "status": 200,
+      "count": 3616,
+      "p95ServerMs": 94
+    },
+    {
+      "stage": "P1",
+      "method": "POST",
+      "path": "/api/v1/bookings",
+      "status": 201,
+      "count": 2624,
+      "p95ServerMs": 104
+    },
+    {
+      "stage": "P1",
+      "method": "POST",
+      "path": "/api/v1/bookings",
+      "status": 409,
+      "count": 460,
+      "p95ServerMs": 5
+    },
+    {
+      "stage": "P1",
+      "method": "POST",
+      "path": "/api/v1/bookings/{id}/cancel",
+      "status": 200,
+      "count": 1416,
+      "p95ServerMs": 101
+    },
+    {
+      "stage": "P2",
+      "method": "GET",
+      "path": "/admin/bookings",
+      "status": 200,
+      "count": 1494,
+      "p95ServerMs": 34
+    },
+    {
+      "stage": "P2",
+      "method": "GET",
+      "path": "/api/v1/me/bookings",
+      "status": 200,
+      "count": 7605,
+      "p95ServerMs": 9
+    },
+    {
+      "stage": "P2",
+      "method": "GET",
+      "path": "/api/v1/occupancy",
+      "status": 200,
+      "count": 7237,
+      "p95ServerMs": 15
+    },
+    {
+      "stage": "P2",
+      "method": "GET",
+      "path": "/api/v1/rooms",
+      "status": 200,
+      "count": 5942,
+      "p95ServerMs": 6
+    },
+    {
+      "stage": "P2",
+      "method": "GET",
+      "path": "/fragments/room-day",
+      "status": 200,
+      "count": 2916,
+      "p95ServerMs": 16
+    },
+    {
+      "stage": "P2",
+      "method": "GET",
+      "path": "/occupancy",
+      "status": 200,
+      "count": 4806,
+      "p95ServerMs": 101
+    },
+    {
+      "stage": "P2",
+      "method": "POST",
+      "path": "/api/v1/bookings",
+      "status": 201,
+      "count": 3522,
+      "p95ServerMs": 103
+    },
+    {
+      "stage": "P2",
+      "method": "POST",
+      "path": "/api/v1/bookings",
+      "status": 409,
+      "count": 612,
+      "p95ServerMs": 7
+    },
+    {
+      "stage": "P2",
+      "method": "POST",
+      "path": "/api/v1/bookings/{id}/cancel",
+      "status": 200,
+      "count": 1866,
+      "p95ServerMs": 105
+    },
+    {
+      "stage": "P3",
+      "method": "GET",
+      "path": "/admin/bookings",
+      "status": 200,
+      "count": 385,
+      "p95ServerMs": 513
+    },
+    {
+      "stage": "P3",
+      "method": "GET",
+      "path": "/api/v1/csrf",
+      "status": 200,
+      "count": 600,
+      "p95ServerMs": 80
+    },
+    {
+      "stage": "P3",
+      "method": "GET",
+      "path": "/api/v1/me/bookings",
+      "status": 200,
+      "count": 1887,
+      "p95ServerMs": 64
+    },
+    {
+      "stage": "P3",
+      "method": "GET",
+      "path": "/api/v1/occupancy",
+      "status": 200,
+      "count": 1811,
+      "p95ServerMs": 186
+    },
+    {
+      "stage": "P3",
+      "method": "GET",
+      "path": "/api/v1/rooms",
+      "status": 200,
+      "count": 1476,
+      "p95ServerMs": 81
+    },
+    {
+      "stage": "P3",
+      "method": "GET",
+      "path": "/fragments/room-day",
+      "status": 200,
+      "count": 739,
+      "p95ServerMs": 190
+    },
+    {
+      "stage": "P3",
+      "method": "GET",
+      "path": "/occupancy",
+      "status": 200,
+      "count": 1202,
+      "p95ServerMs": 1750
+    },
+    {
+      "stage": "P3",
+      "method": "POST",
+      "path": "/api/v1/bookings",
+      "status": 201,
+      "count": 868,
+      "p95ServerMs": 230
+    },
+    {
+      "stage": "P3",
+      "method": "POST",
+      "path": "/api/v1/bookings",
+      "status": 409,
+      "count": 151,
+      "p95ServerMs": 59
+    },
+    {
+      "stage": "P3",
+      "method": "POST",
+      "path": "/api/v1/bookings/{id}/cancel",
+      "status": 200,
+      "count": 481,
+      "p95ServerMs": 229
+    },
+    {
+      "stage": "P3",
+      "method": "POST",
+      "path": "/login",
+      "status": 302,
+      "count": 300,
+      "p95ServerMs": 8700
+    },
+    {
+      "stage": "P4",
+      "method": "POST",
+      "path": "/api/v1/bookings",
+      "status": 201,
+      "count": 1020,
+      "p95ServerMs": 2624
+    },
+    {
+      "stage": "P4",
+      "method": "POST",
+      "path": "/api/v1/bookings",
+      "status": 409,
+      "count": 980,
+      "p95ServerMs": 163
+    },
+    {
+      "stage": "P4",
+      "method": "POST",
+      "path": "/api/v1/bookings/{id}/cancel",
+      "status": 200,
+      "count": 1020,
+      "p95ServerMs": 98
+    },
+    {
+      "stage": "P5",
+      "method": "GET",
+      "path": "/api/v1/bookings?page=0",
+      "status": 200,
+      "count": 100,
+      "p95ServerMs": 3
+    },
+    {
+      "stage": "P5",
+      "method": "GET",
+      "path": "/api/v1/bookings?page=1000",
+      "status": 200,
+      "count": 100,
+      "p95ServerMs": 22
+    },
+    {
+      "stage": "P5",
+      "method": "GET",
+      "path": "/api/v1/bookings?page=25000",
+      "status": 200,
+      "count": 100,
+      "p95ServerMs": 612
+    },
+    {
+      "stage": "P5",
+      "method": "GET",
+      "path": "/api/v1/bookings?page=49000",
+      "status": 200,
+      "count": 100,
+      "p95ServerMs": 1055
+    },
+    {
+      "stage": "P5",
+      "method": "GET",
+      "path": "/api/v1/csrf",
+      "status": 200,
+      "count": 2,
+      "p95ServerMs": 1
+    },
+    {
+      "stage": "P5",
+      "method": "GET",
+      "path": "/api/v1/me/bookings?page=0",
+      "status": 200,
+      "count": 100,
+      "p95ServerMs": 2
+    },
+    {
+      "stage": "P5",
+      "method": "GET",
+      "path": "/api/v1/me/bookings?page=1",
+      "status": 200,
+      "count": 100,
+      "p95ServerMs": 4
+    },
+    {
+      "stage": "P5",
+      "method": "GET",
+      "path": "/api/v1/me/bookings?page=10",
+      "status": 200,
+      "count": 100,
+      "p95ServerMs": 3
+    },
+    {
+      "stage": "P5",
+      "method": "GET",
+      "path": "/api/v1/me/bookings?page=100",
+      "status": 200,
+      "count": 100,
+      "p95ServerMs": 5
+    },
+    {
+      "stage": "P5",
+      "method": "GET",
+      "path": "/api/v1/me/bookings?page=101",
+      "status": 200,
+      "count": 100,
+      "p95ServerMs": 5
+    },
+    {
+      "stage": "P5",
+      "method": "GET",
+      "path": "/api/v1/me/bookings?page=102",
+      "status": 200,
+      "count": 100,
+      "p95ServerMs": 6
+    },
+    {
+      "stage": "P5",
+      "method": "GET",
+      "path": "/api/v1/me/bookings?page=103",
+      "status": 200,
+      "count": 100,
+      "p95ServerMs": 4
+    },
+    {
+      "stage": "P5",
+      "method": "GET",
+      "path": "/api/v1/me/bookings?page=104",
+      "status": 200,
+      "count": 100,
+      "p95ServerMs": 4
+    },
+    {
+      "stage": "P5",
+      "method": "GET",
+      "path": "/api/v1/me/bookings?page=105",
+      "status": 200,
+      "count": 100,
+      "p95ServerMs": 7
+    },
+    {
+      "stage": "P5",
+      "method": "GET",
+      "path": "/api/v1/me/bookings?page=106",
+      "status": 200,
+      "count": 100,
+      "p95ServerMs": 6
+    },
+    {
+      "stage": "P5",
+      "method": "GET",
+      "path": "/api/v1/me/bookings?page=107",
+      "status": 200,
+      "count": 100,
+      "p95ServerMs": 5
+    },
+    {
+      "stage": "P5",
+      "method": "GET",
+      "path": "/api/v1/me/bookings?page=108",
+      "status": 200,
+      "count": 100,
+      "p95ServerMs": 5
+    },
+    {
+      "stage": "P5",
+      "method": "GET",
+      "path": "/api/v1/me/bookings?page=109",
+      "status": 200,
+      "count": 100,
+      "p95ServerMs": 5
+    },
+    {
+      "stage": "P5",
+      "method": "GET",
+      "path": "/api/v1/me/bookings?page=11",
+      "status": 200,
+      "count": 100,
+      "p95ServerMs": 3
+    },
+    {
+      "stage": "P5",
+      "method": "GET",
+      "path": "/api/v1/me/bookings?page=110",
+      "status": 200,
+      "count": 100,
+      "p95ServerMs": 5
+    },
+    {
+      "stage": "P5",
+      "method": "GET",
+      "path": "/api/v1/me/bookings?page=111",
+      "status": 200,
+      "count": 100,
+      "p95ServerMs": 6
+    },
+    {
+      "stage": "P5",
+      "method": "GET",
+      "path": "/api/v1/me/bookings?page=112",
+      "status": 200,
+      "count": 100,
+      "p95ServerMs": 5
+    },
+    {
+      "stage": "P5",
+      "method": "GET",
+      "path": "/api/v1/me/bookings?page=113",
+      "status": 200,
+      "count": 100,
+      "p95ServerMs": 5
+    },
+    {
+      "stage": "P5",
+      "method": "GET",
+      "path": "/api/v1/me/bookings?page=114",
+      "status": 200,
+      "count": 100,
+      "p95ServerMs": 5
+    },
+    {
+      "stage": "P5",
+      "method": "GET",
+      "path": "/api/v1/me/bookings?page=115",
+      "status": 200,
+      "count": 100,
+      "p95ServerMs": 5
+    },
+    {
+      "stage": "P5",
+      "method": "GET",
+      "path": "/api/v1/me/bookings?page=116",
+      "status": 200,
+      "count": 100,
+      "p95ServerMs": 5
+    },
+    {
+      "stage": "P5",
+      "method": "GET",
+      "path": "/api/v1/me/bookings?page=117",
+      "status": 200,
+      "count": 100,
+      "p95ServerMs": 6
+    },
+    {
+      "stage": "P5",
+      "method": "GET",
+      "path": "/api/v1/me/bookings?page=118",
+      "status": 200,
+      "count": 100,
+      "p95ServerMs": 5
+    },
+    {
+      "stage": "P5",
+      "method": "GET",
+      "path": "/api/v1/me/bookings?page=119",
+      "status": 200,
+      "count": 100,
+      "p95ServerMs": 5
+    },
+    {
+      "stage": "P5",
+      "method": "GET",
+      "path": "/api/v1/me/bookings?page=12",
+      "status": 200,
+      "count": 100,
+      "p95ServerMs": 3
+    },
+    {
+      "stage": "P5",
+      "method": "GET",
+      "path": "/api/v1/me/bookings?page=120",
+      "status": 200,
+      "count": 100,
+      "p95ServerMs": 5
+    },
+    {
+      "stage": "P5",
+      "method": "GET",
+      "path": "/api/v1/me/bookings?page=121",
+      "status": 200,
+      "count": 100,
+      "p95ServerMs": 5
+    },
+    {
+      "stage": "P5",
+      "method": "GET",
+      "path": "/api/v1/me/bookings?page=122",
+      "status": 200,
+      "count": 100,
+      "p95ServerMs": 7
+    },
+    {
+      "stage": "P5",
+      "method": "GET",
+      "path": "/api/v1/me/bookings?page=123",
+      "status": 200,
+      "count": 100,
+      "p95ServerMs": 5
+    },
+    {
+      "stage": "P5",
+      "method": "GET",
+      "path": "/api/v1/me/bookings?page=124",
+      "status": 200,
+      "count": 100,
+      "p95ServerMs": 5
+    },
+    {
+      "stage": "P5",
+      "method": "GET",
+      "path": "/api/v1/me/bookings?page=125",
+      "status": 200,
+      "count": 100,
+      "p95ServerMs": 5
+    },
+    {
+      "stage": "P5",
+      "method": "GET",
+      "path": "/api/v1/me/bookings?page=126",
+      "status": 200,
+      "count": 100,
+      "p95ServerMs": 5
+    },
+    {
+      "stage": "P5",
+      "method": "GET",
+      "path": "/api/v1/me/bookings?page=127",
+      "status": 200,
+      "count": 100,
+      "p95ServerMs": 5
+    },
+    {
+      "stage": "P5",
+      "method": "GET",
+      "path": "/api/v1/me/bookings?page=128",
+      "status": 200,
+      "count": 100,
+      "p95ServerMs": 7
+    },
+    {
+      "stage": "P5",
+      "method": "GET",
+      "path": "/api/v1/me/bookings?page=129",
+      "status": 200,
+      "count": 100,
+      "p95ServerMs": 5
+    },
+    {
+      "stage": "P5",
+      "method": "GET",
+      "path": "/api/v1/me/bookings?page=13",
+      "status": 200,
+      "count": 100,
+      "p95ServerMs": 3
+    },
+    {
+      "stage": "P5",
+      "method": "GET",
+      "path": "/api/v1/me/bookings?page=130",
+      "status": 200,
+      "count": 100,
+      "p95ServerMs": 6
+    },
+    {
+      "stage": "P5",
+      "method": "GET",
+      "path": "/api/v1/me/bookings?page=131",
+      "status": 200,
+      "count": 100,
+      "p95ServerMs": 5
+    },
+    {
+      "stage": "P5",
+      "method": "GET",
+      "path": "/api/v1/me/bookings?page=132",
+      "status": 200,
+      "count": 100,
+      "p95ServerMs": 5
+    },
+    {
+      "stage": "P5",
+      "method": "GET",
+      "path": "/api/v1/me/bookings?page=133",
+      "status": 200,
+      "count": 100,
+      "p95ServerMs": 6
+    },
+    {
+      "stage": "P5",
+      "method": "GET",
+      "path": "/api/v1/me/bookings?page=134",
+      "status": 200,
+      "count": 100,
+      "p95ServerMs": 6
+    },
+    {
+      "stage": "P5",
+      "method": "GET",
+      "path": "/api/v1/me/bookings?page=135",
+      "status": 200,
+      "count": 100,
+      "p95ServerMs": 5
+    },
+    {
+      "stage": "P5",
+      "method": "GET",
+      "path": "/api/v1/me/bookings?page=136",
+      "status": 200,
+      "count": 100,
+      "p95ServerMs": 5
+    },
+    {
+      "stage": "P5",
+      "method": "GET",
+      "path": "/api/v1/me/bookings?page=137",
+      "status": 200,
+      "count": 100,
+      "p95ServerMs": 5
+    },
+    {
+      "stage": "P5",
+      "method": "GET",
+      "path": "/api/v1/me/bookings?page=138",
+      "status": 200,
+      "count": 100,
+      "p95ServerMs": 5
+    },
+    {
+      "stage": "P5",
+      "method": "GET",
+      "path": "/api/v1/me/bookings?page=139",
+      "status": 200,
+      "count": 100,
+      "p95ServerMs": 7
+    },
+    {
+      "stage": "P5",
+      "method": "GET",
+      "path": "/api/v1/me/bookings?page=14",
+      "status": 200,
+      "count": 100,
+      "p95ServerMs": 3
+    },
+    {
+      "stage": "P5",
+      "method": "GET",
+      "path": "/api/v1/me/bookings?page=140",
+      "status": 200,
+      "count": 100,
+      "p95ServerMs": 5
+    },
+    {
+      "stage": "P5",
+      "method": "GET",
+      "path": "/api/v1/me/bookings?page=141",
+      "status": 200,
+      "count": 100,
+      "p95ServerMs": 6
+    },
+    {
+      "stage": "P5",
+      "method": "GET",
+      "path": "/api/v1/me/bookings?page=142",
+      "status": 200,
+      "count": 100,
+      "p95ServerMs": 6
+    },
+    {
+      "stage": "P5",
+      "method": "GET",
+      "path": "/api/v1/me/bookings?page=143",
+      "status": 200,
+      "count": 100,
+      "p95ServerMs": 5
+    },
+    {
+      "stage": "P5",
+      "method": "GET",
+      "path": "/api/v1/me/bookings?page=144",
+      "status": 200,
+      "count": 100,
+      "p95ServerMs": 5
+    },
+    {
+      "stage": "P5",
+      "method": "GET",
+      "path": "/api/v1/me/bookings?page=145",
+      "status": 200,
+      "count": 100,
+      "p95ServerMs": 5
+    },
+    {
+      "stage": "P5",
+      "method": "GET",
+      "path": "/api/v1/me/bookings?page=146",
+      "status": 200,
+      "count": 100,
+      "p95ServerMs": 5
+    },
+    {
+      "stage": "P5",
+      "method": "GET",
+      "path": "/api/v1/me/bookings?page=147",
+      "status": 200,
+      "count": 100,
+      "p95ServerMs": 6
+    },
+    {
+      "stage": "P5",
+      "method": "GET",
+      "path": "/api/v1/me/bookings?page=148",
+      "status": 200,
+      "count": 100,
+      "p95ServerMs": 6
+    },
+    {
+      "stage": "P5",
+      "method": "GET",
+      "path": "/api/v1/me/bookings?page=149",
+      "status": 200,
+      "count": 100,
+      "p95ServerMs": 5
+    },
+    {
+      "stage": "P5",
+      "method": "GET",
+      "path": "/api/v1/me/bookings?page=15",
+      "status": 200,
+      "count": 100,
+      "p95ServerMs": 3
+    },
+    {
+      "stage": "P5",
+      "method": "GET",
+      "path": "/api/v1/me/bookings?page=150",
+      "status": 200,
+      "count": 100,
+      "p95ServerMs": 8
+    },
+    {
+      "stage": "P5",
+      "method": "GET",
+      "path": "/api/v1/me/bookings?page=151",
+      "status": 200,
+      "count": 100,
+      "p95ServerMs": 5
+    },
+    {
+      "stage": "P5",
+      "method": "GET",
+      "path": "/api/v1/me/bookings?page=152",
+      "status": 200,
+      "count": 100,
+      "p95ServerMs": 6
+    },
+    {
+      "stage": "P5",
+      "method": "GET",
+      "path": "/api/v1/me/bookings?page=153",
+      "status": 200,
+      "count": 100,
+      "p95ServerMs": 8
+    },
+    {
+      "stage": "P5",
+      "method": "GET",
+      "path": "/api/v1/me/bookings?page=154",
+      "status": 200,
+      "count": 100,
+      "p95ServerMs": 6
+    },
+    {
+      "stage": "P5",
+      "method": "GET",
+      "path": "/api/v1/me/bookings?page=155",
+      "status": 200,
+      "count": 100,
+      "p95ServerMs": 6
+    },
+    {
+      "stage": "P5",
+      "method": "GET",
+      "path": "/api/v1/me/bookings?page=156",
+      "status": 200,
+      "count": 100,
+      "p95ServerMs": 6
+    },
+    {
+      "stage": "P5",
+      "method": "GET",
+      "path": "/api/v1/me/bookings?page=157",
+      "status": 200,
+      "count": 100,
+      "p95ServerMs": 6
+    },
+    {
+      "stage": "P5",
+      "method": "GET",
+      "path": "/api/v1/me/bookings?page=158",
+      "status": 200,
+      "count": 100,
+      "p95ServerMs": 7
+    },
+    {
+      "stage": "P5",
+      "method": "GET",
+      "path": "/api/v1/me/bookings?page=159",
+      "status": 200,
+      "count": 100,
+      "p95ServerMs": 6
+    },
+    {
+      "stage": "P5",
+      "method": "GET",
+      "path": "/api/v1/me/bookings?page=16",
+      "status": 200,
+      "count": 100,
+      "p95ServerMs": 5
+    },
+    {
+      "stage": "P5",
+      "method": "GET",
+      "path": "/api/v1/me/bookings?page=160",
+      "status": 200,
+      "count": 100,
+      "p95ServerMs": 8
+    },
+    {
+      "stage": "P5",
+      "method": "GET",
+      "path": "/api/v1/me/bookings?page=161",
+      "status": 200,
+      "count": 100,
+      "p95ServerMs": 6
+    },
+    {
+      "stage": "P5",
+      "method": "GET",
+      "path": "/api/v1/me/bookings?page=162",
+      "status": 200,
+      "count": 100,
+      "p95ServerMs": 6
+    },
+    {
+      "stage": "P5",
+      "method": "GET",
+      "path": "/api/v1/me/bookings?page=163",
+      "status": 200,
+      "count": 100,
+      "p95ServerMs": 6
+    },
+    {
+      "stage": "P5",
+      "method": "GET",
+      "path": "/api/v1/me/bookings?page=164",
+      "status": 200,
+      "count": 100,
+      "p95ServerMs": 6
+    },
+    {
+      "stage": "P5",
+      "method": "GET",
+      "path": "/api/v1/me/bookings?page=165",
+      "status": 200,
+      "count": 100,
+      "p95ServerMs": 6
+    },
+    {
+      "stage": "P5",
+      "method": "GET",
+      "path": "/api/v1/me/bookings?page=166",
+      "status": 200,
+      "count": 100,
+      "p95ServerMs": 6
+    },
+    {
+      "stage": "P5",
+      "method": "GET",
+      "path": "/api/v1/me/bookings?page=167",
+      "status": 200,
+      "count": 100,
+      "p95ServerMs": 7
+    },
+    {
+      "stage": "P5",
+      "method": "GET",
+      "path": "/api/v1/me/bookings?page=168",
+      "status": 200,
+      "count": 100,
+      "p95ServerMs": 6
+    },
+    {
+      "stage": "P5",
+      "method": "GET",
+      "path": "/api/v1/me/bookings?page=169",
+      "status": 200,
+      "count": 100,
+      "p95ServerMs": 6
+    },
+    {
+      "stage": "P5",
+      "method": "GET",
+      "path": "/api/v1/me/bookings?page=17",
+      "status": 200,
+      "count": 100,
+      "p95ServerMs": 3
+    },
+    {
+      "stage": "P5",
+      "method": "GET",
+      "path": "/api/v1/me/bookings?page=170",
+      "status": 200,
+      "count": 100,
+      "p95ServerMs": 7
+    },
+    {
+      "stage": "P5",
+      "method": "GET",
+      "path": "/api/v1/me/bookings?page=171",
+      "status": 200,
+      "count": 100,
+      "p95ServerMs": 6
+    },
+    {
+      "stage": "P5",
+      "method": "GET",
+      "path": "/api/v1/me/bookings?page=172",
+      "status": 200,
+      "count": 100,
+      "p95ServerMs": 6
+    },
+    {
+      "stage": "P5",
+      "method": "GET",
+      "path": "/api/v1/me/bookings?page=173",
+      "status": 200,
+      "count": 100,
+      "p95ServerMs": 6
+    },
+    {
+      "stage": "P5",
+      "method": "GET",
+      "path": "/api/v1/me/bookings?page=174",
+      "status": 200,
+      "count": 100,
+      "p95ServerMs": 6
+    },
+    {
+      "stage": "P5",
+      "method": "GET",
+      "path": "/api/v1/me/bookings?page=175",
+      "status": 200,
+      "count": 100,
+      "p95ServerMs": 6
+    },
+    {
+      "stage": "P5",
+      "method": "GET",
+      "path": "/api/v1/me/bookings?page=176",
+      "status": 200,
+      "count": 100,
+      "p95ServerMs": 6
+    },
+    {
+      "stage": "P5",
+      "method": "GET",
+      "path": "/api/v1/me/bookings?page=177",
+      "status": 200,
+      "count": 100,
+      "p95ServerMs": 6
+    },
+    {
+      "stage": "P5",
+      "method": "GET",
+      "path": "/api/v1/me/bookings?page=178",
+      "status": 200,
+      "count": 100,
+      "p95ServerMs": 6
+    },
+    {
+      "stage": "P5",
+      "method": "GET",
+      "path": "/api/v1/me/bookings?page=179",
+      "status": 200,
+      "count": 100,
+      "p95ServerMs": 8
+    },
+    {
+      "stage": "P5",
+      "method": "GET",
+      "path": "/api/v1/me/bookings?page=18",
+      "status": 200,
+      "count": 100,
+      "p95ServerMs": 3
+    },
+    {
+      "stage": "P5",
+      "method": "GET",
+      "path": "/api/v1/me/bookings?page=180",
+      "status": 200,
+      "count": 100,
+      "p95ServerMs": 9
+    },
+    {
+      "stage": "P5",
+      "method": "GET",
+      "path": "/api/v1/me/bookings?page=181",
+      "status": 200,
+      "count": 100,
+      "p95ServerMs": 6
+    },
+    {
+      "stage": "P5",
+      "method": "GET",
+      "path": "/api/v1/me/bookings?page=182",
+      "status": 200,
+      "count": 100,
+      "p95ServerMs": 7
+    },
+    {
+      "stage": "P5",
+      "method": "GET",
+      "path": "/api/v1/me/bookings?page=183",
+      "status": 200,
+      "count": 100,
+      "p95ServerMs": 6
+    },
+    {
+      "stage": "P5",
+      "method": "GET",
+      "path": "/api/v1/me/bookings?page=184",
+      "status": 200,
+      "count": 100,
+      "p95ServerMs": 6
+    },
+    {
+      "stage": "P5",
+      "method": "GET",
+      "path": "/api/v1/me/bookings?page=19",
+      "status": 200,
+      "count": 100,
+      "p95ServerMs": 4
+    },
+    {
+      "stage": "P5",
+      "method": "GET",
+      "path": "/api/v1/me/bookings?page=2",
+      "status": 200,
+      "count": 100,
+      "p95ServerMs": 6
+    },
+    {
+      "stage": "P5",
+      "method": "GET",
+      "path": "/api/v1/me/bookings?page=20",
+      "status": 200,
+      "count": 100,
+      "p95ServerMs": 3
+    },
+    {
+      "stage": "P5",
+      "method": "GET",
+      "path": "/api/v1/me/bookings?page=21",
+      "status": 200,
+      "count": 100,
+      "p95ServerMs": 3
+    },
+    {
+      "stage": "P5",
+      "method": "GET",
+      "path": "/api/v1/me/bookings?page=22",
+      "status": 200,
+      "count": 100,
+      "p95ServerMs": 3
+    },
+    {
+      "stage": "P5",
+      "method": "GET",
+      "path": "/api/v1/me/bookings?page=23",
+      "status": 200,
+      "count": 100,
+      "p95ServerMs": 3
+    },
+    {
+      "stage": "P5",
+      "method": "GET",
+      "path": "/api/v1/me/bookings?page=24",
+      "status": 200,
+      "count": 100,
+      "p95ServerMs": 3
+    },
+    {
+      "stage": "P5",
+      "method": "GET",
+      "path": "/api/v1/me/bookings?page=25",
+      "status": 200,
+      "count": 100,
+      "p95ServerMs": 3
+    },
+    {
+      "stage": "P5",
+      "method": "GET",
+      "path": "/api/v1/me/bookings?page=26",
+      "status": 200,
+      "count": 100,
+      "p95ServerMs": 3
+    },
+    {
+      "stage": "P5",
+      "method": "GET",
+      "path": "/api/v1/me/bookings?page=27",
+      "status": 200,
+      "count": 100,
+      "p95ServerMs": 4
+    },
+    {
+      "stage": "P5",
+      "method": "GET",
+      "path": "/api/v1/me/bookings?page=28",
+      "status": 200,
+      "count": 100,
+      "p95ServerMs": 3
+    },
+    {
+      "stage": "P5",
+      "method": "GET",
+      "path": "/api/v1/me/bookings?page=29",
+      "status": 200,
+      "count": 100,
+      "p95ServerMs": 3
+    },
+    {
+      "stage": "P5",
+      "method": "GET",
+      "path": "/api/v1/me/bookings?page=3",
+      "status": 200,
+      "count": 100,
+      "p95ServerMs": 5
+    },
+    {
+      "stage": "P5",
+      "method": "GET",
+      "path": "/api/v1/me/bookings?page=30",
+      "status": 200,
+      "count": 100,
+      "p95ServerMs": 3
+    },
+    {
+      "stage": "P5",
+      "method": "GET",
+      "path": "/api/v1/me/bookings?page=31",
+      "status": 200,
+      "count": 100,
+      "p95ServerMs": 5
+    },
+    {
+      "stage": "P5",
+      "method": "GET",
+      "path": "/api/v1/me/bookings?page=32",
+      "status": 200,
+      "count": 100,
+      "p95ServerMs": 4
+    },
+    {
+      "stage": "P5",
+      "method": "GET",
+      "path": "/api/v1/me/bookings?page=33",
+      "status": 200,
+      "count": 100,
+      "p95ServerMs": 3
+    },
+    {
+      "stage": "P5",
+      "method": "GET",
+      "path": "/api/v1/me/bookings?page=34",
+      "status": 200,
+      "count": 100,
+      "p95ServerMs": 4
+    },
+    {
+      "stage": "P5",
+      "method": "GET",
+      "path": "/api/v1/me/bookings?page=35",
+      "status": 200,
+      "count": 100,
+      "p95ServerMs": 4
+    },
+    {
+      "stage": "P5",
+      "method": "GET",
+      "path": "/api/v1/me/bookings?page=36",
+      "status": 200,
+      "count": 100,
+      "p95ServerMs": 3
+    },
+    {
+      "stage": "P5",
+      "method": "GET",
+      "path": "/api/v1/me/bookings?page=37",
+      "status": 200,
+      "count": 100,
+      "p95ServerMs": 3
+    },
+    {
+      "stage": "P5",
+      "method": "GET",
+      "path": "/api/v1/me/bookings?page=38",
+      "status": 200,
+      "count": 100,
+      "p95ServerMs": 4
+    },
+    {
+      "stage": "P5",
+      "method": "GET",
+      "path": "/api/v1/me/bookings?page=39",
+      "status": 200,
+      "count": 100,
+      "p95ServerMs": 3
+    },
+    {
+      "stage": "P5",
+      "method": "GET",
+      "path": "/api/v1/me/bookings?page=4",
+      "status": 200,
+      "count": 100,
+      "p95ServerMs": 3
+    },
+    {
+      "stage": "P5",
+      "method": "GET",
+      "path": "/api/v1/me/bookings?page=40",
+      "status": 200,
+      "count": 100,
+      "p95ServerMs": 3
+    },
+    {
+      "stage": "P5",
+      "method": "GET",
+      "path": "/api/v1/me/bookings?page=41",
+      "status": 200,
+      "count": 100,
+      "p95ServerMs": 4
+    },
+    {
+      "stage": "P5",
+      "method": "GET",
+      "path": "/api/v1/me/bookings?page=42",
+      "status": 200,
+      "count": 100,
+      "p95ServerMs": 4
+    },
+    {
+      "stage": "P5",
+      "method": "GET",
+      "path": "/api/v1/me/bookings?page=43",
+      "status": 200,
+      "count": 100,
+      "p95ServerMs": 3
+    },
+    {
+      "stage": "P5",
+      "method": "GET",
+      "path": "/api/v1/me/bookings?page=44",
+      "status": 200,
+      "count": 100,
+      "p95ServerMs": 4
+    },
+    {
+      "stage": "P5",
+      "method": "GET",
+      "path": "/api/v1/me/bookings?page=45",
+      "status": 200,
+      "count": 100,
+      "p95ServerMs": 6
+    },
+    {
+      "stage": "P5",
+      "method": "GET",
+      "path": "/api/v1/me/bookings?page=46",
+      "status": 200,
+      "count": 100,
+      "p95ServerMs": 4
+    },
+    {
+      "stage": "P5",
+      "method": "GET",
+      "path": "/api/v1/me/bookings?page=47",
+      "status": 200,
+      "count": 100,
+      "p95ServerMs": 4
+    },
+    {
+      "stage": "P5",
+      "method": "GET",
+      "path": "/api/v1/me/bookings?page=48",
+      "status": 200,
+      "count": 100,
+      "p95ServerMs": 5
+    },
+    {
+      "stage": "P5",
+      "method": "GET",
+      "path": "/api/v1/me/bookings?page=49",
+      "status": 200,
+      "count": 100,
+      "p95ServerMs": 4
+    },
+    {
+      "stage": "P5",
+      "method": "GET",
+      "path": "/api/v1/me/bookings?page=5",
+      "status": 200,
+      "count": 100,
+      "p95ServerMs": 3
+    },
+    {
+      "stage": "P5",
+      "method": "GET",
+      "path": "/api/v1/me/bookings?page=50",
+      "status": 200,
+      "count": 100,
+      "p95ServerMs": 3
+    },
+    {
+      "stage": "P5",
+      "method": "GET",
+      "path": "/api/v1/me/bookings?page=51",
+      "status": 200,
+      "count": 100,
+      "p95ServerMs": 4
+    },
+    {
+      "stage": "P5",
+      "method": "GET",
+      "path": "/api/v1/me/bookings?page=52",
+      "status": 200,
+      "count": 100,
+      "p95ServerMs": 4
+    },
+    {
+      "stage": "P5",
+      "method": "GET",
+      "path": "/api/v1/me/bookings?page=53",
+      "status": 200,
+      "count": 100,
+      "p95ServerMs": 4
+    },
+    {
+      "stage": "P5",
+      "method": "GET",
+      "path": "/api/v1/me/bookings?page=54",
+      "status": 200,
+      "count": 100,
+      "p95ServerMs": 4
+    },
+    {
+      "stage": "P5",
+      "method": "GET",
+      "path": "/api/v1/me/bookings?page=55",
+      "status": 200,
+      "count": 100,
+      "p95ServerMs": 4
+    },
+    {
+      "stage": "P5",
+      "method": "GET",
+      "path": "/api/v1/me/bookings?page=56",
+      "status": 200,
+      "count": 100,
+      "p95ServerMs": 4
+    },
+    {
+      "stage": "P5",
+      "method": "GET",
+      "path": "/api/v1/me/bookings?page=57",
+      "status": 200,
+      "count": 100,
+      "p95ServerMs": 4
+    },
+    {
+      "stage": "P5",
+      "method": "GET",
+      "path": "/api/v1/me/bookings?page=58",
+      "status": 200,
+      "count": 100,
+      "p95ServerMs": 5
+    },
+    {
+      "stage": "P5",
+      "method": "GET",
+      "path": "/api/v1/me/bookings?page=59",
+      "status": 200,
+      "count": 100,
+      "p95ServerMs": 4
+    },
+    {
+      "stage": "P5",
+      "method": "GET",
+      "path": "/api/v1/me/bookings?page=6",
+      "status": 200,
+      "count": 100,
+      "p95ServerMs": 2
+    },
+    {
+      "stage": "P5",
+      "method": "GET",
+      "path": "/api/v1/me/bookings?page=60",
+      "status": 200,
+      "count": 100,
+      "p95ServerMs": 4
+    },
+    {
+      "stage": "P5",
+      "method": "GET",
+      "path": "/api/v1/me/bookings?page=61",
+      "status": 200,
+      "count": 100,
+      "p95ServerMs": 4
+    },
+    {
+      "stage": "P5",
+      "method": "GET",
+      "path": "/api/v1/me/bookings?page=62",
+      "status": 200,
+      "count": 100,
+      "p95ServerMs": 4
+    },
+    {
+      "stage": "P5",
+      "method": "GET",
+      "path": "/api/v1/me/bookings?page=63",
+      "status": 200,
+      "count": 100,
+      "p95ServerMs": 5
+    },
+    {
+      "stage": "P5",
+      "method": "GET",
+      "path": "/api/v1/me/bookings?page=64",
+      "status": 200,
+      "count": 100,
+      "p95ServerMs": 4
+    },
+    {
+      "stage": "P5",
+      "method": "GET",
+      "path": "/api/v1/me/bookings?page=65",
+      "status": 200,
+      "count": 100,
+      "p95ServerMs": 4
+    },
+    {
+      "stage": "P5",
+      "method": "GET",
+      "path": "/api/v1/me/bookings?page=66",
+      "status": 200,
+      "count": 100,
+      "p95ServerMs": 4
+    },
+    {
+      "stage": "P5",
+      "method": "GET",
+      "path": "/api/v1/me/bookings?page=67",
+      "status": 200,
+      "count": 100,
+      "p95ServerMs": 4
+    },
+    {
+      "stage": "P5",
+      "method": "GET",
+      "path": "/api/v1/me/bookings?page=68",
+      "status": 200,
+      "count": 100,
+      "p95ServerMs": 4
+    },
+    {
+      "stage": "P5",
+      "method": "GET",
+      "path": "/api/v1/me/bookings?page=69",
+      "status": 200,
+      "count": 100,
+      "p95ServerMs": 4
+    },
+    {
+      "stage": "P5",
+      "method": "GET",
+      "path": "/api/v1/me/bookings?page=7",
+      "status": 200,
+      "count": 100,
+      "p95ServerMs": 3
+    },
+    {
+      "stage": "P5",
+      "method": "GET",
+      "path": "/api/v1/me/bookings?page=70",
+      "status": 200,
+      "count": 100,
+      "p95ServerMs": 6
+    },
+    {
+      "stage": "P5",
+      "method": "GET",
+      "path": "/api/v1/me/bookings?page=71",
+      "status": 200,
+      "count": 100,
+      "p95ServerMs": 4
+    },
+    {
+      "stage": "P5",
+      "method": "GET",
+      "path": "/api/v1/me/bookings?page=72",
+      "status": 200,
+      "count": 100,
+      "p95ServerMs": 5
+    },
+    {
+      "stage": "P5",
+      "method": "GET",
+      "path": "/api/v1/me/bookings?page=73",
+      "status": 200,
+      "count": 100,
+      "p95ServerMs": 4
+    },
+    {
+      "stage": "P5",
+      "method": "GET",
+      "path": "/api/v1/me/bookings?page=74",
+      "status": 200,
+      "count": 100,
+      "p95ServerMs": 4
+    },
+    {
+      "stage": "P5",
+      "method": "GET",
+      "path": "/api/v1/me/bookings?page=75",
+      "status": 200,
+      "count": 100,
+      "p95ServerMs": 4
+    },
+    {
+      "stage": "P5",
+      "method": "GET",
+      "path": "/api/v1/me/bookings?page=76",
+      "status": 200,
+      "count": 100,
+      "p95ServerMs": 4
+    },
+    {
+      "stage": "P5",
+      "method": "GET",
+      "path": "/api/v1/me/bookings?page=77",
+      "status": 200,
+      "count": 100,
+      "p95ServerMs": 4
+    },
+    {
+      "stage": "P5",
+      "method": "GET",
+      "path": "/api/v1/me/bookings?page=78",
+      "status": 200,
+      "count": 100,
+      "p95ServerMs": 4
+    },
+    {
+      "stage": "P5",
+      "method": "GET",
+      "path": "/api/v1/me/bookings?page=79",
+      "status": 200,
+      "count": 100,
+      "p95ServerMs": 4
+    },
+    {
+      "stage": "P5",
+      "method": "GET",
+      "path": "/api/v1/me/bookings?page=8",
+      "status": 200,
+      "count": 100,
+      "p95ServerMs": 3
+    },
+    {
+      "stage": "P5",
+      "method": "GET",
+      "path": "/api/v1/me/bookings?page=80",
+      "status": 200,
+      "count": 100,
+      "p95ServerMs": 4
+    },
+    {
+      "stage": "P5",
+      "method": "GET",
+      "path": "/api/v1/me/bookings?page=81",
+      "status": 200,
+      "count": 100,
+      "p95ServerMs": 4
+    },
+    {
+      "stage": "P5",
+      "method": "GET",
+      "path": "/api/v1/me/bookings?page=82",
+      "status": 200,
+      "count": 100,
+      "p95ServerMs": 5
+    },
+    {
+      "stage": "P5",
+      "method": "GET",
+      "path": "/api/v1/me/bookings?page=83",
+      "status": 200,
+      "count": 100,
+      "p95ServerMs": 4
+    },
+    {
+      "stage": "P5",
+      "method": "GET",
+      "path": "/api/v1/me/bookings?page=84",
+      "status": 200,
+      "count": 100,
+      "p95ServerMs": 4
+    },
+    {
+      "stage": "P5",
+      "method": "GET",
+      "path": "/api/v1/me/bookings?page=85",
+      "status": 200,
+      "count": 100,
+      "p95ServerMs": 4
+    },
+    {
+      "stage": "P5",
+      "method": "GET",
+      "path": "/api/v1/me/bookings?page=86",
+      "status": 200,
+      "count": 100,
+      "p95ServerMs": 5
+    },
+    {
+      "stage": "P5",
+      "method": "GET",
+      "path": "/api/v1/me/bookings?page=87",
+      "status": 200,
+      "count": 100,
+      "p95ServerMs": 5
+    },
+    {
+      "stage": "P5",
+      "method": "GET",
+      "path": "/api/v1/me/bookings?page=88",
+      "status": 200,
+      "count": 100,
+      "p95ServerMs": 4
+    },
+    {
+      "stage": "P5",
+      "method": "GET",
+      "path": "/api/v1/me/bookings?page=89",
+      "status": 200,
+      "count": 100,
+      "p95ServerMs": 5
+    },
+    {
+      "stage": "P5",
+      "method": "GET",
+      "path": "/api/v1/me/bookings?page=9",
+      "status": 200,
+      "count": 100,
+      "p95ServerMs": 3
+    },
+    {
+      "stage": "P5",
+      "method": "GET",
+      "path": "/api/v1/me/bookings?page=90",
+      "status": 200,
+      "count": 100,
+      "p95ServerMs": 5
+    },
+    {
+      "stage": "P5",
+      "method": "GET",
+      "path": "/api/v1/me/bookings?page=91",
+      "status": 200,
+      "count": 100,
+      "p95ServerMs": 5
+    },
+    {
+      "stage": "P5",
+      "method": "GET",
+      "path": "/api/v1/me/bookings?page=92",
+      "status": 200,
+      "count": 100,
+      "p95ServerMs": 4
+    },
+    {
+      "stage": "P5",
+      "method": "GET",
+      "path": "/api/v1/me/bookings?page=93",
+      "status": 200,
+      "count": 100,
+      "p95ServerMs": 5
+    },
+    {
+      "stage": "P5",
+      "method": "GET",
+      "path": "/api/v1/me/bookings?page=94",
+      "status": 200,
+      "count": 100,
+      "p95ServerMs": 5
+    },
+    {
+      "stage": "P5",
+      "method": "GET",
+      "path": "/api/v1/me/bookings?page=95",
+      "status": 200,
+      "count": 100,
+      "p95ServerMs": 7
+    },
+    {
+      "stage": "P5",
+      "method": "GET",
+      "path": "/api/v1/me/bookings?page=96",
+      "status": 200,
+      "count": 100,
+      "p95ServerMs": 8
+    },
+    {
+      "stage": "P5",
+      "method": "GET",
+      "path": "/api/v1/me/bookings?page=97",
+      "status": 200,
+      "count": 100,
+      "p95ServerMs": 5
+    },
+    {
+      "stage": "P5",
+      "method": "GET",
+      "path": "/api/v1/me/bookings?page=98",
+      "status": 200,
+      "count": 100,
+      "p95ServerMs": 4
+    },
+    {
+      "stage": "P5",
+      "method": "GET",
+      "path": "/api/v1/me/bookings?page=99",
+      "status": 200,
+      "count": 100,
+      "p95ServerMs": 4
+    },
+    {
+      "stage": "P5",
+      "method": "POST",
+      "path": "/login",
+      "status": 302,
+      "count": 1,
+      "p95ServerMs": 287
+    },
+    {
+      "stage": "P6",
+      "method": "GET",
+      "path": "/admin/bookings",
+      "status": 200,
+      "count": 4622,
+      "p95ServerMs": 23
+    },
+    {
+      "stage": "P6",
+      "method": "GET",
+      "path": "/api/v1/me/bookings",
+      "status": 200,
+      "count": 22717,
+      "p95ServerMs": 7
+    },
+    {
+      "stage": "P6",
+      "method": "GET",
+      "path": "/api/v1/occupancy",
+      "status": 200,
+      "count": 21500,
+      "p95ServerMs": 11
+    },
+    {
+      "stage": "P6",
+      "method": "GET",
+      "path": "/api/v1/rooms",
+      "status": 200,
+      "count": 17827,
+      "p95ServerMs": 7
+    },
+    {
+      "stage": "P6",
+      "method": "GET",
+      "path": "/fragments/room-day",
+      "status": 200,
+      "count": 8861,
+      "p95ServerMs": 11
+    },
+    {
+      "stage": "P6",
+      "method": "GET",
+      "path": "/occupancy",
+      "status": 200,
+      "count": 14473,
+      "p95ServerMs": 75
+    },
+    {
+      "stage": "P6",
+      "method": "POST",
+      "path": "/api/v1/bookings",
+      "status": 201,
+      "count": 10722,
+      "p95ServerMs": 95
+    },
+    {
+      "stage": "P6",
+      "method": "POST",
+      "path": "/api/v1/bookings",
+      "status": 409,
+      "count": 1836,
+      "p95ServerMs": 3
+    },
+    {
+      "stage": "P6",
+      "method": "POST",
+      "path": "/api/v1/bookings/{id}/cancel",
+      "status": 200,
+      "count": 5442,
+      "p95ServerMs": 96
+    }
+  ],
+  "metrics": [
+    {
+      "stage": "warmup",
+      "minute": 1,
+      "heapUsed": 107252736.0,
+      "heapAfterGc": 59982968.0,
+      "activeConnections": 0.0,
+      "sessions": 51.0
+    },
+    {
+      "stage": "P1",
+      "minute": 1,
+      "heapUsed": 85942304.0,
+      "heapAfterGc": 59982968.0,
+      "activeConnections": 0.0,
+      "sessions": 51.0
+    },
+    {
+      "stage": "P1",
+      "minute": 2,
+      "heapUsed": 97642160.0,
+      "heapAfterGc": 59982968.0,
+      "activeConnections": 0.0,
+      "sessions": 51.0
+    },
+    {
+      "stage": "P1",
+      "minute": 3,
+      "heapUsed": 79391560.0,
+      "heapAfterGc": 59982968.0,
+      "activeConnections": 0.0,
+      "sessions": 51.0
+    },
+    {
+      "stage": "P1",
+      "minute": 4,
+      "heapUsed": 75613112.0,
+      "heapAfterGc": 59982968.0,
+      "activeConnections": 0.0,
+      "sessions": 51.0
+    },
+    {
+      "stage": "P1",
+      "minute": 5,
+      "heapUsed": 96439512.0,
+      "heapAfterGc": 59982968.0,
+      "activeConnections": 0.0,
+      "sessions": 51.0
+    },
+    {
+      "stage": "P1",
+      "minute": 6,
+      "heapUsed": 111652264.0,
+      "heapAfterGc": 59982968.0,
+      "activeConnections": 0.0,
+      "sessions": 51.0
+    },
+    {
+      "stage": "P1",
+      "minute": 7,
+      "heapUsed": 82633488.0,
+      "heapAfterGc": 46047600.0,
+      "activeConnections": 0.0,
+      "sessions": 51.0
+    },
+    {
+      "stage": "P1",
+      "minute": 8,
+      "heapUsed": 79492120.0,
+      "heapAfterGc": 46047600.0,
+      "activeConnections": 0.0,
+      "sessions": 51.0
+    },
+    {
+      "stage": "P1",
+      "minute": 9,
+      "heapUsed": 47268312.0,
+      "heapAfterGc": 46047600.0,
+      "activeConnections": 0.0,
+      "sessions": 51.0
+    },
+    {
+      "stage": "P1",
+      "minute": 10,
+      "heapUsed": 76082448.0,
+      "heapAfterGc": 46047600.0,
+      "activeConnections": 0.0,
+      "sessions": 51.0
+    },
+    {
+      "stage": "P1",
+      "minute": 11,
+      "heapUsed": 71405512.0,
+      "heapAfterGc": 46047600.0,
+      "activeConnections": 0.0,
+      "sessions": 51.0
+    },
+    {
+      "stage": "P1",
+      "minute": 12,
+      "heapUsed": 83401984.0,
+      "heapAfterGc": 46047600.0,
+      "activeConnections": 0.0,
+      "sessions": 51.0
+    },
+    {
+      "stage": "P1",
+      "minute": 13,
+      "heapUsed": 58211808.0,
+      "heapAfterGc": 46047600.0,
+      "activeConnections": 0.0,
+      "sessions": 51.0
+    },
+    {
+      "stage": "P1",
+      "minute": 14,
+      "heapUsed": 70538816.0,
+      "heapAfterGc": 46047600.0,
+      "activeConnections": 0.0,
+      "sessions": 51.0
+    },
+    {
+      "stage": "P2",
+      "minute": 1,
+      "heapUsed": 67997664.0,
+      "heapAfterGc": 46047600.0,
+      "activeConnections": 0.0,
+      "sessions": 51.0
+    },
+    {
+      "stage": "P2",
+      "minute": 2,
+      "heapUsed": 60795472.0,
+      "heapAfterGc": 46047600.0,
+      "activeConnections": 0.0,
+      "sessions": 51.0
+    },
+    {
+      "stage": "P2",
+      "minute": 3,
+      "heapUsed": 66530496.0,
+      "heapAfterGc": 46047600.0,
+      "activeConnections": 0.0,
+      "sessions": 51.0
+    },
+    {
+      "stage": "P2",
+      "minute": 4,
+      "heapUsed": 90428272.0,
+      "heapAfterGc": 46047600.0,
+      "activeConnections": 0.0,
+      "sessions": 51.0
+    },
+    {
+      "stage": "P2",
+      "minute": 5,
+      "heapUsed": 69761240.0,
+      "heapAfterGc": 46047600.0,
+      "activeConnections": 0.0,
+      "sessions": 51.0
+    },
+    {
+      "stage": "P2",
+      "minute": 6,
+      "heapUsed": 55380096.0,
+      "heapAfterGc": 46047600.0,
+      "activeConnections": 0.0,
+      "sessions": 51.0
+    },
+    {
+      "stage": "P2",
+      "minute": 7,
+      "heapUsed": 85820800.0,
+      "heapAfterGc": 46047600.0,
+      "activeConnections": 0.0,
+      "sessions": 51.0
+    },
+    {
+      "stage": "P2",
+      "minute": 8,
+      "heapUsed": 78549664.0,
+      "heapAfterGc": 46047600.0,
+      "activeConnections": 0.0,
+      "sessions": 51.0
+    },
+    {
+      "stage": "P2",
+      "minute": 9,
+      "heapUsed": 68329664.0,
+      "heapAfterGc": 46047600.0,
+      "activeConnections": 0.0,
+      "sessions": 51.0
+    },
+    {
+      "stage": "P3",
+      "minute": 1,
+      "heapUsed": 91414032.0,
+      "heapAfterGc": 46047600.0,
+      "activeConnections": 1.0,
+      "sessions": 336.0
+    },
+    {
+      "stage": "P3",
+      "minute": 2,
+      "heapUsed": 105970528.0,
+      "heapAfterGc": 46047600.0,
+      "activeConnections": 0.0,
+      "sessions": 351.0
+    },
+    {
+      "stage": "P3",
+      "minute": 3,
+      "heapUsed": 101179032.0,
+      "heapAfterGc": 46047600.0,
+      "activeConnections": 0.0,
+      "sessions": 351.0
+    },
+    {
+      "stage": "P3",
+      "minute": 4,
+      "heapUsed": 127685720.0,
+      "heapAfterGc": 46047600.0,
+      "activeConnections": 0.0,
+      "sessions": 351.0
+    },
+    {
+      "stage": "P6",
+      "minute": 1,
+      "heapUsed": 137647528.0,
+      "heapAfterGc": 46047600.0,
+      "activeConnections": 0.0,
+      "sessions": 352.0
+    },
+    {
+      "stage": "P6",
+      "minute": 2,
+      "heapUsed": 137810880.0,
+      "heapAfterGc": 46047600.0,
+      "activeConnections": 1.0,
+      "sessions": 353.0
+    },
+    {
+      "stage": "P6",
+      "minute": 3,
+      "heapUsed": 128036440.0,
+      "heapAfterGc": 46047600.0,
+      "activeConnections": 0.0,
+      "sessions": 354.0
+    },
+    {
+      "stage": "P6",
+      "minute": 4,
+      "heapUsed": 108229512.0,
+      "heapAfterGc": 46047600.0,
+      "activeConnections": 0.0,
+      "sessions": 355.0
+    },
+    {
+      "stage": "P6",
+      "minute": 5,
+      "heapUsed": 117102344.0,
+      "heapAfterGc": 46047600.0,
+      "activeConnections": 0.0,
+      "sessions": 356.0
+    },
+    {
+      "stage": "P6",
+      "minute": 6,
+      "heapUsed": 119561888.0,
+      "heapAfterGc": 46047600.0,
+      "activeConnections": 0.0,
+      "sessions": 357.0
+    },
+    {
+      "stage": "P6",
+      "minute": 7,
+      "heapUsed": 104363488.0,
+      "heapAfterGc": 46047600.0,
+      "activeConnections": 0.0,
+      "sessions": 358.0
+    },
+    {
+      "stage": "P6",
+      "minute": 8,
+      "heapUsed": 128074176.0,
+      "heapAfterGc": 46047600.0,
+      "activeConnections": 0.0,
+      "sessions": 359.0
+    },
+    {
+      "stage": "P6",
+      "minute": 9,
+      "heapUsed": 115012480.0,
+      "heapAfterGc": 46047600.0,
+      "activeConnections": 0.0,
+      "sessions": 360.0
+    },
+    {
+      "stage": "P6",
+      "minute": 10,
+      "heapUsed": 130086784.0,
+      "heapAfterGc": 46047600.0,
+      "activeConnections": 0.0,
+      "sessions": 361.0
+    },
+    {
+      "stage": "P6",
+      "minute": 11,
+      "heapUsed": 142863584.0,
+      "heapAfterGc": 46047600.0,
+      "activeConnections": 0.0,
+      "sessions": 362.0
+    },
+    {
+      "stage": "P6",
+      "minute": 12,
+      "heapUsed": 133874624.0,
+      "heapAfterGc": 46047600.0,
+      "activeConnections": 0.0,
+      "sessions": 363.0
+    },
+    {
+      "stage": "P6",
+      "minute": 13,
+      "heapUsed": 103950064.0,
+      "heapAfterGc": 46047600.0,
+      "activeConnections": 0.0,
+      "sessions": 364.0
+    },
+    {
+      "stage": "P6",
+      "minute": 14,
+      "heapUsed": 106521344.0,
+      "heapAfterGc": 46047600.0,
+      "activeConnections": 0.0,
+      "sessions": 365.0
+    },
+    {
+      "stage": "P6",
+      "minute": 15,
+      "heapUsed": 135283680.0,
+      "heapAfterGc": 46047600.0,
+      "activeConnections": 0.0,
+      "sessions": 366.0
+    },
+    {
+      "stage": "P6",
+      "minute": 16,
+      "heapUsed": 140679792.0,
+      "heapAfterGc": 46047600.0,
+      "activeConnections": 0.0,
+      "sessions": 367.0
+    },
+    {
+      "stage": "P6",
+      "minute": 17,
+      "heapUsed": 103471992.0,
+      "heapAfterGc": 46047600.0,
+      "activeConnections": 0.0,
+      "sessions": 367.0
+    },
+    {
+      "stage": "P6",
+      "minute": 18,
+      "heapUsed": 134258776.0,
+      "heapAfterGc": 46047600.0,
+      "activeConnections": 0.0,
+      "sessions": 367.0
+    },
+    {
+      "stage": "P6",
+      "minute": 19,
+      "heapUsed": 112639536.0,
+      "heapAfterGc": 46047600.0,
+      "activeConnections": 0.0,
+      "sessions": 367.0
+    },
+    {
+      "stage": "P6",
+      "minute": 20,
+      "heapUsed": 115467960.0,
+      "heapAfterGc": 46047600.0,
+      "activeConnections": 0.0,
+      "sessions": 367.0
+    },
+    {
+      "stage": "P6",
+      "minute": 21,
+      "heapUsed": 104052840.0,
+      "heapAfterGc": 46047600.0,
+      "activeConnections": 0.0,
+      "sessions": 367.0
+    },
+    {
+      "stage": "P6",
+      "minute": 22,
+      "heapUsed": 120445080.0,
+      "heapAfterGc": 46047600.0,
+      "activeConnections": 0.0,
+      "sessions": 367.0
+    },
+    {
+      "stage": "P6",
+      "minute": 23,
+      "heapUsed": 118319232.0,
+      "heapAfterGc": 46047600.0,
+      "activeConnections": 0.0,
+      "sessions": 367.0
+    },
+    {
+      "stage": "P6",
+      "minute": 24,
+      "heapUsed": 136573384.0,
+      "heapAfterGc": 46047600.0,
+      "activeConnections": 0.0,
+      "sessions": 367.0
+    },
+    {
+      "stage": "P6",
+      "minute": 25,
+      "heapUsed": 128723544.0,
+      "heapAfterGc": 46047600.0,
+      "activeConnections": 0.0,
+      "sessions": 367.0
+    },
+    {
+      "stage": "P6",
+      "minute": 26,
+      "heapUsed": 116662312.0,
+      "heapAfterGc": 46047600.0,
+      "activeConnections": 0.0,
+      "sessions": 367.0
+    },
+    {
+      "stage": "P6",
+      "minute": 27,
+      "heapUsed": 135757936.0,
+      "heapAfterGc": 46047600.0,
+      "activeConnections": 0.0,
+      "sessions": 367.0
+    },
+    {
+      "stage": "P6",
+      "minute": 28,
+      "heapUsed": 121921752.0,
+      "heapAfterGc": 46047600.0,
+      "activeConnections": 0.0,
+      "sessions": 367.0
+    },
+    {
+      "stage": "P6",
+      "minute": 29,
+      "heapUsed": 136265520.0,
+      "heapAfterGc": 46047600.0,
+      "activeConnections": 0.0,
+      "sessions": 367.0
+    },
+    {
+      "stage": "P6",
+      "minute": 30,
+      "heapUsed": 108425200.0,
+      "heapAfterGc": 46047600.0,
+      "activeConnections": 0.0,
+      "sessions": 367.0
+    },
+    {
+      "stage": "P6",
+      "minute": 31,
+      "heapUsed": 115556896.0,
+      "heapAfterGc": 46047600.0,
+      "activeConnections": 0.0,
+      "sessions": 367.0
+    },
+    {
+      "stage": "P6",
+      "minute": 32,
+      "heapUsed": 115315160.0,
+      "heapAfterGc": 46047600.0,
+      "activeConnections": 0.0,
+      "sessions": 367.0
+    },
+    {
+      "stage": "P6",
+      "minute": 33,
+      "heapUsed": 126448024.0,
+      "heapAfterGc": 46047600.0,
+      "activeConnections": 0.0,
+      "sessions": 367.0
+    },
+    {
+      "stage": "P6",
+      "minute": 34,
+      "heapUsed": 136625880.0,
+      "heapAfterGc": 46047600.0,
+      "activeConnections": 0.0,
+      "sessions": 367.0
+    },
+    {
+      "stage": "P6",
+      "minute": 35,
+      "heapUsed": 136102408.0,
+      "heapAfterGc": 46047600.0,
+      "activeConnections": 0.0,
+      "sessions": 367.0
+    },
+    {
+      "stage": "P6",
+      "minute": 36,
+      "heapUsed": 138132120.0,
+      "heapAfterGc": 46047600.0,
+      "activeConnections": 0.0,
+      "sessions": 367.0
+    },
+    {
+      "stage": "P6",
+      "minute": 37,
+      "heapUsed": 110983248.0,
+      "heapAfterGc": 46047600.0,
+      "activeConnections": 0.0,
+      "sessions": 367.0
+    },
+    {
+      "stage": "P6",
+      "minute": 38,
+      "heapUsed": 142253592.0,
+      "heapAfterGc": 46047600.0,
+      "activeConnections": 0.0,
+      "sessions": 368.0
+    },
+    {
+      "stage": "P6",
+      "minute": 39,
+      "heapUsed": 121772856.0,
+      "heapAfterGc": 46047600.0,
+      "activeConnections": 0.0,
+      "sessions": 368.0
+    },
+    {
+      "stage": "P6",
+      "minute": 40,
+      "heapUsed": 127543800.0,
+      "heapAfterGc": 46047600.0,
+      "activeConnections": 0.0,
+      "sessions": 368.0
+    },
+    {
+      "stage": "P6",
+      "minute": 41,
+      "heapUsed": 105349760.0,
+      "heapAfterGc": 46047600.0,
+      "activeConnections": 0.0,
+      "sessions": 368.0
+    },
+    {
+      "stage": "P6",
+      "minute": 42,
+      "heapUsed": 144920288.0,
+      "heapAfterGc": 46047600.0,
+      "activeConnections": 0.0,
+      "sessions": 368.0
+    },
+    {
+      "stage": "P6",
+      "minute": 43,
+      "heapUsed": 111044744.0,
+      "heapAfterGc": 46047600.0,
+      "activeConnections": 0.0,
+      "sessions": 368.0
+    },
+    {
+      "stage": "P6",
+      "minute": 44,
+      "heapUsed": 130816728.0,
+      "heapAfterGc": 46047600.0,
+      "activeConnections": 0.0,
+      "sessions": 368.0
+    },
+    {
+      "stage": "P6",
+      "minute": 45,
+      "heapUsed": 126159880.0,
+      "heapAfterGc": 46047600.0,
+      "activeConnections": 0.0,
+      "sessions": 368.0
+    },
+    {
+      "stage": "P6",
+      "minute": 46,
+      "heapUsed": 137873024.0,
+      "heapAfterGc": 46047600.0,
+      "activeConnections": 0.0,
+      "sessions": 368.0
+    },
+    {
+      "stage": "P6",
+      "minute": 47,
+      "heapUsed": 141384032.0,
+      "heapAfterGc": 46047600.0,
+      "activeConnections": 0.0,
+      "sessions": 368.0
+    },
+    {
+      "stage": "P6",
+      "minute": 48,
+      "heapUsed": 108236856.0,
+      "heapAfterGc": 46047600.0,
+      "activeConnections": 0.0,
+      "sessions": 368.0
+    },
+    {
+      "stage": "P6",
+      "minute": 49,
+      "heapUsed": 115308944.0,
+      "heapAfterGc": 46047600.0,
+      "activeConnections": 0.0,
+      "sessions": 368.0
+    },
+    {
+      "stage": "P6",
+      "minute": 50,
+      "heapUsed": 130462896.0,
+      "heapAfterGc": 46047600.0,
+      "activeConnections": 0.0,
+      "sessions": 368.0
+    },
+    {
+      "stage": "P6",
+      "minute": 51,
+      "heapUsed": 120282808.0,
+      "heapAfterGc": 46047600.0,
+      "activeConnections": 0.0,
+      "sessions": 368.0
+    },
+    {
+      "stage": "P6",
+      "minute": 52,
+      "heapUsed": 109628776.0,
+      "heapAfterGc": 46047600.0,
+      "activeConnections": 0.0,
+      "sessions": 368.0
+    },
+    {
+      "stage": "P6",
+      "minute": 53,
+      "heapUsed": 118821152.0,
+      "heapAfterGc": 46047600.0,
+      "activeConnections": 0.0,
+      "sessions": 367.0
+    },
+    {
+      "stage": "P6",
+      "minute": 54,
+      "heapUsed": 128546168.0,
+      "heapAfterGc": 46047600.0,
+      "activeConnections": 0.0,
+      "sessions": 367.0
+    },
+    {
+      "stage": "P6",
+      "minute": 55,
+      "heapUsed": 113990032.0,
+      "heapAfterGc": 46047600.0,
+      "activeConnections": 0.0,
+      "sessions": 367.0
+    },
+    {
+      "stage": "P6",
+      "minute": 56,
+      "heapUsed": 137535912.0,
+      "heapAfterGc": 46047600.0,
+      "activeConnections": 0.0,
+      "sessions": 367.0
+    },
+    {
+      "stage": "P6",
+      "minute": 57,
+      "heapUsed": 121156184.0,
+      "heapAfterGc": 46047600.0,
+      "activeConnections": 0.0,
+      "sessions": 367.0
+    },
+    {
+      "stage": "P6",
+      "minute": 58,
+      "heapUsed": 135689208.0,
+      "heapAfterGc": 46047600.0,
+      "activeConnections": 0.0,
+      "sessions": 367.0
+    },
+    {
+      "stage": "P6",
+      "minute": 59,
+      "heapUsed": 134107408.0,
+      "heapAfterGc": 46047600.0,
+      "activeConnections": 0.0,
+      "sessions": 367.0
+    },
+    {
+      "stage": "P6",
+      "minute": 60.0,
+      "heapUsed": 141915696.0,
+      "heapAfterGc": 46047600.0,
+      "activeConnections": 0.0,
+      "sessions": 367.0
+    }
+  ],
+  "p4Checks": [
+    {
+      "repeat": 1,
+      "sameSlot": {
+        "409": 49,
+        "201": 1
+      },
+      "differentSlots": 50
+    },
+    {
+      "repeat": 2,
+      "sameSlot": {
+        "409": 49,
+        "201": 1
+      },
+      "differentSlots": 50
+    },
+    {
+      "repeat": 3,
+      "sameSlot": {
+        "409": 49,
+        "201": 1
+      },
+      "differentSlots": 50
+    },
+    {
+      "repeat": 4,
+      "sameSlot": {
+        "409": 49,
+        "201": 1
+      },
+      "differentSlots": 50
+    },
+    {
+      "repeat": 5,
+      "sameSlot": {
+        "409": 49,
+        "201": 1
+      },
+      "differentSlots": 50
+    },
+    {
+      "repeat": 6,
+      "sameSlot": {
+        "409": 49,
+        "201": 1
+      },
+      "differentSlots": 50
+    },
+    {
+      "repeat": 7,
+      "sameSlot": {
+        "409": 49,
+        "201": 1
+      },
+      "differentSlots": 50
+    },
+    {
+      "repeat": 8,
+      "sameSlot": {
+        "409": 49,
+        "201": 1
+      },
+      "differentSlots": 50
+    },
+    {
+      "repeat": 9,
+      "sameSlot": {
+        "409": 49,
+        "201": 1
+      },
+      "differentSlots": 50
+    },
+    {
+      "repeat": 10,
+      "sameSlot": {
+        "409": 49,
+        "201": 1
+      },
+      "differentSlots": 50
+    },
+    {
+      "repeat": 11,
+      "sameSlot": {
+        "409": 49,
+        "201": 1
+      },
+      "differentSlots": 50
+    },
+    {
+      "repeat": 12,
+      "sameSlot": {
+        "409": 49,
+        "201": 1
+      },
+      "differentSlots": 50
+    },
+    {
+      "repeat": 13,
+      "sameSlot": {
+        "409": 49,
+        "201": 1
+      },
+      "differentSlots": 50
+    },
+    {
+      "repeat": 14,
+      "sameSlot": {
+        "409": 49,
+        "201": 1
+      },
+      "differentSlots": 50
+    },
+    {
+      "repeat": 15,
+      "sameSlot": {
+        "409": 49,
+        "201": 1
+      },
+      "differentSlots": 50
+    },
+    {
+      "repeat": 16,
+      "sameSlot": {
+        "409": 49,
+        "201": 1
+      },
+      "differentSlots": 50
+    },
+    {
+      "repeat": 17,
+      "sameSlot": {
+        "409": 49,
+        "201": 1
+      },
+      "differentSlots": 50
+    },
+    {
+      "repeat": 18,
+      "sameSlot": {
+        "409": 49,
+        "201": 1
+      },
+      "differentSlots": 50
+    },
+    {
+      "repeat": 19,
+      "sameSlot": {
+        "201": 1,
+        "409": 49
+      },
+      "differentSlots": 50
+    },
+    {
+      "repeat": 20,
+      "sameSlot": {
+        "409": 49,
+        "201": 1
+      },
+      "differentSlots": 50
+    }
+  ],
+  "commitProbeP95Ms": 112.596,
+  "invariantAudit": "PASS",
+  "errors5xx": 0,
+  "missingServerDurations": 0,
+  "boundary": "Separate app/DB containers and host generator share one Docker Desktop host. Diagnostic profile shortens durations and cannot satisfy TS-22. Heap-after-GC uses JVM metric; absent/zero measurements are inconclusive."
+}

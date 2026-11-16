@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Компоненти: Переговорні</title>
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/fonts.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/timeline.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">До змісту</a>
+  <header class="app-header">
+    <a class="app-name" href="occupancy.html">Переговорні</a>
+    <nav class="app-nav" aria-label="Основна навігація">
+      <a class="nav-link" href="occupancy.html">Зайнятість</a>
+      <a class="nav-link" href="rooms.html">Кімнати</a>
+      <a class="nav-link" href="my-bookings.html">Мої бронювання</a>
+    </nav>
+    <div class="app-user">
+      <span class="app-user-name">Олена Коваль</span>
+      <button class="btn" type="button">Вийти</button>
+    </div>
+  </header>
+  <main id="main" class="page-shell">
+    <div class="page-head"><h1>Компоненти</h1></div>
+    <div id="alerts" class="alerts" aria-live="polite"></div>
+
+    <section class="form-section" aria-labelledby="buttons-title">
+      <h2 id="buttons-title">Кнопки</h2>
+      <div class="form-actions">
+        <button class="btn btn-primary" type="button">Забронювати</button>
+        <button class="btn" type="button">Скасувати</button>
+        <button class="link-action" type="button">Змінити</button>
+        <button class="link-danger" type="button">Деактивувати</button>
+        <button class="btn btn-primary" type="button" disabled>Недоступно</button>
+      </div>
+    </section>
+
+    <section class="form-section" aria-labelledby="fields-title">
+      <h2 id="fields-title">Поля</h2>
+      <div class="form-stack">
+        <div class="field">
+          <label class="field-label" for="sample-name">Назва зустрічі</label>
+          <input class="field-control" id="sample-name" type="text" value="Планування спринту">
+        </div>
+        <div class="field">
+          <label class="field-label" for="sample-room">Кімната</label>
+          <select class="field-control" id="sample-room">
+            <option value="dnipro">Дніпро</option>
+            <option value="desna">Десна</option>
+          </select>
+        </div>
+        <div class="field">
+          <label class="field-label" for="sample-date">Дата</label>
+          <input class="field-control" id="sample-date" type="date" value="2026-10-20">
+        </div>
+        <div class="field">
+          <label class="field-label" for="sample-hint">Місткість</label>
+          <input class="field-control" id="sample-hint" type="number" min="1" value="8" aria-describedby="capacity-hint">
+          <span class="field-hint" id="capacity-hint">Кількість учасників зустрічі.</span>
+        </div>
+        <div class="field">
+          <label class="field-label" for="sample-error">Назва зустрічі</label>
+          <input class="field-control" id="sample-error" type="text" aria-invalid="true" aria-describedby="sample-error-text">
+          <span class="field-error" id="sample-error-text">
+            <svg aria-hidden="true" focusable="false"><use href="icons.svg#error"></use></svg>
+            Укажіть назву зустрічі.
+          </span>
+        </div>
+      </div>
+    </section>
+
+    <section class="form-section" aria-labelledby="messages-title">
+      <h2 id="messages-title">Повідомлення</h2>
+      <div class="alerts">
+        <div class="alert alert-error" role="alert">
+          <svg aria-hidden="true" focusable="false"><use href="icons.svg#error"></use></svg>
+          <span class="alert-text">Кімната вже зайнята на цей час.</span>
+        </div>
+        <div class="alert alert-success" role="status">
+          <svg aria-hidden="true" focusable="false"><use href="icons.svg#ok"></use></svg>
+          <span class="alert-text">Бронювання створено.</span>
+        </div>
+        <div class="alert alert-info" role="status">
+          <svg aria-hidden="true" focusable="false"><use href="icons.svg#info"></use></svg>
+          <span class="alert-text">Від 15 хвилин до 4 годин, з 08:00 до 20:00.</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="form-section" aria-labelledby="table-title">
+      <h2 id="table-title">Таблиця бронювань</h2>
+      <div class="table-wrap">
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th scope="col">Дата</th>
+              <th scope="col">Час</th>
+              <th scope="col">Кімната</th>
+              <th scope="col">Назва</th>
+              <th scope="col">Стан</th>
+              <th scope="col"><span class="sr-only">Дія</span></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="fresh">
+              <td class="cell-numeric">вт 20.10</td>
+              <td class="cell-numeric">14:00–15:00</td>
+              <td>Дніпро</td>
+              <td>Огляд бюджету на четвертий квартал</td>
+              <td><span class="status-upcoming">Заплановано</span></td>
+              <td class="cell-actions"><button class="link-danger" type="button">Скасувати бронювання</button></td>
+            </tr>
+            <tr>
+              <td class="cell-numeric">вт 20.10</td>
+              <td class="cell-numeric">10:00–11:00</td>
+              <td>Десна</td>
+              <td>Планування спринту</td>
+              <td><span class="status-current">Триває</span></td>
+              <td class="cell-actions"><button class="link-danger" type="button">Скасувати бронювання</button></td>
+            </tr>
+            <tr>
+              <td class="cell-numeric">пн 19.10</td>
+              <td class="cell-numeric">08:00–09:00</td>
+              <td>Карпати</td>
+              <td>Співбесіда: бекенд-розробник</td>
+              <td><span class="status-muted">Завершено</span></td>
+              <td class="cell-actions"></td>
+            </tr>
+            <tr>
+              <td class="cell-numeric">пн 19.10</td>
+              <td class="cell-numeric">16:00–17:00</td>
+              <td>Дніпро</td>
+              <td>Огляд результатів</td>
+              <td><span class="status-muted">Скасовано</span></td>
+              <td class="cell-actions"></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="form-section" aria-labelledby="tabs-title">
+      <h2 id="tabs-title">Вкладки</h2>
+      <nav class="tabs" aria-label="Період бронювань">
+        <a class="tab" href="my-bookings.html" aria-current="page">Сьогодні й далі</a>
+        <a class="tab" href="my-bookings.html?period=past">Раніше</a>
+      </nav>
+    </section>
+
+    <section class="form-section" aria-labelledby="pager-title">
+      <h2 id="pager-title">Сторінки списку</h2>
+      <nav class="pager" aria-label="Сторінки бронювань">
+        <span class="pager-disabled" aria-disabled="true">Попередня сторінка</span>
+        <span class="pager-current" aria-current="page">Сторінка 1</span>
+        <a href="my-bookings.html?page=2">Наступна сторінка</a>
+      </nav>
+    </section>
+
+    <section class="form-section" aria-labelledby="links-title">
+      <h2 id="links-title">Посилання</h2>
+      <p><a href="occupancy.html">Зайнятість</a></p>
+    </section>
+  </main>
+</body>
+</html>

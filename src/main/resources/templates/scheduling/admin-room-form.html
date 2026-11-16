@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="uk" xmlns:th="http://www.thymeleaf.org" th:replace="~{layout/shell :: page(${roomId != null ? 'Редагування кімнати' : 'Нова кімната'}, ~{::page-content})}">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title th:text="${roomId != null ? 'Редагування кімнати' : 'Нова кімната'} + ': Переговорні'"></title>
+  <link rel="stylesheet" th:href="@{/css/tokens.css}">
+  <link rel="stylesheet" th:href="@{/css/fonts.css}">
+  <link rel="stylesheet" th:href="@{/css/base.css}">
+  <link rel="stylesheet" th:href="@{/css/components.css}">
+  <link rel="stylesheet" th:href="@{/css/timeline.css}">
+  <script th:src="@{/js/htmx.min.js}"></script>
+  <script th:src="@{/js/htmx-swap.js}"></script>
+</head>
+<body>
+  <section th:fragment="page-content">
+    <div class="page-head">
+      <h1 th:text="${roomId != null ? 'Редагування кімнати' : 'Нова кімната'}"></h1>
+    </div>
+    
+
+    <form th:fragment="form" id="room-form" class="form-stack"
+          th:action="@{${roomId != null ? '/admin/rooms/' + roomId : '/admin/rooms'}}"
+          th:hx-post="@{${roomId != null ? '/admin/rooms/' + roomId : '/admin/rooms'}}" hx-target="#room-form" hx-swap="outerHTML" hx-disabled-elt="button"
+          method="post">
+      <div th:replace="~{components/field-error :: summary}"></div>
+      <div class="field" th:classappend="${fieldErrors != null and fieldErrors['name'] != null ? 'field-error' : ''}">
+        <label class="field-label" for="room-name">Назва</label>
+        <input class="field-control" id="room-name" name="name" type="text" required
+               th:value="${room.name}"
+               th:attr="aria-invalid=${fieldErrors != null and fieldErrors['name'] != null ? 'true' : null},aria-describedby=${fieldErrors != null and fieldErrors['name'] != null ? 'room-name-error' : null}">
+        <span th:if="${fieldErrors != null and fieldErrors['name'] != null}"
+              th:replace="~{components/field-error :: message('name')}"></span>
+      </div>
+      <div class="field" th:classappend="${fieldErrors != null and fieldErrors['floor'] != null ? 'field-error' : ''}">
+        <label class="field-label" for="room-floor">Поверх</label>
+        <input class="field-control" id="room-floor" name="floor" type="number" min="1" step="1" required
+               th:value="${room.floor}"
+               th:attr="aria-invalid=${fieldErrors != null and fieldErrors['floor'] != null ? 'true' : null},aria-describedby=${fieldErrors != null and fieldErrors['floor'] != null ? 'room-floor-error' : null}">
+        <span th:if="${fieldErrors != null and fieldErrors['floor'] != null}"
+              th:replace="~{components/field-error :: message('floor')}"></span>
+      </div>
+      <div class="field" th:classappend="${fieldErrors != null and fieldErrors['capacity'] != null ? 'field-error' : ''}">
+        <label class="field-label" for="room-capacity">Місткість</label>
+        <input class="field-control" id="room-capacity" name="capacity" type="number" min="1" step="1" required
+               th:value="${room.capacity}"
+               th:attr="aria-invalid=${fieldErrors != null and fieldErrors['capacity'] != null ? 'true' : null},aria-describedby=${fieldErrors != null and fieldErrors['capacity'] != null ? 'room-capacity-error' : null}">
+        <span th:if="${fieldErrors != null and fieldErrors['capacity'] != null}"
+              th:replace="~{components/field-error :: message('capacity')}"></span>
+      </div>
+      <div class="field" th:classappend="${fieldErrors != null and fieldErrors['equipment'] != null ? 'field-error' : ''}">
+        <label class="field-label" for="room-equipment">Обладнання</label>
+        <textarea class="field-control" id="room-equipment" name="equipment" rows="3" maxlength="500"
+                  th:text="${room.equipment}"
+                  th:attr="aria-describedby=${fieldErrors != null and fieldErrors['equipment'] != null ? 'room-equipment-error equipment-hint' : 'equipment-hint'},aria-invalid=${fieldErrors != null and fieldErrors['equipment'] != null ? 'true' : null}"></textarea>
+        <span class="field-hint" id="equipment-hint">Необов'язково. До 500 символів.</span>
+        <span th:if="${fieldErrors != null and fieldErrors['equipment'] != null}"
+              th:replace="~{components/field-error :: message('equipment')}"></span>
+      </div>
+      <div class="form-actions">
+        <button class="btn btn-primary" type="submit" th:text="${roomId != null ? 'Зберегти зміни' : 'Створити кімнату'}"></button>
+      </div>
+    </form>
+  </section>
+</body>
+</html>

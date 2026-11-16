@@ -1,0 +1,72 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  min-width: 1024px;
+  color-scheme: light;
+}
+
+body {
+  min-width: 1024px;
+  margin: 0;
+  background: var(--page);
+  color: var(--ink);
+  font-family: "Fira Sans", Arial, sans-serif;
+  font-size: var(--body-size);
+  font-weight: 400;
+  line-height: 1.45;
+}
+
+h1, h2, h3, p {
+  margin-top: 0;
+}
+
+h1 {
+  margin-bottom: 0;
+  font-size: var(--h1-size);
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+h2 {
+  margin-bottom: var(--s4);
+  font-size: var(--h2-size);
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+p {
+  max-width: 70ch;
+  margin-bottom: var(--s4);
+}
+
+a {
+  color: var(--blue);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  transition: color var(--transition-time);
+}
+
+a:hover {
+  color: var(--blue-hover);
+}
+
+button, input, select, textarea {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+:focus-visible {
+  outline: 2px solid var(--blue);
+  outline-offset: 2px;
+}
+
+[disabled] {
+  cursor: not-allowed;
+}

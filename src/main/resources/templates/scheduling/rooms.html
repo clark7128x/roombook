@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="uk" xmlns:th="http://www.thymeleaf.org" th:replace="~{layout/shell :: page('Кімнати', ~{::page-content})}">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Кімнати: Переговорні</title>
+  <link rel="stylesheet" th:href="@{/css/tokens.css}">
+  <link rel="stylesheet" th:href="@{/css/fonts.css}">
+  <link rel="stylesheet" th:href="@{/css/base.css}">
+  <link rel="stylesheet" th:href="@{/css/components.css}">
+  <link rel="stylesheet" th:href="@{/css/timeline.css}">
+</head>
+<body>
+  <section th:fragment="page-content">
+    <div class="page-head">
+      <h1>Кімнати</h1>
+    </div>
+    
+
+    <section th:if="${searchDate != null}" aria-labelledby="availability-title">
+      <div class="section-head">
+        <h2 id="availability-title">Вільні на інтервал</h2>
+      </div>
+      <form class="filters" th:action="@{/rooms}" method="get">
+        <div class="field filter-field">
+          <label class="field-label" for="date">Дата</label>
+          <input class="field-control" id="date" name="date" type="date" th:value="${searchDate}" required>
+        </div>
+        <div class="field filter-field">
+          <label class="field-label" for="start">З</label>
+          <select class="field-control" id="start" name="start" required>
+            <option th:each="time : ${starts}" th:value="${time}" th:text="${time}" th:selected="${time == searchStart}"></option>
+          </select>
+        </div>
+        <div class="field filter-field">
+          <label class="field-label" for="end">До</label>
+          <select class="field-control" id="end" name="end" required>
+            <option th:each="time : ${ends}" th:value="${time}" th:text="${time}" th:selected="${time == searchEnd}"></option>
+          </select>
+        </div>
+        <div class="field filter-field">
+          <label class="field-label" for="floor">Поверх</label>
+          <select class="field-control" id="floor" name="floor">
+            <option value="" th:selected="${floor == null}">Усі</option>
+            <option th:each="f : ${#numbers.sequence(-5, 100)}" th:value="${f}" th:text="${f}" th:selected="${floor != null and floor == f}"></option>
+          </select>
+        </div>
+        <div class="field filter-field">
+          <label class="field-label" for="minCapacity">Місткість від</label>
+          <input class="field-control" id="minCapacity" name="minCapacity" type="number" min="1" step="1" th:value="${minCapacity}">
+        </div>
+        <div class="filter-actions">
+          <button class="btn btn-primary" type="submit">Знайти вільні</button>
+        </div>
+      </form>
+
+      <div class="table-wrap" th:fragment="room-list">
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th scope="col">Назва</th>
+              <th scope="col">Поверх</th>
+              <th scope="col">Місткість</th>
+              <th scope="col">Обладнання</th>
+              <th scope="col"><span class="sr-only">Дія</span></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr th:each="room : ${rooms}">
+              <td th:text="${room.name}"></td>
+              <td class="cell-numeric" th:text="${room.floor}"></td>
+              <td class="cell-numeric" th:text="${room.capacity}"></td>
+              <td class="cell-equipment" th:text="${room.equipment ?: ''}"></td>
+              <td class="cell-actions"><a class="link-action" th:href="@{/bookings/new(roomId=${room.id},date=${searchDate},start=${searchStart},end=${searchEnd})}">Забронювати</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <div th:if="${searchDate == null}"><div th:replace="~{::room-list}"></div></div>
+    <section th:if="${searchDate == null}" aria-labelledby="availability-title">
+      <div class="section-head">
+        <h2 id="availability-title">Вільні на інтервал</h2>
+      </div>
+      <form class="filters" th:action="@{/rooms}" method="get">
+        <div class="field filter-field">
+          <label class="field-label" for="date">Дата</label>
+          <input class="field-control" id="date" name="date" type="date" th:value="${@officeClock.today()}" required>
+        </div>
+        <div class="field filter-field">
+          <label class="field-label" for="start">З</label>
+          <select class="field-control" id="start" name="start" required>
+            <option th:each="time : ${starts}" th:value="${time}" th:text="${time}"></option>
+          </select>
+        </div>
+        <div class="field filter-field">
+          <label class="field-label" for="end">До</label>
+          <select class="field-control" id="end" name="end" required>
+            <option th:each="time : ${ends}" th:value="${time}" th:text="${time}"></option>
+          </select>
+        </div>
+        <div class="field filter-field">
+          <label class="field-label" for="floor">Поверх</label>
+          <select class="field-control" id="floor" name="floor">
+            <option value="" th:selected="${floor == null}">Усі</option>
+            <option th:each="f : ${#numbers.sequence(-5, 100)}" th:value="${f}" th:text="${f}" th:selected="${floor != null and floor == f}"></option>
+          </select>
+        </div>
+        <div class="field filter-field">
+          <label class="field-label" for="minCapacity">Місткість від</label>
+          <input class="field-control" id="minCapacity" name="minCapacity" type="number" min="1" step="1" th:value="${minCapacity}">
+        </div>
+        <div class="filter-actions">
+          <button class="btn btn-primary" type="submit">Знайти вільні</button>
+        </div>
+      </form>
+    </section>
+  </section>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="uk" xmlns:th="http://www.thymeleaf.org">
+<body>
+<tr th:fragment="row" th:id="'booking-' + ${booking?.id}">
+  <td th:replace="~{::row-inner}"></td>
+</tr>
+
+<th:block th:fragment="row-inner">
+  <td class="cell-numeric" th:text="${@uiFormat.dateShortWithDay(booking.startAt)}"></td>
+  <td class="cell-numeric text-numeric" th:text="${@uiFormat.time(booking.startAt)} + '–' + ${@uiFormat.time(booking.endAt)}"></td>
+  <td th:text="${booking.room.name}"></td>
+  <td th:text="${booking.title}"></td>
+  <td th:if="${showAuthor}" th:text="${booking.author.displayName}"></td>
+  <td>
+    <span th:if="${booking.phase == T(roombook.scheduling.domain.BookingPhase).UPCOMING}" class="status-upcoming">Заплановано</span>
+    <span th:if="${booking.phase == T(roombook.scheduling.domain.BookingPhase).IN_PROGRESS}" class="status-current">Триває</span>
+    <span th:if="${booking.phase == T(roombook.scheduling.domain.BookingPhase).FINISHED}" class="status-muted">Завершено</span>
+    <span th:if="${booking.phase == null}" class="status-muted">Скасовано</span>
+  </td>
+  <td class="cell-actions">
+    <form th:if="${booking.cancellable}" th:action="@{/bookings/{id}/cancel(id=${booking.id})}" method="post"
+          th:hx-post="@{/bookings/{id}/cancel(id=${booking.id})}" th:hx-target="'#booking-' + ${booking.id}" hx-swap="outerHTML" hx-disabled-elt="button"
+          th:hx-confirm="${cancelConfirmation}" th:with="cancelConfirmation=${'Скасувати бронювання &quot;' + booking.title + '&quot;, ' + @uiFormat.date(booking.startAt) + ', ' + @uiFormat.time(booking.startAt) + '–' + @uiFormat.time(booking.endAt) + '? Цю дію не можна відмінити.'}">
+      <input type="hidden" name="adminView" th:value="${showAuthor}">
+      <button class="link-danger" type="submit">Скасувати бронювання</button>
+    </form>
+  </td>
+</th:block>
+</body>
+</html>

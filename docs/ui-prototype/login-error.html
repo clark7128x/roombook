@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Вхід: Переговорні</title>
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/fonts.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/timeline.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">До змісту</a>
+
+  <header class="login-shell">
+    <span class="login-brand">Переговорні</span>
+  </header>
+
+  <main id="main" class="login-shell">
+    <h1>Вхід</h1>
+
+    <div id="alerts" class="alerts" aria-live="polite">
+      <div class="alert alert-error" role="alert">
+        <svg aria-hidden="true" focusable="false">
+          <use href="icons.svg#error"></use>
+        </svg>
+        <div class="alert-text">Не вдалося увійти. Перевірте логін і пароль або зверніться до адміністратора.</div>
+      </div>
+    </div>
+
+    <form class="form-stack login-form" action="occupancy.html" method="post">
+      <div class="field">
+        <label class="field-label" for="username">Логін</label>
+        <input
+          class="field-control"
+          id="username"
+          name="username"
+          type="text"
+          value="olena.koval"
+          autocomplete="username"
+          required
+        >
+      </div>
+
+      <div class="field">
+        <label class="field-label" for="password">Пароль</label>
+        <input
+          class="field-control"
+          id="password"
+          name="password"
+          type="password"
+          autocomplete="current-password"
+          required
+        >
+      </div>
+
+      <div class="form-actions">
+        <button class="btn btn-primary" type="submit">Увійти</button>
+      </div>
+    </form>
+  </main>
+</body>
+</html>

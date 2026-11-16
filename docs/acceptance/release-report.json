@@ -1,0 +1,26 @@
+{
+  "result": "PASS",
+  "copiedBookings": 1019092,
+  "seconds": 149.38,
+  "checks": [
+    {
+      "image": "roombook:verify",
+      "imageId": "sha256:431119a2c01f4e4977376c358d842e0f2de0f7fcc468afb0e9e7c52a96e45941",
+      "login": "PASS",
+      "occupancy": "PASS",
+      "ukrainianOrder": "PASS",
+      "invariantAudit": "PASS",
+      "schema": "2"
+    },
+    {
+      "image": "roombook:rollback-test",
+      "imageId": "sha256:d713b8e51876310bb9c98eda3b901eefa678f831935775508d4ef94c0b8c2285",
+      "login": "PASS",
+      "occupancy": "PASS",
+      "ukrainianOrder": "PASS",
+      "invariantAudit": "PASS",
+      "schema": "2"
+    }
+  ],
+  "boundary": "Disposable database copy on the same Docker Desktop host. Image rollback with unchanged schema; production routing and incompatible migration recovery are not exercised."
+}

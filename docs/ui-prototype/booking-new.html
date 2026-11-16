@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Нове бронювання: Переговорні</title>
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/fonts.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/timeline.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">До змісту</a>
+  <header class="app-header">
+    <a class="app-name" href="occupancy.html">Переговорні</a>
+    <nav class="app-nav" aria-label="Основна навігація">
+      <a class="nav-link" href="occupancy.html">Зайнятість</a>
+      <a class="nav-link" href="rooms.html">Кімнати</a>
+      <a class="nav-link" href="my-bookings.html">Мої бронювання</a>
+    </nav>
+    <div class="app-user">
+      <span class="app-user-name">Олена Коваль</span>
+      <button class="btn" type="button">Вийти</button>
+    </div>
+  </header>
+
+  <main id="main" class="page-shell">
+    <div class="page-head">
+      <h1>Нове бронювання</h1>
+    </div>
+    <div id="alerts" class="alerts" aria-live="polite"></div>
+    <div class="form-layout">
+      <form id="booking-form" class="form-stack" action="occupancy.html" method="get">
+        <div class="field">
+          <label class="field-label" for="room">Кімната</label>
+          <select class="field-control" id="room" name="roomId" required>
+            <option value="dnipro" selected>Дніпро, поверх 2, місткість 8</option>
+            <option value="desna">Десна, поверх 2, місткість 6</option>
+            <option value="prut">Прут, поверх 2, місткість 4</option>
+            <option value="hoverla">Говерла, поверх 3, місткість 12</option>
+            <option value="karpaty">Карпати, поверх 3, місткість 10</option>
+            <option value="dnister">Дністер, поверх 3, місткість 6</option>
+            <option value="gorgany">Ґорґани, поверх 4, місткість 14</option>
+            <option value="beskydy">Бескиди, поверх 4, місткість 8</option>
+          </select>
+        </div>
+        <div class="field">
+          <label class="field-label" for="booking-date">Дата</label>
+          <input class="field-control" id="booking-date" name="date" type="date" value="2026-10-20" required>
+        </div>
+        <div class="form-row">
+          <div class="field">
+            <label class="field-label" for="start">Початок</label>
+            <select class="field-control" id="start" name="start" aria-describedby="time-hint" required>
+              <option value="08:00">08:00</option>
+              <option value="08:15">08:15</option>
+              <option value="08:30">08:30</option>
+              <option value="08:45">08:45</option>
+              <option value="09:00">09:00</option>
+              <option value="09:15">09:15</option>
+              <option value="09:30">09:30</option>
+              <option value="09:45">09:45</option>
+              <option value="10:00">10:00</option>
+              <option value="10:15">10:15</option>
+              <option value="10:30">10:30</option>
+              <option value="10:45">10:45</option>
+              <option value="11:00">11:00</option>
+              <option value="11:15">11:15</option>
+              <option value="11:30">11:30</option>
+              <option value="11:45">11:45</option>
+              <option value="12:00">12:00</option>
+              <option value="12:15">12:15</option>
+              <option value="12:30">12:30</option>
+              <option value="12:45">12:45</option>
+              <option value="13:00">13:00</option>
+              <option value="13:15">13:15</option>
+              <option value="13:30">13:30</option>
+              <option value="13:45">13:45</option>
+              <option value="14:00" selected>14:00</option>
+              <option value="14:15">14:15</option>
+              <option value="14:30">14:30</option>
+              <option value="14:45">14:45</option>
+              <option value="15:00">15:00</option>
+              <option value="15:15">15:15</option>
+              <option value="15:30">15:30</option>
+              <option value="15:45">15:45</option>
+              <option value="16:00">16:00</option>
+              <option value="16:15">16:15</option>
+              <option value="16:30">16:30</option>
+              <option value="16:45">16:45</option>
+              <option value="17:00">17:00</option>
+              <option value="17:15">17:15</option>
+              <option value="17:30">17:30</option>
+              <option value="17:45">17:45</option>
+              <option value="18:00">18:00</option>
+              <option value="18:15">18:15</option>
+              <option value="18:30">18:30</option>
+              <option value="18:45">18:45</option>
+              <option value="19:00">19:00</option>
+              <option value="19:15">19:15</option>
+              <option value="19:30">19:30</option>
+              <option value="19:45">19:45</option>
+            </select>
+          </div>
+          <div class="field">
+            <label class="field-label" for="end">Кінець</label>
+            <select class="field-control" id="end" name="end" aria-describedby="time-hint" required>
+              <option value="08:15">08:15</option>
+              <option value="08:30">08:30</option>
+              <option value="08:45">08:45</option>
+              <option value="09:00">09:00</option>
+              <option value="09:15">09:15</option>
+              <option value="09:30">09:30</option>
+              <option value="09:45">09:45</option>
+              <option value="10:00">10:00</option>
+              <option value="10:15">10:15</option>
+              <option value="10:30">10:30</option>
+              <option value="10:45">10:45</option>
+              <option value="11:00">11:00</option>
+              <option value="11:15">11:15</option>
+              <option value="11:30">11:30</option>
+              <option value="11:45">11:45</option>
+              <option value="12:00">12:00</option>
+              <option value="12:15">12:15</option>
+              <option value="12:30">12:30</option>
+              <option value="12:45">12:45</option>
+              <option value="13:00">13:00</option>
+              <option value="13:15">13:15</option>
+              <option value="13:30">13:30</option>
+              <option value="13:45">13:45</option>
+              <option value="14:00">14:00</option>
+              <option value="14:15">14:15</option>
+              <option value="14:30">14:30</option>
+              <option value="14:45">14:45</option>
+              <option value="15:00" selected>15:00</option>
+              <option value="15:15">15:15</option>
+              <option value="15:30">15:30</option>
+              <option value="15:45">15:45</option>
+              <option value="16:00">16:00</option>
+              <option value="16:15">16:15</option>
+              <option value="16:30">16:30</option>
+              <option value="16:45">16:45</option>
+              <option value="17:00">17:00</option>
+              <option value="17:15">17:15</option>
+              <option value="17:30">17:30</option>
+              <option value="17:45">17:45</option>
+              <option value="18:00">18:00</option>
+              <option value="18:15">18:15</option>
+              <option value="18:30">18:30</option>
+              <option value="18:45">18:45</option>
+              <option value="19:00">19:00</option>
+              <option value="19:15">19:15</option>
+              <option value="19:30">19:30</option>
+              <option value="19:45">19:45</option>
+              <option value="20:00">20:00</option>
+            </select>
+          </div>
+        </div>
+        <div class="field-hint" id="time-hint">Від 15 хвилин до 4 годин, з 08:00 до 20:00.</div>
+        <div class="field">
+          <label class="field-label" for="title">Назва зустрічі</label>
+          <input class="field-control" id="title" name="title" type="text" aria-describedby="title-hint" required>
+          <span class="field-hint" id="title-hint">Назву бачать усі працівники.</span>
+        </div>
+        <div class="form-actions">
+          <button class="btn btn-primary" type="submit">Забронювати</button>
+          <a href="occupancy.html">Назад до зайнятості</a>
+        </div>
+      </form>
+
+      <section id="room-day" class="room-day" aria-labelledby="room-day-title">
+        <h2 id="room-day-title">Зайнятість кімнати Дніпро, 20.10.2026</h2>
+        <div class="tl-scroll tl-single">
+          <table class="tl-table">
+            <caption>Зайнятість кімнат на 20.10.2026</caption>
+            <thead>
+              <tr>
+                <th class="tl-corner tl-floor-head" scope="col" rowspan="2">Час</th>
+                <th class="tl-floor-head tl-floor-start" scope="colgroup">Поверх 2</th>
+              </tr>
+              <tr>
+                <th class="tl-room-head tl-floor-start" scope="col">
+                  <span class="tl-room-name" title="Проєктор, дошка, відеозв’язок">Дніпро</span>
+                  <span class="tl-room-meta">місткість 8</span>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="tl-past tl-hour">
+                <th class="tl-time" scope="row" rowspan="4">08:00</th>
+                <td class="tl-booking tl-len-4 tl-floor-start" rowspan="4" title="08:00–09:00, Операційна нарада, Дарина Лисенко">
+                  <div class="tl-booking-body tl-len-4">
+                    <span class="tl-booking-time">08:00–09:00</span>
+                    <span class="tl-booking-title">Операційна нарада</span>
+                    <span class="tl-booking-author">Дарина Лисенко</span>
+                  </div>
+                </td>
+              </tr>
+              <tr class="tl-past">
+              </tr>
+              <tr class="tl-past">
+              </tr>
+              <tr class="tl-past">
+              </tr>
+              <tr class="tl-past tl-hour">
+                <th class="tl-time" scope="row" rowspan="4">09:00</th>
+                <td class="tl-slot tl-floor-start"></td>
+              </tr>
+              <tr class="tl-past">
+                <td class="tl-slot tl-floor-start"></td>
+              </tr>
+              <tr class="tl-past">
+                <td class="tl-slot tl-floor-start"></td>
+              </tr>
+              <tr class="tl-past">
+                <td class="tl-slot tl-floor-start"></td>
+              </tr>
+              <tr class="tl-hour tl-now">
+                <th class="tl-time" scope="row" rowspan="4">10:00</th>
+                <td class="tl-slot tl-floor-start"></td>
+              </tr>
+              <tr>
+                <td class="tl-slot tl-floor-start"><a class="tl-slot-link" href="booking-new.html?roomId=dnipro&amp;date=2026-10-20&amp;start=10:15" tabindex="-1" aria-hidden="true"></a></td>
+              </tr>
+              <tr>
+                <td class="tl-slot tl-floor-start"><a class="tl-slot-link" href="booking-new.html?roomId=dnipro&amp;date=2026-10-20&amp;start=10:30" tabindex="-1" aria-hidden="true"></a></td>
+              </tr>
+              <tr>
+                <td class="tl-slot tl-floor-start"><a class="tl-slot-link" href="booking-new.html?roomId=dnipro&amp;date=2026-10-20&amp;start=10:45" tabindex="-1" aria-hidden="true"></a></td>
+              </tr>
+              <tr class="tl-hour">
+                <th class="tl-time" scope="row" rowspan="4">11:00</th>
+                <td class="tl-slot tl-floor-start"><a class="tl-slot-link" href="booking-new.html?roomId=dnipro&amp;date=2026-10-20&amp;start=11:00" tabindex="-1" aria-hidden="true"></a></td>
+              </tr>
+              <tr>
+                <td class="tl-slot tl-floor-start"><a class="tl-slot-link" href="booking-new.html?roomId=dnipro&amp;date=2026-10-20&amp;start=11:15" tabindex="-1" aria-hidden="true"></a></td>
+              </tr>
+              <tr>
+                <td class="tl-slot tl-floor-start"><a class="tl-slot-link" href="booking-new.html?roomId=dnipro&amp;date=2026-10-20&amp;start=11:30" tabindex="-1" aria-hidden="true"></a></td>
+              </tr>
+              <tr>
+                <td class="tl-slot tl-floor-start"><a class="tl-slot-link" href="booking-new.html?roomId=dnipro&amp;date=2026-10-20&amp;start=11:45" tabindex="-1" aria-hidden="true"></a></td>
+              </tr>
+              <tr class="tl-hour">
+                <th class="tl-time" scope="row" rowspan="4">12:00</th>
+                <td class="tl-slot tl-floor-start"><a class="tl-slot-link" href="booking-new.html?roomId=dnipro&amp;date=2026-10-20&amp;start=12:00" tabindex="-1" aria-hidden="true"></a></td>
+              </tr>
+              <tr>
+                <td class="tl-slot tl-floor-start"><a class="tl-slot-link" href="booking-new.html?roomId=dnipro&amp;date=2026-10-20&amp;start=12:15" tabindex="-1" aria-hidden="true"></a></td>
+              </tr>
+              <tr>
+                <td class="tl-slot tl-floor-start"><a class="tl-slot-link" href="booking-new.html?roomId=dnipro&amp;date=2026-10-20&amp;start=12:30" tabindex="-1" aria-hidden="true"></a></td>
+              </tr>
+              <tr>
+                <td class="tl-slot tl-floor-start"><a class="tl-slot-link" href="booking-new.html?roomId=dnipro&amp;date=2026-10-20&amp;start=12:45" tabindex="-1" aria-hidden="true"></a></td>
+              </tr>
+              <tr class="tl-hour">
+                <th class="tl-time" scope="row" rowspan="4">13:00</th>
+                <td class="tl-slot tl-floor-start"><a class="tl-slot-link" href="booking-new.html?roomId=dnipro&amp;date=2026-10-20&amp;start=13:00" tabindex="-1" aria-hidden="true"></a></td>
+              </tr>
+              <tr>
+                <td class="tl-slot tl-floor-start"><a class="tl-slot-link" href="booking-new.html?roomId=dnipro&amp;date=2026-10-20&amp;start=13:15" tabindex="-1" aria-hidden="true"></a></td>
+              </tr>
+              <tr>
+                <td class="tl-slot tl-floor-start"><a class="tl-slot-link" href="booking-new.html?roomId=dnipro&amp;date=2026-10-20&amp;start=13:30" tabindex="-1" aria-hidden="true"></a></td>
+              </tr>
+              <tr>
+                <td class="tl-slot tl-floor-start"><a class="tl-slot-link" href="booking-new.html?roomId=dnipro&amp;date=2026-10-20&amp;start=13:45" tabindex="-1" aria-hidden="true"></a></td>
+              </tr>
+              <tr class="tl-hour">
+                <th class="tl-time" scope="row" rowspan="4">14:00</th>
+                <td class="tl-booking tl-len-4 tl-mine tl-floor-start" rowspan="4" title="14:00–15:00, Огляд бюджету на четвертий квартал, Олена Коваль">
+                  <div class="tl-booking-body tl-len-4">
+                    <span class="sr-only">Ваше бронювання</span>
+                    <span class="tl-booking-time">14:00–15:00</span>
+                    <span class="tl-booking-title">Огляд бюджету на четвертий квартал</span>
+                    <span class="tl-booking-author">Олена Коваль</span>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+              </tr>
+              <tr>
+              </tr>
+              <tr>
+              </tr>
+              <tr class="tl-hour">
+                <th class="tl-time" scope="row" rowspan="4">15:00</th>
+                <td class="tl-slot tl-floor-start"><a class="tl-slot-link" href="booking-new.html?roomId=dnipro&amp;date=2026-10-20&amp;start=15:00" tabindex="-1" aria-hidden="true"></a></td>
+              </tr>
+              <tr>
+                <td class="tl-slot tl-floor-start"><a class="tl-slot-link" href="booking-new.html?roomId=dnipro&amp;date=2026-10-20&amp;start=15:15" tabindex="-1" aria-hidden="true"></a></td>
+              </tr>
+              <tr>
+                <td class="tl-slot tl-floor-start"><a class="tl-slot-link" href="booking-new.html?roomId=dnipro&amp;date=2026-10-20&amp;start=15:30" tabindex="-1" aria-hidden="true"></a></td>
+              </tr>
+              <tr>
+                <td class="tl-slot tl-floor-start"><a class="tl-slot-link" href="booking-new.html?roomId=dnipro&amp;date=2026-10-20&amp;start=15:45" tabindex="-1" aria-hidden="true"></a></td>
+              </tr>
+              <tr class="tl-hour">
+                <th class="tl-time" scope="row" rowspan="4">16:00</th>
+                <td class="tl-slot tl-floor-start"><a class="tl-slot-link" href="booking-new.html?roomId=dnipro&amp;date=2026-10-20&amp;start=16:00" tabindex="-1" aria-hidden="true"></a></td>
+              </tr>
+              <tr>
+                <td class="tl-slot tl-floor-start"><a class="tl-slot-link" href="booking-new.html?roomId=dnipro&amp;date=2026-10-20&amp;start=16:15" tabindex="-1" aria-hidden="true"></a></td>
+              </tr>
+              <tr>
+                <td class="tl-slot tl-floor-start"><a class="tl-slot-link" href="booking-new.html?roomId=dnipro&amp;date=2026-10-20&amp;start=16:30" tabindex="-1" aria-hidden="true"></a></td>
+              </tr>
+              <tr>
+                <td class="tl-slot tl-floor-start"><a class="tl-slot-link" href="booking-new.html?roomId=dnipro&amp;date=2026-10-20&amp;start=16:45" tabindex="-1" aria-hidden="true"></a></td>
+              </tr>
+              <tr class="tl-hour">
+                <th class="tl-time" scope="row" rowspan="4">17:00</th>
+                <td class="tl-slot tl-floor-start"><a class="tl-slot-link" href="booking-new.html?roomId=dnipro&amp;date=2026-10-20&amp;start=17:00" tabindex="-1" aria-hidden="true"></a></td>
+              </tr>
+              <tr>
+                <td class="tl-slot tl-floor-start"><a class="tl-slot-link" href="booking-new.html?roomId=dnipro&amp;date=2026-10-20&amp;start=17:15" tabindex="-1" aria-hidden="true"></a></td>
+              </tr>
+              <tr>
+                <td class="tl-slot tl-floor-start"><a class="tl-slot-link" href="booking-new.html?roomId=dnipro&amp;date=2026-10-20&amp;start=17:30" tabindex="-1" aria-hidden="true"></a></td>
+              </tr>
+              <tr>
+                <td class="tl-slot tl-floor-start"><a class="tl-slot-link" href="booking-new.html?roomId=dnipro&amp;date=2026-10-20&amp;start=17:45" tabindex="-1" aria-hidden="true"></a></td>
+              </tr>
+              <tr class="tl-hour">
+                <th class="tl-time" scope="row" rowspan="4">18:00</th>
+                <td class="tl-slot tl-floor-start"><a class="tl-slot-link" href="booking-new.html?roomId=dnipro&amp;date=2026-10-20&amp;start=18:00" tabindex="-1" aria-hidden="true"></a></td>
+              </tr>
+              <tr>
+                <td class="tl-slot tl-floor-start"><a class="tl-slot-link" href="booking-new.html?roomId=dnipro&amp;date=2026-10-20&amp;start=18:15" tabindex="-1" aria-hidden="true"></a></td>
+              </tr>
+              <tr>
+                <td class="tl-slot tl-floor-start"><a class="tl-slot-link" href="booking-new.html?roomId=dnipro&amp;date=2026-10-20&amp;start=18:30" tabindex="-1" aria-hidden="true"></a></td>
+              </tr>
+              <tr>
+                <td class="tl-slot tl-floor-start"><a class="tl-slot-link" href="booking-new.html?roomId=dnipro&amp;date=2026-10-20&amp;start=18:45" tabindex="-1" aria-hidden="true"></a></td>
+              </tr>
+              <tr class="tl-hour">
+                <th class="tl-time" scope="row" rowspan="4">19:00</th>
+                <td class="tl-slot tl-floor-start"><a class="tl-slot-link" href="booking-new.html?roomId=dnipro&amp;date=2026-10-20&amp;start=19:00" tabindex="-1" aria-hidden="true"></a></td>
+              </tr>
+              <tr>
+                <td class="tl-slot tl-floor-start"><a class="tl-slot-link" href="booking-new.html?roomId=dnipro&amp;date=2026-10-20&amp;start=19:15" tabindex="-1" aria-hidden="true"></a></td>
+              </tr>
+              <tr>
+                <td class="tl-slot tl-floor-start"><a class="tl-slot-link" href="booking-new.html?roomId=dnipro&amp;date=2026-10-20&amp;start=19:30" tabindex="-1" aria-hidden="true"></a></td>
+              </tr>
+              <tr>
+                <td class="tl-slot tl-floor-start"><a class="tl-slot-link" href="booking-new.html?roomId=dnipro&amp;date=2026-10-20&amp;start=19:45" tabindex="-1" aria-hidden="true"></a></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </div>
+  </main>
+</body>
+</html>

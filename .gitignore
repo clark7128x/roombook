@@ -1,0 +1,12 @@
+.verify-skeleton/
+.tools/
+.jdk*.zip
+.maven*.zip
+target/
+*.iml
+.idea/
+*.ipr
+*.iws
+.vscode/
+__pycache__/
+*.pyc

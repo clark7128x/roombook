@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Користувачі: Переговорні</title>
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/fonts.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/timeline.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">До змісту</a>
+  <header class="app-header">
+    <a class="app-name" href="occupancy.html">Переговорні</a>
+    <nav class="app-nav" aria-label="Основна навігація">
+      <a class="nav-link" href="occupancy.html">Зайнятість</a>
+      <a class="nav-link" href="rooms.html">Кімнати</a>
+      <a class="nav-link" href="my-bookings.html">Мої бронювання</a>
+      <div class="nav-admin">
+        <a class="nav-link" href="admin-bookings.html">Усі бронювання</a>
+        <a class="nav-link" href="admin-rooms.html">Керування кімнатами</a>
+        <a class="nav-link" href="admin-users.html" aria-current="page">Користувачі</a>
+      </div>
+    </nav>
+    <div class="app-user">
+      <span class="app-user-name">Андрій Мельник</span>
+      <button class="btn" type="button">Вийти</button>
+    </div>
+  </header>
+
+  <main id="main" class="page-shell">
+    <div class="page-head">
+      <h1>Користувачі</h1>
+      <a class="btn btn-primary" href="admin-user-new.html">Додати користувача</a>
+    </div>
+    <div id="alerts" class="alerts" aria-live="polite"></div>
+
+    <div class="table-wrap">
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th scope="col">Ім’я</th>
+            <th scope="col">Логін</th>
+            <th scope="col">Роль</th>
+            <th scope="col">Стан</th>
+            <th scope="col"><span class="sr-only">Дія</span></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr id="user-301">
+            <td><a class="link-action" href="admin-user.html?userId=301">Андрій Мельник</a></td>
+            <td>andrii.melnyk</td>
+            <td>Адміністратор</td>
+            <td>Активний</td>
+            <td class="cell-actions">
+              <button class="link-danger" type="button">Деактивувати</button>
+            </td>
+          </tr>
+          <tr id="user-302">
+            <td><a class="link-action" href="admin-user.html?userId=302">Олена Коваль</a></td>
+            <td>olena.koval</td>
+            <td>Працівник</td>
+            <td>Активний</td>
+            <td class="cell-actions">
+              <button class="link-danger" type="button">Деактивувати</button>
+            </td>
+          </tr>
+          <tr id="user-303">
+            <td><a class="link-action" href="admin-user.html?userId=303">Дарина Лисенко</a></td>
+            <td>daryna.lysenko</td>
+            <td>Працівник</td>
+            <td>Активний</td>
+            <td class="cell-actions">
+              <button class="link-danger" type="button">Деактивувати</button>
+            </td>
+          </tr>
+          <tr id="user-304">
+            <td><a class="link-action" href="admin-user.html?userId=304">Наталія Романюк</a></td>
+            <td>nataliia.romaniuk</td>
+            <td>Працівник</td>
+            <td>Активний</td>
+            <td class="cell-actions">
+              <button class="link-danger" type="button">Деактивувати</button>
+            </td>
+          </tr>
+          <tr id="user-305">
+            <td><a class="link-action" href="admin-user.html?userId=305">Максим Черненко</a></td>
+            <td>maksym.chernenko</td>
+            <td>Працівник</td>
+            <td>Активний</td>
+            <td class="cell-actions">
+              <button class="link-danger" type="button">Деактивувати</button>
+            </td>
+          </tr>
+          <tr id="user-306">
+            <td><a class="link-action" href="admin-user.html?userId=306">Ірина Бондаренко</a></td>
+            <td>iryna.bondarenko</td>
+            <td>Працівник</td>
+            <td>Активний</td>
+            <td class="cell-actions">
+              <button class="link-danger" type="button">Деактивувати</button>
+            </td>
+          </tr>
+          <tr id="user-307">
+            <td><a class="link-action" href="admin-user.html?userId=307">Сергій Марченко</a></td>
+            <td>serhii.marchenko</td>
+            <td>Адміністратор</td>
+            <td>Активний</td>
+            <td class="cell-actions">
+              <button class="link-danger" type="button">Деактивувати</button>
+            </td>
+          </tr>
+          <tr id="user-308" class="is-inactive">
+            <td><a class="link-action" href="admin-user.html?userId=308">Ганна Савчук</a></td>
+            <td>hanna.savchuk</td>
+            <td>Працівник</td>
+            <td>Деактивований</td>
+            <td class="cell-actions">
+              <button class="link-action" type="button">Активувати</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </main>
+</body>
+</html>

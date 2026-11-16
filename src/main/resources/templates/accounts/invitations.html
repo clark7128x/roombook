@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="uk" xmlns:th="http://www.thymeleaf.org" th:replace="~{layout/shell :: page('Запрошення', ~{::page-content})}">
+<body><section th:fragment="page-content">
+<div class="page-head"><div><span class="eyebrow">Доступ для команди</span><h1>Запросити працівника</h1></div><a class="btn" th:href="@{/admin/users}">Користувачі</a></div>
+<p class="subtext">Працівник встановить власний пароль. Запрошення діє 48 годин і створює лише обліковий запис працівника.</p>
+<section th:if="${issued != null}" class="invite-result" aria-label="Створене запрошення">
+<h2>Запрошення готове</h2><p>Скопіюйте посилання та передайте працівнику особисто. Воно показується лише зараз.</p>
+<label for="invitation-link">Посилання для працівника</label><input id="invitation-link" readonly th:value="@{/join} + '#' + ${issued.token}">
+<button class="btn" type="button" id="copy-invitation">Скопіювати посилання</button><span id="copy-status" role="status"></span>
+<p th:text="'Дійсне до ' + ${@uiFormat.audit(issued.expiresAt)}"></p>
+</section>
+<form class="form-stack" th:action="@{/admin/invitations}" method="post">
+<div th:replace="~{components/field-error :: summary}"></div>
+<div class="field"><label class="field-label" for="invite-username">Логін</label><input class="field-control" id="invite-username" name="username" required minlength="3" maxlength="64" pattern="[a-zA-Z0-9._\-]+" th:value="${username}"><span class="field-hint">Від 3 до 64 символів: латиниця, цифри, крапка, дефіс або підкреслення.</span><span th:replace="~{components/field-error :: message('username')}"></span></div>
+<div class="field"><label class="field-label" for="invite-name">Ім’я</label><input class="field-control" id="invite-name" name="displayName" required maxlength="100" th:value="${displayName}"><span th:replace="~{components/field-error :: message('displayName')}"></span></div>
+<button class="btn btn-primary" type="submit">Створити запрошення</button>
+</form>
+<h2 class="section-heading">Останні запрошення</h2><p class="field-hint">Показано до 100 останніх записів. Посилання не зберігаються у відкритому вигляді.</p>
+<div class="table-wrap"><table class="data-table"><thead><tr><th scope="col">Ім’я / логін</th><th scope="col">Дійсне до</th><th scope="col">Стан</th><th scope="col">Дія</th></tr></thead><tbody>
+<tr th:if="${invitations.empty}"><td colspan="4">Запрошень ще немає.</td></tr>
+<tr th:each="invitation : ${invitations}"><td><strong th:text="${invitation.displayName}"></strong><br><span th:text="${invitation.username}"></span></td><td th:text="${@uiFormat.audit(invitation.expiresAt)}"></td><td th:text="${invitation.state}"></td><td><form th:if="${invitation.revocable}" th:action="@{/admin/invitations/{id}/revoke(id=${invitation.id})}" method="post"><button class="btn btn-link" type="submit">Відкликати</button></form></td></tr>
+</tbody></table></div></section></body></html>

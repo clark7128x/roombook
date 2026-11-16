@@ -1,0 +1,8 @@
+<!doctype html>
+<html lang="uk" xmlns:th="http://www.thymeleaf.org"><body>
+<th:block th:fragment="content">
+  <h2 th:if="${selectedRoom != null}" th:text="${'Зайнятість кімнати ' + selectedRoom.name + ', ' + @uiFormat.date(roomTimeline.date)}"></h2>
+  <th:block th:if="${roomTimeline != null}"><div th:replace="~{components/timeline :: timeline(${roomTimeline}, true)}"></div></th:block>
+  <p th:if="${selectedRoom == null}">Кімната недоступна. Оберіть активну кімнату.</p>
+</th:block>
+</body></html>

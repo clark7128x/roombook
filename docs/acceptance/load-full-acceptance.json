@@ -1,0 +1,1880 @@
+{
+  "result": "NOT_ACCEPTED",
+  "checks": [
+    {
+      "criterion": "Full profile",
+      "result": "PASS",
+      "detail": "full"
+    },
+    {
+      "criterion": "Expected response statuses",
+      "result": "PASS",
+      "detail": []
+    },
+    {
+      "criterion": "P1 completed request count",
+      "result": "PASS",
+      "detail": {
+        "actual": 27000,
+        "expected": 27000
+      }
+    },
+    {
+      "criterion": "P2 completed request count",
+      "result": "PASS",
+      "detail": {
+        "actual": 36000,
+        "expected": 36000
+      }
+    },
+    {
+      "criterion": "P3 completed request count",
+      "result": "PASS",
+      "detail": {
+        "actual": 9900,
+        "expected": 9900
+      }
+    },
+    {
+      "criterion": "P6 completed request count",
+      "result": "PASS",
+      "detail": {
+        "actual": 108000,
+        "expected": 108000
+      }
+    },
+    {
+      "criterion": "P1 read-route coverage",
+      "result": "PASS",
+      "detail": []
+    },
+    {
+      "criterion": "P3 read-route coverage",
+      "result": "PASS",
+      "detail": []
+    },
+    {
+      "criterion": "P5 contiguous own pages with 100 samples each",
+      "result": "PASS",
+      "detail": 185
+    },
+    {
+      "criterion": "P1 GET /api/v1/me/bookings 200",
+      "result": "PASS",
+      "detail": {
+        "p95Ms": 8,
+        "limitMs": 300,
+        "samples": 5677
+      }
+    },
+    {
+      "criterion": "P1 GET /api/v1/occupancy 200",
+      "result": "PASS",
+      "detail": {
+        "p95Ms": 11,
+        "limitMs": 300,
+        "samples": 5420
+      }
+    },
+    {
+      "criterion": "P1 GET /occupancy 200",
+      "result": "PASS",
+      "detail": {
+        "p95Ms": 94,
+        "limitMs": 300,
+        "samples": 3616
+      }
+    },
+    {
+      "criterion": "P1 POST /api/v1/bookings 201",
+      "result": "PASS",
+      "detail": {
+        "p95Ms": 104,
+        "limitMs": 300,
+        "samples": 2624
+      }
+    },
+    {
+      "criterion": "P1 POST /api/v1/bookings 409",
+      "result": "PASS",
+      "detail": {
+        "p95Ms": 5,
+        "limitMs": 300,
+        "samples": 460
+      }
+    },
+    {
+      "criterion": "P3 GET /admin/bookings 200",
+      "result": "FAIL",
+      "detail": {
+        "p95Ms": 513,
+        "limitMs": 300,
+        "samples": 385
+      }
+    },
+    {
+      "criterion": "P3 GET /api/v1/csrf 200",
+      "result": "PASS",
+      "detail": {
+        "p95Ms": 80,
+        "limitMs": 300,
+        "samples": 600
+      }
+    },
+    {
+      "criterion": "P3 GET /api/v1/me/bookings 200",
+      "result": "PASS",
+      "detail": {
+        "p95Ms": 64,
+        "limitMs": 300,
+        "samples": 1887
+      }
+    },
+    {
+      "criterion": "P3 GET /api/v1/occupancy 200",
+      "result": "PASS",
+      "detail": {
+        "p95Ms": 186,
+        "limitMs": 300,
+        "samples": 1811
+      }
+    },
+    {
+      "criterion": "P3 GET /api/v1/rooms 200",
+      "result": "PASS",
+      "detail": {
+        "p95Ms": 81,
+        "limitMs": 300,
+        "samples": 1476
+      }
+    },
+    {
+      "criterion": "P3 GET /fragments/room-day 200",
+      "result": "PASS",
+      "detail": {
+        "p95Ms": 190,
+        "limitMs": 300,
+        "samples": 739
+      }
+    },
+    {
+      "criterion": "P3 GET /occupancy 200",
+      "result": "FAIL",
+      "detail": {
+        "p95Ms": 1750,
+        "limitMs": 300,
+        "samples": 1202
+      }
+    },
+    {
+      "criterion": "P4 POST /api/v1/bookings 201",
+      "result": "FAIL",
+      "detail": {
+        "p95Ms": 2624,
+        "limitMs": 300,
+        "samples": 1020
+      }
+    },
+    {
+      "criterion": "P4 POST /api/v1/bookings 409",
+      "result": "PASS",
+      "detail": {
+        "p95Ms": 163,
+        "limitMs": 300,
+        "samples": 980
+      }
+    },
+    {
+      "criterion": "P5 GET /api/v1/me/bookings?page=0 200",
+      "result": "PASS",
+      "detail": {
+        "p95Ms": 2,
+        "limitMs": 300,
+        "samples": 100
+      }
+    },
+    {
+      "criterion": "P5 GET /api/v1/me/bookings?page=1 200",
+      "result": "PASS",
+      "detail": {
+        "p95Ms": 4,
+        "limitMs": 300,
+        "samples": 100
+      }
+    },
+    {
+      "criterion": "P5 GET /api/v1/me/bookings?page=10 200",
+      "result": "PASS",
+      "detail": {
+        "p95Ms": 3,
+        "limitMs": 300,
+        "samples": 100
+      }
+    },
+    {
+      "criterion": "P5 GET /api/v1/me/bookings?page=100 200",
+      "result": "PASS",
+      "detail": {
+        "p95Ms": 5,
+        "limitMs": 300,
+        "samples": 100
+      }
+    },
+    {
+      "criterion": "P5 GET /api/v1/me/bookings?page=101 200",
+      "result": "PASS",
+      "detail": {
+        "p95Ms": 5,
+        "limitMs": 300,
+        "samples": 100
+      }
+    },
+    {
+      "criterion": "P5 GET /api/v1/me/bookings?page=102 200",
+      "result": "PASS",
+      "detail": {
+        "p95Ms": 6,
+        "limitMs": 300,
+        "samples": 100
+      }
+    },
+    {
+      "criterion": "P5 GET /api/v1/me/bookings?page=103 200",
+      "result": "PASS",
+      "detail": {
+        "p95Ms": 4,
+        "limitMs": 300,
+        "samples": 100
+      }
+    },
+    {
+      "criterion": "P5 GET /api/v1/me/bookings?page=104 200",
+      "result": "PASS",
+      "detail": {
+        "p95Ms": 4,
+        "limitMs": 300,
+        "samples": 100
+      }
+    },
+    {
+      "criterion": "P5 GET /api/v1/me/bookings?page=105 200",
+      "result": "PASS",
+      "detail": {
+        "p95Ms": 7,
+        "limitMs": 300,
+        "samples": 100
+      }
+    },
+    {
+      "criterion": "P5 GET /api/v1/me/bookings?page=106 200",
+      "result": "PASS",
+      "detail": {
+        "p95Ms": 6,
+        "limitMs": 300,
+        "samples": 100
+      }
+    },
+    {
+      "criterion": "P5 GET /api/v1/me/bookings?page=107 200",
+      "result": "PASS",
+      "detail": {
+        "p95Ms": 5,
+        "limitMs": 300,
+        "samples": 100
+      }
+    },
+    {
+      "criterion": "P5 GET /api/v1/me/bookings?page=108 200",
+      "result": "PASS",
+      "detail": {
+        "p95Ms": 5,
+        "limitMs": 300,
+        "samples": 100
+      }
+    },
+    {
+      "criterion": "P5 GET /api/v1/me/bookings?page=109 200",
+      "result": "PASS",
+      "detail": {
+        "p95Ms": 5,
+        "limitMs": 300,
+        "samples": 100
+      }
+    },
+    {
+      "criterion": "P5 GET /api/v1/me/bookings?page=11 200",
+      "result": "PASS",
+      "detail": {
+        "p95Ms": 3,
+        "limitMs": 300,
+        "samples": 100
+      }
+    },
+    {
+      "criterion": "P5 GET /api/v1/me/bookings?page=110 200",
+      "result": "PASS",
+      "detail": {
+        "p95Ms": 5,
+        "limitMs": 300,
+        "samples": 100
+      }
+    },
+    {
+      "criterion": "P5 GET /api/v1/me/bookings?page=111 200",
+      "result": "PASS",
+      "detail": {
+        "p95Ms": 6,
+        "limitMs": 300,
+        "samples": 100
+      }
+    },
+    {
+      "criterion": "P5 GET /api/v1/me/bookings?page=112 200",
+      "result": "PASS",
+      "detail": {
+        "p95Ms": 5,
+        "limitMs": 300,
+        "samples": 100
+      }
+    },
+    {
+      "criterion": "P5 GET /api/v1/me/bookings?page=113 200",
+      "result": "PASS",
+      "detail": {
+        "p95Ms": 5,
+        "limitMs": 300,
+        "samples": 100
+      }
+    },
+    {
+      "criterion": "P5 GET /api/v1/me/bookings?page=114 200",
+      "result": "PASS",
+      "detail": {
+        "p95Ms": 5,
+        "limitMs": 300,
+        "samples": 100
+      }
+    },
+    {
+      "criterion": "P5 GET /api/v1/me/bookings?page=115 200",
+      "result": "PASS",
+      "detail": {
+        "p95Ms": 5,
+        "limitMs": 300,
+        "samples": 100
+      }
+    },
+    {
+      "criterion": "P5 GET /api/v1/me/bookings?page=116 200",
+      "result": "PASS",
+      "detail": {
+        "p95Ms": 5,
+        "limitMs": 300,
+        "samples": 100
+      }
+    },
+    {
+      "criterion": "P5 GET /api/v1/me/bookings?page=117 200",
+      "result": "PASS",
+      "detail": {
+        "p95Ms": 6,
+        "limitMs": 300,
+        "samples": 100
+      }
+    },
+    {
+      "criterion": "P5 GET /api/v1/me/bookings?page=118 200",
+      "result": "PASS",
+      "detail": {
+        "p95Ms": 5,
+        "limitMs": 300,
+        "samples": 100
+      }
+    },
+    {
+      "criterion": "P5 GET /api/v1/me/bookings?page=119 200",
+      "result": "PASS",
+      "detail": {
+        "p95Ms": 5,
+        "limitMs": 300,
+        "samples": 100
+      }
+    },
+    {
+      "criterion": "P5 GET /api/v1/me/bookings?page=12 200",
+      "result": "PASS",
+      "detail": {
+        "p95Ms": 3,
+        "limitMs": 300,
+        "samples": 100
+      }
+    },
+    {
+      "criterion": "P5 GET /api/v1/me/bookings?page=120 200",
+      "result": "PASS",
+      "detail": {
+        "p95Ms": 5,
+        "limitMs": 300,
+        "samples": 100
+      }
+    },
+    {
+      "criterion": "P5 GET /api/v1/me/bookings?page=121 200",
+      "result": "PASS",
+      "detail": {
+        "p95Ms": 5,
+        "limitMs": 300,
+        "samples": 100
+      }
+    },
+    {
+      "criterion": "P5 GET /api/v1/me/bookings?page=122 200",
+      "result": "PASS",
+      "detail": {
+        "p95Ms": 7,
+        "limitMs": 300,
+        "samples": 100
+      }
+    },
+    {
+      "criterion": "P5 GET /api/v1/me/bookings?page=123 200",
+      "result": "PASS",
+      "detail": {
+        "p95Ms": 5,
+        "limitMs": 300,
+        "samples": 100
+      }
+    },
+    {
+      "criterion": "P5 GET /api/v1/me/bookings?page=124 200",
+      "result": "PASS",
+      "detail": {
+        "p95Ms": 5,
+        "limitMs": 300,
+        "samples": 100
+      }
+    },
+    {
+      "criterion": "P5 GET /api/v1/me/bookings?page=125 200",
+      "result": "PASS",
+      "detail": {
+        "p95Ms": 5,
+        "limitMs": 300,
+        "samples": 100
+      }
+    },
+    {
+      "criterion": "P5 GET /api/v1/me/bookings?page=126 200",
+      "result": "PASS",
+      "detail": {
+        "p95Ms": 5,
+        "limitMs": 300,
+        "samples": 100
+      }
+    },
+    {
+      "criterion": "P5 GET /api/v1/me/bookings?page=127 200",
+      "result": "PASS",
+      "detail": {
+        "p95Ms": 5,
+        "limitMs": 300,
+        "samples": 100
+      }
+    },
+    {
+      "criterion": "P5 GET /api/v1/me/bookings?page=128 200",
+      "result": "PASS",
+      "detail": {
+        "p95Ms": 7,
+        "limitMs": 300,
+        "samples": 100
+      }
+    },
+    {
+      "criterion": "P5 GET /api/v1/me/bookings?page=129 200",
+      "result": "PASS",
+      "detail": {
+        "p95Ms": 5,
+        "limitMs": 300,
+        "samples": 100
+      }
+    },
+    {
+      "criterion": "P5 GET /api/v1/me/bookings?page=13 200",
+      "result": "PASS",
+      "detail": {
+        "p95Ms": 3,
+        "limitMs": 300,
+        "samples": 100
+      }
+    },
+    {
+      "criterion": "P5 GET /api/v1/me/bookings?page=130 200",
+      "result": "PASS",
+      "detail": {
+        "p95Ms": 6,
+        "limitMs": 300,
+        "samples": 100
+      }
+    },
+    {
+      "criterion": "P5 GET /api/v1/me/bookings?page=131 200",
+      "result": "PASS",
+      "detail": {
+        "p95Ms": 5,
+        "limitMs": 300,
+        "samples": 100
+      }
+    },
+    {
+      "criterion": "P5 GET /api/v1/me/bookings?page=132 200",
+      "result": "PASS",
+      "detail": {
+        "p95Ms": 5,
+        "limitMs": 300,
+        "samples": 100
+      }
+    },
+    {
+      "criterion": "P5 GET /api/v1/me/bookings?page=133 200",
+      "result": "PASS",
+      "detail": {
+        "p95Ms": 6,
+        "limitMs": 300,
+        "samples": 100
+      }
+    },
+    {
+      "criterion": "P5 GET /api/v1/me/bookings?page=134 200",
+      "result": "PASS",
+      "detail": {
+        "p95Ms": 6,
+        "limitMs": 300,
+        "samples": 100
+      }
+    },
+    {
+      "criterion": "P5 GET /api/v1/me/bookings?page=135 200",
+      "result": "PASS",
+      "detail": {
+        "p95Ms": 5,
+        "limitMs": 300,
+        "samples": 100
+      }
+    },
+    {
+      "criterion": "P5 GET /api/v1/me/bookings?page=136 200",
+      "result": "PASS",
+      "detail": {
+        "p95Ms": 5,
+        "limitMs": 300,
+        "samples": 100
+      }
+    },
+    {
+      "criterion": "P5 GET /api/v1/me/bookings?page=137 200",
+      "result": "PASS",
+      "detail": {
+        "p95Ms": 5,
+        "limitMs": 300,
+        "samples": 100
+      }
+    },
+    {
+      "criterion": "P5 GET /api/v1/me/bookings?page=138 200",
+      "result": "PASS",
+      "detail": {
+        "p95Ms": 5,
+        "limitMs": 300,
+        "samples": 100
+      }
+    },
+    {
+      "criterion": "P5 GET /api/v1/me/bookings?page=139 200",
+      "result": "PASS",
+      "detail": {
+        "p95Ms": 7,
+        "limitMs": 300,
+        "samples": 100
+      }
+    },
+    {
+      "criterion": "P5 GET /api/v1/me/bookings?page=14 200",
+      "result": "PASS",
+      "detail": {
+        "p95Ms": 3,
+        "limitMs": 300,
+        "samples": 100
+      }
+    },
+    {
+      "criterion": "P5 GET /api/v1/me/bookings?page=140 200",
+      "result": "PASS",
+      "detail": {
+        "p95Ms": 5,
+        "limitMs": 300,
+        "samples": 100
+      }
+    },
+    {
+      "criterion": "P5 GET /api/v1/me/bookings?page=141 200",
+      "result": "PASS",
+      "detail": {
+        "p95Ms": 6,
+        "limitMs": 300,
+        "samples": 100
+      }
+    },
+    {
+      "criterion": "P5 GET /api/v1/me/bookings?page=142 200",
+      "result": "PASS",
+      "detail": {
+        "p95Ms": 6,
+        "limitMs": 300,
+        "samples": 100
+      }
+    },
+    {
+      "criterion": "P5 GET /api/v1/me/bookings?page=143 200",
+      "result": "PASS",
+      "detail": {
+        "p95Ms": 5,
+        "limitMs": 300,
+        "samples": 100
+      }
+    },
+    {
+      "criterion": "P5 GET /api/v1/me/bookings?page=144 200",
+      "result": "PASS",
+      "detail": {
+        "p95Ms": 5,
+        "limitMs": 300,
+        "samples": 100
+      }
+    },
+    {
+      "criterion": "P5 GET /api/v1/me/bookings?page=145 200",
+      "result": "PASS",
+      "detail": {
+        "p95Ms": 5,
+        "limitMs": 300,
+        "samples": 100
+      }
+    },
+    {
+      "criterion": "P5 GET /api/v1/me/bookings?page=146 200",
+      "result": "PASS",
+      "detail": {
+        "p95Ms": 5,
+        "limitMs": 300,
+        "samples": 100
+      }
+    },
+    {
+      "criterion": "P5 GET /api/v1/me/bookings?page=147 200",
+      "result": "PASS",
+      "detail": {
+        "p95Ms": 6,
+        "limitMs": 300,
+        "samples": 100
+      }
+    },
+    {
+      "criterion": "P5 GET /api/v1/me/bookings?page=148 200",
+      "result": "PASS",
+      "detail": {
+        "p95Ms": 6,
+        "limitMs": 300,
+        "samples": 100
+      }
+    },
+    {
+      "criterion": "P5 GET /api/v1/me/bookings?page=149 200",
+      "result": "PASS",
+      "detail": {
+        "p95Ms": 5,
+        "limitMs": 300,
+        "samples": 100
+      }
+    },
+    {
+      "criterion": "P5 GET /api/v1/me/bookings?page=15 200",
+      "result": "PASS",
+      "detail": {
+        "p95Ms": 3,
+        "limitMs": 300,
+        "samples": 100
+      }
+    },
+    {
+      "criterion": "P5 GET /api/v1/me/bookings?page=150 200",
+      "result": "PASS",
+      "detail": {
+        "p95Ms": 8,
+        "limitMs": 300,
+        "samples": 100
+      }
+    },
+    {
+      "criterion": "P5 GET /api/v1/me/bookings?page=151 200",
+      "result": "PASS",
+      "detail": {
+        "p95Ms": 5,
+        "limitMs": 300,
+        "samples": 100
+      }
+    },
+    {
+      "criterion": "P5 GET /api/v1/me/bookings?page=152 200",
+      "result": "PASS",
+      "detail": {
+        "p95Ms": 6,
+        "limitMs": 300,
+        "samples": 100
+      }
+    },
+    {
+      "criterion": "P5 GET /api/v1/me/bookings?page=153 200",
+      "result": "PASS",
+      "detail": {
+        "p95Ms": 8,
+        "limitMs": 300,
+        "samples": 100
+      }
+    },
+    {
+      "criterion": "P5 GET /api/v1/me/bookings?page=154 200",
+      "result": "PASS",
+      "detail": {
+        "p95Ms": 6,
+        "limitMs": 300,
+        "samples": 100
+      }
+    },
+    {
+      "criterion": "P5 GET /api/v1/me/bookings?page=155 200",
+      "result": "PASS",
+      "detail": {
+        "p95Ms": 6,
+        "limitMs": 300,
+        "samples": 100
+      }
+    },
+    {
+      "criterion": "P5 GET /api/v1/me/bookings?page=156 200",
+      "result": "PASS",
+      "detail": {
+        "p95Ms": 6,
+        "limitMs": 300,
+        "samples": 100
+      }
+    },
+    {
+      "criterion": "P5 GET /api/v1/me/bookings?page=157 200",
+      "result": "PASS",
+      "detail": {
+        "p95Ms": 6,
+        "limitMs": 300,
+        "samples": 100
+      }
+    },
+    {
+      "criterion": "P5 GET /api/v1/me/bookings?page=158 200",
+      "result": "PASS",
+      "detail": {
+        "p95Ms": 7,
+        "limitMs": 300,
+        "samples": 100
+      }
+    },
+    {
+      "criterion": "P5 GET /api/v1/me/bookings?page=159 200",
+      "result": "PASS",
+      "detail": {
+        "p95Ms": 6,
+        "limitMs": 300,
+        "samples": 100
+      }
+    },
+    {
+      "criterion": "P5 GET /api/v1/me/bookings?page=16 200",
+      "result": "PASS",
+      "detail": {
+        "p95Ms": 5,
+        "limitMs": 300,
+        "samples": 100
+      }
+    },
+    {
+      "criterion": "P5 GET /api/v1/me/bookings?page=160 200",
+      "result": "PASS",
+      "detail": {
+        "p95Ms": 8,
+        "limitMs": 300,
+        "samples": 100
+      }
+    },
+    {
+      "criterion": "P5 GET /api/v1/me/bookings?page=161 200",
+      "result": "PASS",
+      "detail": {
+        "p95Ms": 6,
+        "limitMs": 300,
+        "samples": 100
+      }
+    },
+    {
+      "criterion": "P5 GET /api/v1/me/bookings?page=162 200",
+      "result": "PASS",
+      "detail": {
+        "p95Ms": 6,
+        "limitMs": 300,
+        "samples": 100
+      }
+    },
+    {
+      "criterion": "P5 GET /api/v1/me/bookings?page=163 200",
+      "result": "PASS",
+      "detail": {
+        "p95Ms": 6,
+        "limitMs": 300,
+        "samples": 100
+      }
+    },
+    {
+      "criterion": "P5 GET /api/v1/me/bookings?page=164 200",
+      "result": "PASS",
+      "detail": {
+        "p95Ms": 6,
+        "limitMs": 300,
+        "samples": 100
+      }
+    },
+    {
+      "criterion": "P5 GET /api/v1/me/bookings?page=165 200",
+      "result": "PASS",
+      "detail": {
+        "p95Ms": 6,
+        "limitMs": 300,
+        "samples": 100
+      }
+    },
+    {
+      "criterion": "P5 GET /api/v1/me/bookings?page=166 200",
+      "result": "PASS",
+      "detail": {
+        "p95Ms": 6,
+        "limitMs": 300,
+        "samples": 100
+      }
+    },
+    {
+      "criterion": "P5 GET /api/v1/me/bookings?page=167 200",
+      "result": "PASS",
+      "detail": {
+        "p95Ms": 7,
+        "limitMs": 300,
+        "samples": 100
+      }
+    },
+    {
+      "criterion": "P5 GET /api/v1/me/bookings?page=168 200",
+      "result": "PASS",
+      "detail": {
+        "p95Ms": 6,
+        "limitMs": 300,
+        "samples": 100
+      }
+    },
+    {
+      "criterion": "P5 GET /api/v1/me/bookings?page=169 200",
+      "result": "PASS",
+      "detail": {
+        "p95Ms": 6,
+        "limitMs": 300,
+        "samples": 100
+      }
+    },
+    {
+      "criterion": "P5 GET /api/v1/me/bookings?page=17 200",
+      "result": "PASS",
+      "detail": {
+        "p95Ms": 3,
+        "limitMs": 300,
+        "samples": 100
+      }
+    },
+    {
+      "criterion": "P5 GET /api/v1/me/bookings?page=170 200",
+      "result": "PASS",
+      "detail": {
+        "p95Ms": 7,
+        "limitMs": 300,
+        "samples": 100
+      }
+    },
+    {
+      "criterion": "P5 GET /api/v1/me/bookings?page=171 200",
+      "result": "PASS",
+      "detail": {
+        "p95Ms": 6,
+        "limitMs": 300,
+        "samples": 100
+      }
+    },
+    {
+      "criterion": "P5 GET /api/v1/me/bookings?page=172 200",
+      "result": "PASS",
+      "detail": {
+        "p95Ms": 6,
+        "limitMs": 300,
+        "samples": 100
+      }
+    },
+    {
+      "criterion": "P5 GET /api/v1/me/bookings?page=173 200",
+      "result": "PASS",
+      "detail": {
+        "p95Ms": 6,
+        "limitMs": 300,
+        "samples": 100
+      }
+    },
+    {
+      "criterion": "P5 GET /api/v1/me/bookings?page=174 200",
+      "result": "PASS",
+      "detail": {
+        "p95Ms": 6,
+        "limitMs": 300,
+        "samples": 100
+      }
+    },
+    {
+      "criterion": "P5 GET /api/v1/me/bookings?page=175 200",
+      "result": "PASS",
+      "detail": {
+        "p95Ms": 6,
+        "limitMs": 300,
+        "samples": 100
+      }
+    },
+    {
+      "criterion": "P5 GET /api/v1/me/bookings?page=176 200",
+      "result": "PASS",
+      "detail": {
+        "p95Ms": 6,
+        "limitMs": 300,
+        "samples": 100
+      }
+    },
+    {
+      "criterion": "P5 GET /api/v1/me/bookings?page=177 200",
+      "result": "PASS",
+      "detail": {
+        "p95Ms": 6,
+        "limitMs": 300,
+        "samples": 100
+      }
+    },
+    {
+      "criterion": "P5 GET /api/v1/me/bookings?page=178 200",
+      "result": "PASS",
+      "detail": {
+        "p95Ms": 6,
+        "limitMs": 300,
+        "samples": 100
+      }
+    },
+    {
+      "criterion": "P5 GET /api/v1/me/bookings?page=179 200",
+      "result": "PASS",
+      "detail": {
+        "p95Ms": 8,
+        "limitMs": 300,
+        "samples": 100
+      }
+    },
+    {
+      "criterion": "P5 GET /api/v1/me/bookings?page=18 200",
+      "result": "PASS",
+      "detail": {
+        "p95Ms": 3,
+        "limitMs": 300,
+        "samples": 100
+      }
+    },
+    {
+      "criterion": "P5 GET /api/v1/me/bookings?page=180 200",
+      "result": "PASS",
+      "detail": {
+        "p95Ms": 9,
+        "limitMs": 300,
+        "samples": 100
+      }
+    },
+    {
+      "criterion": "P5 GET /api/v1/me/bookings?page=181 200",
+      "result": "PASS",
+      "detail": {
+        "p95Ms": 6,
+        "limitMs": 300,
+        "samples": 100
+      }
+    },
+    {
+      "criterion": "P5 GET /api/v1/me/bookings?page=182 200",
+      "result": "PASS",
+      "detail": {
+        "p95Ms": 7,
+        "limitMs": 300,
+        "samples": 100
+      }
+    },
+    {
+      "criterion": "P5 GET /api/v1/me/bookings?page=183 200",
+      "result": "PASS",
+      "detail": {
+        "p95Ms": 6,
+        "limitMs": 300,
+        "samples": 100
+      }
+    },
+    {
+      "criterion": "P5 GET /api/v1/me/bookings?page=184 200",
+      "result": "PASS",
+      "detail": {
+        "p95Ms": 6,
+        "limitMs": 300,
+        "samples": 100
+      }
+    },
+    {
+      "criterion": "P5 GET /api/v1/me/bookings?page=19 200",
+      "result": "PASS",
+      "detail": {
+        "p95Ms": 4,
+        "limitMs": 300,
+        "samples": 100
+      }
+    },
+    {
+      "criterion": "P5 GET /api/v1/me/bookings?page=2 200",
+      "result": "PASS",
+      "detail": {
+        "p95Ms": 6,
+        "limitMs": 300,
+        "samples": 100
+      }
+    },
+    {
+      "criterion": "P5 GET /api/v1/me/bookings?page=20 200",
+      "result": "PASS",
+      "detail": {
+        "p95Ms": 3,
+        "limitMs": 300,
+        "samples": 100
+      }
+    },
+    {
+      "criterion": "P5 GET /api/v1/me/bookings?page=21 200",
+      "result": "PASS",
+      "detail": {
+        "p95Ms": 3,
+        "limitMs": 300,
+        "samples": 100
+      }
+    },
+    {
+      "criterion": "P5 GET /api/v1/me/bookings?page=22 200",
+      "result": "PASS",
+      "detail": {
+        "p95Ms": 3,
+        "limitMs": 300,
+        "samples": 100
+      }
+    },
+    {
+      "criterion": "P5 GET /api/v1/me/bookings?page=23 200",
+      "result": "PASS",
+      "detail": {
+        "p95Ms": 3,
+        "limitMs": 300,
+        "samples": 100
+      }
+    },
+    {
+      "criterion": "P5 GET /api/v1/me/bookings?page=24 200",
+      "result": "PASS",
+      "detail": {
+        "p95Ms": 3,
+        "limitMs": 300,
+        "samples": 100
+      }
+    },
+    {
+      "criterion": "P5 GET /api/v1/me/bookings?page=25 200",
+      "result": "PASS",
+      "detail": {
+        "p95Ms": 3,
+        "limitMs": 300,
+        "samples": 100
+      }
+    },
+    {
+      "criterion": "P5 GET /api/v1/me/bookings?page=26 200",
+      "result": "PASS",
+      "detail": {
+        "p95Ms": 3,
+        "limitMs": 300,
+        "samples": 100
+      }
+    },
+    {
+      "criterion": "P5 GET /api/v1/me/bookings?page=27 200",
+      "result": "PASS",
+      "detail": {
+        "p95Ms": 4,
+        "limitMs": 300,
+        "samples": 100
+      }
+    },
+    {
+      "criterion": "P5 GET /api/v1/me/bookings?page=28 200",
+      "result": "PASS",
+      "detail": {
+        "p95Ms": 3,
+        "limitMs": 300,
+        "samples": 100
+      }
+    },
+    {
+      "criterion": "P5 GET /api/v1/me/bookings?page=29 200",
+      "result": "PASS",
+      "detail": {
+        "p95Ms": 3,
+        "limitMs": 300,
+        "samples": 100
+      }
+    },
+    {
+      "criterion": "P5 GET /api/v1/me/bookings?page=3 200",
+      "result": "PASS",
+      "detail": {
+        "p95Ms": 5,
+        "limitMs": 300,
+        "samples": 100
+      }
+    },
+    {
+      "criterion": "P5 GET /api/v1/me/bookings?page=30 200",
+      "result": "PASS",
+      "detail": {
+        "p95Ms": 3,
+        "limitMs": 300,
+        "samples": 100
+      }
+    },
+    {
+      "criterion": "P5 GET /api/v1/me/bookings?page=31 200",
+      "result": "PASS",
+      "detail": {
+        "p95Ms": 5,
+        "limitMs": 300,
+        "samples": 100
+      }
+    },
+    {
+      "criterion": "P5 GET /api/v1/me/bookings?page=32 200",
+      "result": "PASS",
+      "detail": {
+        "p95Ms": 4,
+        "limitMs": 300,
+        "samples": 100
+      }
+    },
+    {
+      "criterion": "P5 GET /api/v1/me/bookings?page=33 200",
+      "result": "PASS",
+      "detail": {
+        "p95Ms": 3,
+        "limitMs": 300,
+        "samples": 100
+      }
+    },
+    {
+      "criterion": "P5 GET /api/v1/me/bookings?page=34 200",
+      "result": "PASS",
+      "detail": {
+        "p95Ms": 4,
+        "limitMs": 300,
+        "samples": 100
+      }
+    },
+    {
+      "criterion": "P5 GET /api/v1/me/bookings?page=35 200",
+      "result": "PASS",
+      "detail": {
+        "p95Ms": 4,
+        "limitMs": 300,
+        "samples": 100
+      }
+    },
+    {
+      "criterion": "P5 GET /api/v1/me/bookings?page=36 200",
+      "result": "PASS",
+      "detail": {
+        "p95Ms": 3,
+        "limitMs": 300,
+        "samples": 100
+      }
+    },
+    {
+      "criterion": "P5 GET /api/v1/me/bookings?page=37 200",
+      "result": "PASS",
+      "detail": {
+        "p95Ms": 3,
+        "limitMs": 300,
+        "samples": 100
+      }
+    },
+    {
+      "criterion": "P5 GET /api/v1/me/bookings?page=38 200",
+      "result": "PASS",
+      "detail": {
+        "p95Ms": 4,
+        "limitMs": 300,
+        "samples": 100
+      }
+    },
+    {
+      "criterion": "P5 GET /api/v1/me/bookings?page=39 200",
+      "result": "PASS",
+      "detail": {
+        "p95Ms": 3,
+        "limitMs": 300,
+        "samples": 100
+      }
+    },
+    {
+      "criterion": "P5 GET /api/v1/me/bookings?page=4 200",
+      "result": "PASS",
+      "detail": {
+        "p95Ms": 3,
+        "limitMs": 300,
+        "samples": 100
+      }
+    },
+    {
+      "criterion": "P5 GET /api/v1/me/bookings?page=40 200",
+      "result": "PASS",
+      "detail": {
+        "p95Ms": 3,
+        "limitMs": 300,
+        "samples": 100
+      }
+    },
+    {
+      "criterion": "P5 GET /api/v1/me/bookings?page=41 200",
+      "result": "PASS",
+      "detail": {
+        "p95Ms": 4,
+        "limitMs": 300,
+        "samples": 100
+      }
+    },
+    {
+      "criterion": "P5 GET /api/v1/me/bookings?page=42 200",
+      "result": "PASS",
+      "detail": {
+        "p95Ms": 4,
+        "limitMs": 300,
+        "samples": 100
+      }
+    },
+    {
+      "criterion": "P5 GET /api/v1/me/bookings?page=43 200",
+      "result": "PASS",
+      "detail": {
+        "p95Ms": 3,
+        "limitMs": 300,
+        "samples": 100
+      }
+    },
+    {
+      "criterion": "P5 GET /api/v1/me/bookings?page=44 200",
+      "result": "PASS",
+      "detail": {
+        "p95Ms": 4,
+        "limitMs": 300,
+        "samples": 100
+      }
+    },
+    {
+      "criterion": "P5 GET /api/v1/me/bookings?page=45 200",
+      "result": "PASS",
+      "detail": {
+        "p95Ms": 6,
+        "limitMs": 300,
+        "samples": 100
+      }
+    },
+    {
+      "criterion": "P5 GET /api/v1/me/bookings?page=46 200",
+      "result": "PASS",
+      "detail": {
+        "p95Ms": 4,
+        "limitMs": 300,
+        "samples": 100
+      }
+    },
+    {
+      "criterion": "P5 GET /api/v1/me/bookings?page=47 200",
+      "result": "PASS",
+      "detail": {
+        "p95Ms": 4,
+        "limitMs": 300,
+        "samples": 100
+      }
+    },
+    {
+      "criterion": "P5 GET /api/v1/me/bookings?page=48 200",
+      "result": "PASS",
+      "detail": {
+        "p95Ms": 5,
+        "limitMs": 300,
+        "samples": 100
+      }
+    },
+    {
+      "criterion": "P5 GET /api/v1/me/bookings?page=49 200",
+      "result": "PASS",
+      "detail": {
+        "p95Ms": 4,
+        "limitMs": 300,
+        "samples": 100
+      }
+    },
+    {
+      "criterion": "P5 GET /api/v1/me/bookings?page=5 200",
+      "result": "PASS",
+      "detail": {
+        "p95Ms": 3,
+        "limitMs": 300,
+        "samples": 100
+      }
+    },
+    {
+      "criterion": "P5 GET /api/v1/me/bookings?page=50 200",
+      "result": "PASS",
+      "detail": {
+        "p95Ms": 3,
+        "limitMs": 300,
+        "samples": 100
+      }
+    },
+    {
+      "criterion": "P5 GET /api/v1/me/bookings?page=51 200",
+      "result": "PASS",
+      "detail": {
+        "p95Ms": 4,
+        "limitMs": 300,
+        "samples": 100
+      }
+    },
+    {
+      "criterion": "P5 GET /api/v1/me/bookings?page=52 200",
+      "result": "PASS",
+      "detail": {
+        "p95Ms": 4,
+        "limitMs": 300,
+        "samples": 100
+      }
+    },
+    {
+      "criterion": "P5 GET /api/v1/me/bookings?page=53 200",
+      "result": "PASS",
+      "detail": {
+        "p95Ms": 4,
+        "limitMs": 300,
+        "samples": 100
+      }
+    },
+    {
+      "criterion": "P5 GET /api/v1/me/bookings?page=54 200",
+      "result": "PASS",
+      "detail": {
+        "p95Ms": 4,
+        "limitMs": 300,
+        "samples": 100
+      }
+    },
+    {
+      "criterion": "P5 GET /api/v1/me/bookings?page=55 200",
+      "result": "PASS",
+      "detail": {
+        "p95Ms": 4,
+        "limitMs": 300,
+        "samples": 100
+      }
+    },
+    {
+      "criterion": "P5 GET /api/v1/me/bookings?page=56 200",
+      "result": "PASS",
+      "detail": {
+        "p95Ms": 4,
+        "limitMs": 300,
+        "samples": 100
+      }
+    },
+    {
+      "criterion": "P5 GET /api/v1/me/bookings?page=57 200",
+      "result": "PASS",
+      "detail": {
+        "p95Ms": 4,
+        "limitMs": 300,
+        "samples": 100
+      }
+    },
+    {
+      "criterion": "P5 GET /api/v1/me/bookings?page=58 200",
+      "result": "PASS",
+      "detail": {
+        "p95Ms": 5,
+        "limitMs": 300,
+        "samples": 100
+      }
+    },
+    {
+      "criterion": "P5 GET /api/v1/me/bookings?page=59 200",
+      "result": "PASS",
+      "detail": {
+        "p95Ms": 4,
+        "limitMs": 300,
+        "samples": 100
+      }
+    },
+    {
+      "criterion": "P5 GET /api/v1/me/bookings?page=6 200",
+      "result": "PASS",
+      "detail": {
+        "p95Ms": 2,
+        "limitMs": 300,
+        "samples": 100
+      }
+    },
+    {
+      "criterion": "P5 GET /api/v1/me/bookings?page=60 200",
+      "result": "PASS",
+      "detail": {
+        "p95Ms": 4,
+        "limitMs": 300,
+        "samples": 100
+      }
+    },
+    {
+      "criterion": "P5 GET /api/v1/me/bookings?page=61 200",
+      "result": "PASS",
+      "detail": {
+        "p95Ms": 4,
+        "limitMs": 300,
+        "samples": 100
+      }
+    },
+    {
+      "criterion": "P5 GET /api/v1/me/bookings?page=62 200",
+      "result": "PASS",
+      "detail": {
+        "p95Ms": 4,
+        "limitMs": 300,
+        "samples": 100
+      }
+    },
+    {
+      "criterion": "P5 GET /api/v1/me/bookings?page=63 200",
+      "result": "PASS",
+      "detail": {
+        "p95Ms": 5,
+        "limitMs": 300,
+        "samples": 100
+      }
+    },
+    {
+      "criterion": "P5 GET /api/v1/me/bookings?page=64 200",
+      "result": "PASS",
+      "detail": {
+        "p95Ms": 4,
+        "limitMs": 300,
+        "samples": 100
+      }
+    },
+    {
+      "criterion": "P5 GET /api/v1/me/bookings?page=65 200",
+      "result": "PASS",
+      "detail": {
+        "p95Ms": 4,
+        "limitMs": 300,
+        "samples": 100
+      }
+    },
+    {
+      "criterion": "P5 GET /api/v1/me/bookings?page=66 200",
+      "result": "PASS",
+      "detail": {
+        "p95Ms": 4,
+        "limitMs": 300,
+        "samples": 100
+      }
+    },
+    {
+      "criterion": "P5 GET /api/v1/me/bookings?page=67 200",
+      "result": "PASS",
+      "detail": {
+        "p95Ms": 4,
+        "limitMs": 300,
+        "samples": 100
+      }
+    },
+    {
+      "criterion": "P5 GET /api/v1/me/bookings?page=68 200",
+      "result": "PASS",
+      "detail": {
+        "p95Ms": 4,
+        "limitMs": 300,
+        "samples": 100
+      }
+    },
+    {
+      "criterion": "P5 GET /api/v1/me/bookings?page=69 200",
+      "result": "PASS",
+      "detail": {
+        "p95Ms": 4,
+        "limitMs": 300,
+        "samples": 100
+      }
+    },
+    {
+      "criterion": "P5 GET /api/v1/me/bookings?page=7 200",
+      "result": "PASS",
+      "detail": {
+        "p95Ms": 3,
+        "limitMs": 300,
+        "samples": 100
+      }
+    },
+    {
+      "criterion": "P5 GET /api/v1/me/bookings?page=70 200",
+      "result": "PASS",
+      "detail": {
+        "p95Ms": 6,
+        "limitMs": 300,
+        "samples": 100
+      }
+    },
+    {
+      "criterion": "P5 GET /api/v1/me/bookings?page=71 200",
+      "result": "PASS",
+      "detail": {
+        "p95Ms": 4,
+        "limitMs": 300,
+        "samples": 100
+      }
+    },
+    {
+      "criterion": "P5 GET /api/v1/me/bookings?page=72 200",
+      "result": "PASS",
+      "detail": {
+        "p95Ms": 5,
+        "limitMs": 300,
+        "samples": 100
+      }
+    },
+    {
+      "criterion": "P5 GET /api/v1/me/bookings?page=73 200",
+      "result": "PASS",
+      "detail": {
+        "p95Ms": 4,
+        "limitMs": 300,
+        "samples": 100
+      }
+    },
+    {
+      "criterion": "P5 GET /api/v1/me/bookings?page=74 200",
+      "result": "PASS",
+      "detail": {
+        "p95Ms": 4,
+        "limitMs": 300,
+        "samples": 100
+      }
+    },
+    {
+      "criterion": "P5 GET /api/v1/me/bookings?page=75 200",
+      "result": "PASS",
+      "detail": {
+        "p95Ms": 4,
+        "limitMs": 300,
+        "samples": 100
+      }
+    },
+    {
+      "criterion": "P5 GET /api/v1/me/bookings?page=76 200",
+      "result": "PASS",
+      "detail": {
+        "p95Ms": 4,
+        "limitMs": 300,
+        "samples": 100
+      }
+    },
+    {
+      "criterion": "P5 GET /api/v1/me/bookings?page=77 200",
+      "result": "PASS",
+      "detail": {
+        "p95Ms": 4,
+        "limitMs": 300,
+        "samples": 100
+      }
+    },
+    {
+      "criterion": "P5 GET /api/v1/me/bookings?page=78 200",
+      "result": "PASS",
+      "detail": {
+        "p95Ms": 4,
+        "limitMs": 300,
+        "samples": 100
+      }
+    },
+    {
+      "criterion": "P5 GET /api/v1/me/bookings?page=79 200",
+      "result": "PASS",
+      "detail": {
+        "p95Ms": 4,
+        "limitMs": 300,
+        "samples": 100
+      }
+    },
+    {
+      "criterion": "P5 GET /api/v1/me/bookings?page=8 200",
+      "result": "PASS",
+      "detail": {
+        "p95Ms": 3,
+        "limitMs": 300,
+        "samples": 100
+      }
+    },
+    {
+      "criterion": "P5 GET /api/v1/me/bookings?page=80 200",
+      "result": "PASS",
+      "detail": {
+        "p95Ms": 4,
+        "limitMs": 300,
+        "samples": 100
+      }
+    },
+    {
+      "criterion": "P5 GET /api/v1/me/bookings?page=81 200",
+      "result": "PASS",
+      "detail": {
+        "p95Ms": 4,
+        "limitMs": 300,
+        "samples": 100
+      }
+    },
+    {
+      "criterion": "P5 GET /api/v1/me/bookings?page=82 200",
+      "result": "PASS",
+      "detail": {
+        "p95Ms": 5,
+        "limitMs": 300,
+        "samples": 100
+      }
+    },
+    {
+      "criterion": "P5 GET /api/v1/me/bookings?page=83 200",
+      "result": "PASS",
+      "detail": {
+        "p95Ms": 4,
+        "limitMs": 300,
+        "samples": 100
+      }
+    },
+    {
+      "criterion": "P5 GET /api/v1/me/bookings?page=84 200",
+      "result": "PASS",
+      "detail": {
+        "p95Ms": 4,
+        "limitMs": 300,
+        "samples": 100
+      }
+    },
+    {
+      "criterion": "P5 GET /api/v1/me/bookings?page=85 200",
+      "result": "PASS",
+      "detail": {
+        "p95Ms": 4,
+        "limitMs": 300,
+        "samples": 100
+      }
+    },
+    {
+      "criterion": "P5 GET /api/v1/me/bookings?page=86 200",
+      "result": "PASS",
+      "detail": {
+        "p95Ms": 5,
+        "limitMs": 300,
+        "samples": 100
+      }
+    },
+    {
+      "criterion": "P5 GET /api/v1/me/bookings?page=87 200",
+      "result": "PASS",
+      "detail": {
+        "p95Ms": 5,
+        "limitMs": 300,
+        "samples": 100
+      }
+    },
+    {
+      "criterion": "P5 GET /api/v1/me/bookings?page=88 200",
+      "result": "PASS",
+      "detail": {
+        "p95Ms": 4,
+        "limitMs": 300,
+        "samples": 100
+      }
+    },
+    {
+      "criterion": "P5 GET /api/v1/me/bookings?page=89 200",
+      "result": "PASS",
+      "detail": {
+        "p95Ms": 5,
+        "limitMs": 300,
+        "samples": 100
+      }
+    },
+    {
+      "criterion": "P5 GET /api/v1/me/bookings?page=9 200",
+      "result": "PASS",
+      "detail": {
+        "p95Ms": 3,
+        "limitMs": 300,
+        "samples": 100
+      }
+    },
+    {
+      "criterion": "P5 GET /api/v1/me/bookings?page=90 200",
+      "result": "PASS",
+      "detail": {
+        "p95Ms": 5,
+        "limitMs": 300,
+        "samples": 100
+      }
+    },
+    {
+      "criterion": "P5 GET /api/v1/me/bookings?page=91 200",
+      "result": "PASS",
+      "detail": {
+        "p95Ms": 5,
+        "limitMs": 300,
+        "samples": 100
+      }
+    },
+    {
+      "criterion": "P5 GET /api/v1/me/bookings?page=92 200",
+      "result": "PASS",
+      "detail": {
+        "p95Ms": 4,
+        "limitMs": 300,
+        "samples": 100
+      }
+    },
+    {
+      "criterion": "P5 GET /api/v1/me/bookings?page=93 200",
+      "result": "PASS",
+      "detail": {
+        "p95Ms": 5,
+        "limitMs": 300,
+        "samples": 100
+      }
+    },
+    {
+      "criterion": "P5 GET /api/v1/me/bookings?page=94 200",
+      "result": "PASS",
+      "detail": {
+        "p95Ms": 5,
+        "limitMs": 300,
+        "samples": 100
+      }
+    },
+    {
+      "criterion": "P5 GET /api/v1/me/bookings?page=95 200",
+      "result": "PASS",
+      "detail": {
+        "p95Ms": 7,
+        "limitMs": 300,
+        "samples": 100
+      }
+    },
+    {
+      "criterion": "P5 GET /api/v1/me/bookings?page=96 200",
+      "result": "PASS",
+      "detail": {
+        "p95Ms": 8,
+        "limitMs": 300,
+        "samples": 100
+      }
+    },
+    {
+      "criterion": "P5 GET /api/v1/me/bookings?page=97 200",
+      "result": "PASS",
+      "detail": {
+        "p95Ms": 5,
+        "limitMs": 300,
+        "samples": 100
+      }
+    },
+    {
+      "criterion": "P5 GET /api/v1/me/bookings?page=98 200",
+      "result": "PASS",
+      "detail": {
+        "p95Ms": 4,
+        "limitMs": 300,
+        "samples": 100
+      }
+    },
+    {
+      "criterion": "P5 GET /api/v1/me/bookings?page=99 200",
+      "result": "PASS",
+      "detail": {
+        "p95Ms": 4,
+        "limitMs": 300,
+        "samples": 100
+      }
+    },
+    {
+      "criterion": "No server errors or client timeouts",
+      "result": "PASS",
+      "detail": 0
+    },
+    {
+      "criterion": "All server timings matched",
+      "result": "PASS",
+      "detail": 0
+    },
+    {
+      "criterion": "P4 all 20 repetitions",
+      "result": "PASS",
+      "detail": 20
+    },
+    {
+      "criterion": "Invariant audit",
+      "result": "PASS",
+      "detail": "PASS"
+    },
+    {
+      "criterion": "P6 after-GC heap",
+      "result": "INCONCLUSIVE",
+      "detail": "Live-data metric stayed identical throughout P6; fresh post-GC samples at minutes 10 and 60 are not proven."
+    }
+  ],
+  "boundary": "Separate app/DB containers and host generator share one Docker Desktop host. Diagnostic profile shortens durations and cannot satisfy TS-22. Heap-after-GC uses JVM metric; absent/zero measurements are inconclusive.",
+  "manualReview": "Review pool exhaustion events, expected authenticated/anonymous session counts and P5 completeness. API read timings do not prove HTML /rooms and /bookings/mine rendering performance."
+}

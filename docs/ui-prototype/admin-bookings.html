@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Усі бронювання: Переговорні</title>
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/fonts.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/timeline.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">До змісту</a>
+  <header class="app-header">
+    <a class="app-name" href="occupancy.html">Переговорні</a>
+    <nav class="app-nav" aria-label="Основна навігація">
+      <a class="nav-link" href="occupancy.html">Зайнятість</a>
+      <a class="nav-link" href="rooms.html">Кімнати</a>
+      <a class="nav-link" href="my-bookings.html">Мої бронювання</a>
+      <div class="nav-admin">
+        <a class="nav-link" href="admin-bookings.html" aria-current="page">Усі бронювання</a>
+        <a class="nav-link" href="admin-rooms.html">Керування кімнатами</a>
+        <a class="nav-link" href="admin-users.html">Користувачі</a>
+      </div>
+    </nav>
+    <div class="app-user">
+      <span class="app-user-name">Андрій Мельник</span>
+      <button class="btn" type="button">Вийти</button>
+    </div>
+  </header>
+
+  <main id="main" class="page-shell">
+    <div class="page-head">
+      <h1>Усі бронювання</h1>
+    </div>
+    <div id="alerts" class="alerts" aria-live="polite"></div>
+
+    <form class="filters" action="admin-bookings.html" method="get">
+      <div class="field filter-field">
+        <label class="field-label" for="room">Кімната</label>
+        <select class="field-control" id="room" name="roomId">
+          <option value="" selected>Усі</option>
+          <option value="dnipro">Дніпро</option>
+          <option value="desna">Десна</option>
+          <option value="prut">Прут</option>
+          <option value="hoverla">Говерла</option>
+          <option value="karpaty">Карпати</option>
+          <option value="dnister">Дністер</option>
+          <option value="gorgany">Ґорґани</option>
+          <option value="beskydy">Бескиди</option>
+        </select>
+      </div>
+      <div class="field filter-field">
+        <label class="field-label" for="author">Автор</label>
+        <input class="field-control" id="author" name="author" type="text">
+      </div>
+      <div class="field filter-field">
+        <label class="field-label" for="date-from">З дати</label>
+        <input class="field-control" id="date-from" name="dateFrom" type="date">
+      </div>
+      <div class="field filter-field">
+        <label class="field-label" for="date-to">До дати</label>
+        <input class="field-control" id="date-to" name="dateTo" type="date">
+      </div>
+      <div class="field filter-field">
+        <label class="field-label" for="status">Стан</label>
+        <select class="field-control" id="status" name="status">
+          <option value="" selected>Усі</option>
+          <option value="upcoming">Заплановано</option>
+          <option value="current">Триває</option>
+          <option value="completed">Завершено</option>
+          <option value="cancelled">Скасовано</option>
+        </select>
+      </div>
+      <div class="field filter-field">
+        <label class="field-label" for="order">Порядок</label>
+        <select class="field-control" id="order" name="order">
+          <option value="newest" selected>Спочатку нові</option>
+          <option value="oldest">Спочатку старі</option>
+        </select>
+      </div>
+      <div class="filter-actions">
+        <button class="btn btn-primary" type="submit">Показати</button>
+      </div>
+    </form>
+
+    <div class="table-wrap">
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th scope="col">Дата</th>
+            <th scope="col">Час</th>
+            <th scope="col">Кімната</th>
+            <th scope="col">Назва</th>
+            <th scope="col">Автор</th>
+            <th scope="col">Стан</th>
+            <th scope="col"><span class="sr-only">Дія</span></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr id="booking-108">
+            <td class="cell-numeric">чт 22.10</td>
+            <td class="cell-numeric">10:00–11:00</td>
+            <td>Дністер</td>
+            <td>Огляд результатів</td>
+            <td>Олена Коваль</td>
+            <td><span class="status-upcoming">Заплановано</span></td>
+            <td class="cell-actions"><button class="link-danger" type="button">Скасувати бронювання</button></td>
+          </tr>
+          <tr id="booking-107">
+            <td class="cell-numeric">ср 21.10</td>
+            <td class="cell-numeric">09:00–10:00</td>
+            <td>Десна</td>
+            <td>Підготовка демонстрації</td>
+            <td>Олена Коваль</td>
+            <td><span class="status-upcoming">Заплановано</span></td>
+            <td class="cell-actions"><button class="link-danger" type="button">Скасувати бронювання</button></td>
+          </tr>
+          <tr id="booking-106">
+            <td class="cell-numeric">вт 20.10</td>
+            <td class="cell-numeric">16:00–18:00</td>
+            <td>Бескиди</td>
+            <td>Обговорення пріоритетів команди</td>
+            <td>Олена Коваль</td>
+            <td><span class="status-upcoming">Заплановано</span></td>
+            <td class="cell-actions"><button class="link-danger" type="button">Скасувати бронювання</button></td>
+          </tr>
+          <tr id="booking-109">
+            <td class="cell-numeric">вт 20.10</td>
+            <td class="cell-numeric">15:00–16:00</td>
+            <td>Карпати</td>
+            <td>Співбесіда: бекенд-розробник</td>
+            <td>Наталія Романюк</td>
+            <td><span class="status-upcoming">Заплановано</span></td>
+            <td class="cell-actions"><button class="link-danger" type="button">Скасувати бронювання</button></td>
+          </tr>
+          <tr id="booking-102">
+            <td class="cell-numeric">вт 20.10</td>
+            <td class="cell-numeric">14:00–15:00</td>
+            <td>Дніпро</td>
+            <td>Огляд бюджету на четвертий квартал</td>
+            <td>Олена Коваль</td>
+            <td><span class="status-upcoming">Заплановано</span></td>
+            <td class="cell-actions"><button class="link-danger" type="button">Скасувати бронювання</button></td>
+          </tr>
+          <tr id="booking-105">
+            <td class="cell-numeric">вт 20.10</td>
+            <td class="cell-numeric">11:00–13:00</td>
+            <td>Говерла</td>
+            <td>Підготовка релізу</td>
+            <td>Олена Коваль</td>
+            <td><span class="status-upcoming">Заплановано</span></td>
+            <td class="cell-actions"><button class="link-danger" type="button">Скасувати бронювання</button></td>
+          </tr>
+          <tr id="booking-101">
+            <td class="cell-numeric">вт 20.10</td>
+            <td class="cell-numeric">10:00–11:00</td>
+            <td>Десна</td>
+            <td>Планування спринту</td>
+            <td>Олена Коваль</td>
+            <td><span class="status-current">Триває</span></td>
+            <td class="cell-actions"><button class="link-danger" type="button">Скасувати бронювання</button></td>
+          </tr>
+          <tr id="booking-110">
+            <td class="cell-numeric">вт 20.10</td>
+            <td class="cell-numeric">08:00–09:00</td>
+            <td>Дніпро</td>
+            <td>Операційна нарада</td>
+            <td>Дарина Лисенко</td>
+            <td><span class="status-muted">Завершено</span></td>
+            <td class="cell-actions"></td>
+          </tr>
+          <tr id="booking-104">
+            <td class="cell-numeric">пн 19.10</td>
+            <td class="cell-numeric">16:00–17:00</td>
+            <td>Дніпро</td>
+            <td>Огляд результатів</td>
+            <td>Олена Коваль</td>
+            <td><span class="status-muted">Скасовано</span></td>
+            <td class="cell-actions"></td>
+          </tr>
+          <tr id="booking-103">
+            <td class="cell-numeric">пн 19.10</td>
+            <td class="cell-numeric">08:00–09:00</td>
+            <td>Карпати</td>
+            <td>Співбесіда: бекенд-розробник</td>
+            <td>Олена Коваль</td>
+            <td><span class="status-muted">Завершено</span></td>
+            <td class="cell-actions"></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <nav class="pager" aria-label="Сторінки бронювань">
+      <span class="pager-disabled" aria-disabled="true">Попередня сторінка</span>
+      <span class="pager-current" aria-current="page">Сторінка 1</span>
+      <a href="admin-bookings.html?page=2">Наступна сторінка</a>
+    </nav>
+  </main>
+</body>
+</html>

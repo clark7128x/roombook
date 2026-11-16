@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="uk" xmlns:th="http://www.thymeleaf.org">
+<body>
+<form th:fragment="form" id="booking-form" class="form-stack" th:action="@{/bookings}" method="post"
+      hx-post="/bookings" hx-target="#booking-form" hx-swap="outerHTML" hx-disabled-elt="button">
+  <div th:replace="~{components/field-error :: summary}"></div>
+  <p th:if="${afterHours}">Робочий день завершився. Оберіть іншу дату.</p>
+  <div class="field" th:classappend="${fieldErrors != null and fieldErrors.containsKey('roomId') ? 'field-error' : ''}">
+    <label class="field-label" for="room">Кімната</label>
+    <select class="field-control" id="room" name="roomId" required
+            hx-get="/fragments/room-day" hx-target="#room-day" hx-swap="innerHTML"
+            hx-trigger="change" hx-include="[name='date']">
+      <option th:each="room : ${rooms}" th:value="${room.id}" th:text="${room.name + ', поверх ' + room.floor + ', місткість ' + room.capacity}" th:selected="${#strings.toString(room.id) == form.roomId()}"></option>
+    </select>
+    <div th:replace="~{components/field-error :: message('roomId')}"></div>
+  </div>
+  <div class="field" th:classappend="${fieldErrors != null and fieldErrors.containsKey('date') ? 'field-error' : ''}">
+    <label class="field-label" for="booking-date">Дата</label>
+    <input class="field-control" id="booking-date" name="date" type="date" th:value="${form.date()}" required
+           hx-get="/fragments/room-day" hx-target="#room-day" hx-swap="innerHTML"
+           hx-trigger="change" hx-include="[name='roomId']">
+    <div th:replace="~{components/field-error :: message('date')}"></div>
+  </div>
+  <div class="form-row">
+    <div class="field" th:classappend="${fieldErrors != null and fieldErrors.containsKey('start') ? 'field-error' : ''}">
+      <label class="field-label" for="start">Початок</label>
+      <select class="field-control" id="start" name="start" aria-describedby="time-hint" required>
+        <option value="" th:selected="${#strings.isEmpty(form.start())}">Оберіть час</option>
+        <option th:each="time : ${starts}" th:value="${time}" th:text="${time}" th:selected="${time == form.start()}"></option>
+      </select>
+      <div th:replace="~{components/field-error :: message('start')}"></div>
+    </div>
+    <div class="field" th:classappend="${fieldErrors != null and fieldErrors.containsKey('end') ? 'field-error' : ''}">
+      <label class="field-label" for="end">Кінець</label>
+      <select class="field-control" id="end" name="end" aria-describedby="time-hint" required>
+        <option value="" th:selected="${#strings.isEmpty(form.end())}">Оберіть час</option>
+        <option th:each="time : ${ends}" th:value="${time}" th:text="${time}" th:selected="${time == form.end()}"></option>
+      </select>
+      <div th:replace="~{components/field-error :: message('end')}"></div>
+    </div>
+  </div>
+  <div class="field-hint" id="time-hint" th:text="'Від ' + ${minimumMinutes} + ' хвилин до ' + ${maximumMinutes / 60} + ' годин, з ' + ${workStart} + ' до ' + ${workEnd} + '.'"></div>
+  <div class="field" th:classappend="${fieldErrors != null and fieldErrors.containsKey('title') ? 'field-error' : ''}">
+    <label class="field-label" for="title">Назва зустрічі</label>
+    <input class="field-control" id="title" name="title" type="text" maxlength="200" aria-describedby="title-hint" th:value="${form.title()}" required>
+    <span class="field-hint" id="title-hint">Назву бачать усі працівники.</span>
+    <div th:replace="~{components/field-error :: message('title')}"></div>
+  </div>
+  <div class="form-actions">
+    <button class="btn btn-primary" type="submit" th:disabled="${rooms.empty}">Забронювати</button>
+    <a th:href="@{/occupancy}">Назад до зайнятості</a>
+  </div>
+</form>
+
+<div th:if="${refreshRoomDay}" id="room-day" hx-swap-oob="innerHTML">
+  <th:block th:replace="~{components/room-day :: content}"></th:block>
+</div>
+</body>
+</html>

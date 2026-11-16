@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="uk" xmlns:th="http://www.thymeleaf.org">
+<body>
+<div th:fragment="summary" th:if="${formError != null}" class="alert alert-error" role="alert">
+  <svg class="alert-icon" aria-hidden="true"><use th:href="@{/icons.svg#error}"></use></svg>
+  <span th:text="${formError}"></span>
+</div>
+
+<span th:fragment="message(field)" th:if="${fieldErrors != null and fieldErrors.containsKey(field)}"
+      class="field-error" th:id="${field + '-error'}" th:text="${fieldErrors.get(field)}"></span>
+
+<span th:fragment="error(field)" th:if="${fieldErrors != null and fieldErrors.containsKey(field)}"
+      class="field-error" th:id="${field + '-error'}" th:text="${fieldErrors.get(field)}"></span>
+</body>
+</html>

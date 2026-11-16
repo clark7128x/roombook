@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="uk" xmlns:th="http://www.thymeleaf.org" th:replace="~{layout/shell :: page('Зайнятість', ~{::page-content})}">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Зайнятість: Переговорні</title>
+  <link rel="stylesheet" th:href="@{/css/tokens.css}">
+  <link rel="stylesheet" th:href="@{/css/fonts.css}">
+  <link rel="stylesheet" th:href="@{/css/base.css}">
+  <link rel="stylesheet" th:href="@{/css/components.css}">
+  <link rel="stylesheet" th:href="@{/css/timeline.css}">
+</head>
+<body>
+  <section th:fragment="page-content">
+    <div class="page-heading">
+      <div><span class="eyebrow">Плануйте свій день</span><h1>Зайнятість кімнат</h1><p class="subtext">Оберіть кімнату, знайдіть час і збирайте команду.</p></div>
+      <a class="primary" th:href="@{/bookings/new(date=${date})}">Забронювати кімнату</a>
+    </div>
+    <section class="day-summary" aria-label="Стан розкладу"><div><span class="summary-number" th:text="${roomCount}"></span><div><strong>кімнат у вибірці</strong><small th:text="'Робочий час ' + ${workStart} + '–' + ${workEnd}"></small></div></div><span class="office-time">Стан розкладу<br><strong th:text="${@uiFormat.time(currentTime)} + ', ' + ${officeZone}"></strong></span></section>
+    <section class="schedule"><div class="schedule-toolbar"><div class="date-controls">
+      <a class="square" th:href="@{/occupancy(date=${date.minusDays(1)},floor=${floor},minCapacity=${minCapacity})}" aria-label="Попередній день">‹</a>
+      <a class="square" th:href="@{/occupancy(date=${date.plusDays(1)},floor=${floor},minCapacity=${minCapacity})}" aria-label="Наступний день">›</a>
+      <h2 th:text="${@uiFormat.dateWithDay(date)}"></h2><a class="secondary compact" th:href="@{/occupancy}">Сьогодні</a>
+    </div><div class="legend"><span><i class="legend-mine"></i>Моє</span><span><i class="legend-busy"></i>Зайнято</span><span><i class="legend-free"></i>Вільно</span></div></div>
+    <form class="filters" th:action="@{/occupancy}" method="get">
+      <div class="field filter-field">
+        <label class="field-label" for="date">Дата</label>
+        <input class="field-control" type="date" id="date" name="date" th:value="${date}">
+      </div>
+      <div class="field filter-field">
+        <label class="field-label" for="floor">Поверх</label>
+        <select class="field-control" id="floor" name="floor">
+          <option value="" th:selected="${floor == null}">Усі</option>
+          <option th:each="f : ${#numbers.sequence(-5, 100)}" th:value="${f}" th:text="${f}" th:selected="${floor != null and floor == f}"></option>
+        </select>
+      </div>
+      <div class="field filter-field">
+        <label class="field-label" for="minCapacity">Місткість від</label>
+        <input class="field-control" type="number" id="minCapacity" name="minCapacity" min="1" step="1" th:value="${minCapacity}">
+      </div>
+      <div class="filter-actions">
+        <button class="btn btn-primary" type="submit">Показати</button>
+      </div>
+    </form>
+    <p class="schedule-note" th:if="${roomCount == 0}">За цими умовами кімнат немає. Змініть фільтри.</p>
+    <p class="schedule-note" th:if="${timeline.empty and roomCount > 0}">На цю дату бронювань немає.</p>
+    <div th:if="${roomCount > 0}" th:insert="~{components/horizontal-timeline :: timeline}"></div>
+    <p class="schedule-note">Натисніть на вільний інтервал або оберіть «Забронювати» біля назви кімнати.</p></section>
+  </section>
+</body>
+</html>

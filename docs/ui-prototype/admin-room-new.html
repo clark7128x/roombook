@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Нова кімната: Переговорні</title>
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/fonts.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/timeline.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">До змісту</a>
+  <header class="app-header">
+    <a class="app-name" href="occupancy.html">Переговорні</a>
+    <nav class="app-nav" aria-label="Основна навігація">
+      <a class="nav-link" href="occupancy.html">Зайнятість</a>
+      <a class="nav-link" href="rooms.html">Кімнати</a>
+      <a class="nav-link" href="my-bookings.html">Мої бронювання</a>
+      <div class="nav-admin">
+        <a class="nav-link" href="admin-bookings.html">Усі бронювання</a>
+        <a class="nav-link" href="admin-rooms.html" aria-current="page">Керування кімнатами</a>
+        <a class="nav-link" href="admin-users.html">Користувачі</a>
+      </div>
+    </nav>
+    <div class="app-user">
+      <span class="app-user-name">Андрій Мельник</span>
+      <button class="btn" type="button">Вийти</button>
+    </div>
+  </header>
+
+  <main id="main" class="page-shell">
+    <div class="page-head">
+      <h1>Нова кімната</h1>
+    </div>
+    <div id="alerts" class="alerts" aria-live="polite"></div>
+
+    <form id="room-form" class="form-stack" action="admin-rooms.html" method="get">
+      <div class="field">
+        <label class="field-label" for="room-name">Назва</label>
+        <input class="field-control" id="room-name" name="name" type="text" required>
+      </div>
+      <div class="field">
+        <label class="field-label" for="room-floor">Поверх</label>
+        <select class="field-control" id="room-floor" name="floor" required>
+          <option value="2" selected>2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+        </select>
+      </div>
+      <div class="field">
+        <label class="field-label" for="room-capacity">Місткість</label>
+        <input class="field-control" id="room-capacity" name="capacity" type="number" min="1" step="1" required>
+      </div>
+      <div class="field">
+        <label class="field-label" for="room-equipment">Обладнання</label>
+        <textarea class="field-control" id="room-equipment" name="equipment" rows="3" maxlength="500" aria-describedby="equipment-hint"></textarea>
+        <span class="field-hint" id="equipment-hint">Необов’язково. До 500 символів.</span>
+      </div>
+      <div class="form-actions">
+        <button class="btn btn-primary" type="submit">Створити кімнату</button>
+      </div>
+    </form>
+  </main>
+</body>
+</html>

@@ -1,0 +1,10 @@
+<!doctype html>
+<html lang="uk" xmlns:th="http://www.thymeleaf.org"><head th:replace="~{layout/shell :: head('Прийняти запрошення')}"></head>
+<body class="join-page"><a class="brand" th:href="@{/login}"><span class="brand-mark" aria-hidden="true">r<span>·</span></span>RoomBook</a>
+<main id="main" class="join-content"><span class="eyebrow">Приєднуйтеся до команди</span><h1>Створіть свій пароль</h1><p class="subtext">Логін та ім’я вже визначив адміністратор. Після прийняття запрошення ви зможете увійти в RoomBook.</p>
+<form th:action="@{/join}" method="post" autocomplete="off"><div th:replace="~{components/field-error :: summary}"></div>
+<div class="field"><label for="invitation-token">Код запрошення</label><input id="invitation-token" name="token" type="password" maxlength="43" minlength="43" required th:value="${invitationToken}" aria-describedby="token-help"><span class="field-hint" id="token-help">Заповнюється з особистого посилання. Без JavaScript вставте частину посилання після #.</span></div>
+<label for="new-password">Пароль</label><input id="new-password" name="password" type="password" autocomplete="new-password" minlength="10" required aria-describedby="password-help"><span class="field-hint" id="password-help">Від 10 символів. Пароль має відрізнятися від логіна. Для довгих паролів використовуйте не більше 72 латинських або 36 українських літер.</span><span th:replace="~{components/field-error :: message('password')}"></span>
+<label for="confirmation">Повторіть пароль</label><input id="confirmation" name="confirmation" type="password" autocomplete="new-password" minlength="10" required><span th:replace="~{components/field-error :: message('confirmation')}"></span>
+<button class="primary wide" type="submit">Створити обліковий запис</button></form><p class="subtext"><a th:href="@{/login}">Повернутися до входу</a></p>
+</main></body></html>

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Керування кімнатами: Переговорні</title>
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/fonts.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/timeline.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">До змісту</a>
+  <header class="app-header">
+    <a class="app-name" href="occupancy.html">Переговорні</a>
+    <nav class="app-nav" aria-label="Основна навігація">
+      <a class="nav-link" href="occupancy.html">Зайнятість</a>
+      <a class="nav-link" href="rooms.html">Кімнати</a>
+      <a class="nav-link" href="my-bookings.html">Мої бронювання</a>
+      <div class="nav-admin">
+        <a class="nav-link" href="admin-bookings.html">Усі бронювання</a>
+        <a class="nav-link" href="admin-rooms.html" aria-current="page">Керування кімнатами</a>
+        <a class="nav-link" href="admin-users.html">Користувачі</a>
+      </div>
+    </nav>
+    <div class="app-user">
+      <span class="app-user-name">Андрій Мельник</span>
+      <button class="btn" type="button">Вийти</button>
+    </div>
+  </header>
+
+  <main id="main" class="page-shell">
+    <div class="page-head">
+      <h1>Керування кімнатами</h1>
+      <a class="btn btn-primary" href="admin-room-new.html">Додати кімнату</a>
+    </div>
+    <div id="alerts" class="alerts" aria-live="polite"></div>
+
+    <div class="table-wrap">
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th scope="col">Назва</th>
+            <th scope="col">Поверх</th>
+            <th scope="col">Місткість</th>
+            <th scope="col">Обладнання</th>
+            <th scope="col">Стан</th>
+            <th scope="col"><span class="sr-only">Дії</span></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr id="room-201">
+            <td>Дніпро</td>
+            <td class="cell-numeric">2</td>
+            <td class="cell-numeric">8</td>
+            <td class="cell-equipment">Проєктор, дошка, відеозв’язок</td>
+            <td>Активна</td>
+            <td class="cell-actions">
+              <div class="row-actions">
+                <a class="link-action" href="admin-room-edit.html?roomId=201">Змінити</a>
+                <button class="link-danger" type="button">Деактивувати</button>
+              </div>
+            </td>
+          </tr>
+          <tr id="room-202">
+            <td>Десна</td>
+            <td class="cell-numeric">2</td>
+            <td class="cell-numeric">6</td>
+            <td class="cell-equipment">Екран, дошка</td>
+            <td>Активна</td>
+            <td class="cell-actions">
+              <div class="row-actions">
+                <a class="link-action" href="admin-room-edit.html?roomId=202">Змінити</a>
+                <button class="link-danger" type="button">Деактивувати</button>
+              </div>
+            </td>
+          </tr>
+          <tr id="room-203">
+            <td>Прут</td>
+            <td class="cell-numeric">2</td>
+            <td class="cell-numeric">4</td>
+            <td class="cell-equipment">Монітор, відеозв’язок</td>
+            <td>Активна</td>
+            <td class="cell-actions">
+              <div class="row-actions">
+                <a class="link-action" href="admin-room-edit.html?roomId=203">Змінити</a>
+                <button class="link-danger" type="button">Деактивувати</button>
+              </div>
+            </td>
+          </tr>
+          <tr id="room-204">
+            <td>Говерла</td>
+            <td class="cell-numeric">3</td>
+            <td class="cell-numeric">12</td>
+            <td class="cell-equipment">Проєктор, конференц-зв’язок</td>
+            <td>Активна</td>
+            <td class="cell-actions">
+              <div class="row-actions">
+                <a class="link-action" href="admin-room-edit.html?roomId=204">Змінити</a>
+                <button class="link-danger" type="button">Деактивувати</button>
+              </div>
+            </td>
+          </tr>
+          <tr id="room-205">
+            <td>Карпати</td>
+            <td class="cell-numeric">3</td>
+            <td class="cell-numeric">10</td>
+            <td class="cell-equipment">Проєктор, дошка</td>
+            <td>Активна</td>
+            <td class="cell-actions">
+              <div class="row-actions">
+                <a class="link-action" href="admin-room-edit.html?roomId=205">Змінити</a>
+                <button class="link-danger" type="button">Деактивувати</button>
+              </div>
+            </td>
+          </tr>
+          <tr id="room-206">
+            <td>Дністер</td>
+            <td class="cell-numeric">3</td>
+            <td class="cell-numeric">6</td>
+            <td class="cell-equipment">Телевізор, відеозв’язок</td>
+            <td>Активна</td>
+            <td class="cell-actions">
+              <div class="row-actions">
+                <a class="link-action" href="admin-room-edit.html?roomId=206">Змінити</a>
+                <button class="link-danger" type="button">Деактивувати</button>
+              </div>
+            </td>
+          </tr>
+          <tr id="room-207">
+            <td>Ґорґани</td>
+            <td class="cell-numeric">4</td>
+            <td class="cell-numeric">14</td>
+            <td class="cell-equipment">Проєктор, звук, дві дошки</td>
+            <td>Активна</td>
+            <td class="cell-actions">
+              <div class="row-actions">
+                <a class="link-action" href="admin-room-edit.html?roomId=207">Змінити</a>
+                <button class="link-danger" type="button">Деактивувати</button>
+              </div>
+            </td>
+          </tr>
+          <tr id="room-208" class="is-inactive">
+            <td>Бескиди</td>
+            <td class="cell-numeric">4</td>
+            <td class="cell-numeric">8</td>
+            <td class="cell-equipment">Екран, дошка</td>
+            <td>Неактивна</td>
+            <td class="cell-actions">
+              <div class="row-actions">
+                <a class="link-action" href="admin-room-edit.html?roomId=208">Змінити</a>
+                <button class="link-action" type="button">Активувати</button>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </main>
+</body>
+</html>

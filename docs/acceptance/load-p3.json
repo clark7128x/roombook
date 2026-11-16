@@ -1,0 +1,152 @@
+{
+  "runId": "roombook-check-ccdf7e7938ec",
+  "imageId": "sha256:bf4bd96dee2181acded76d3bef1822b13c426d21d4148f10f8d4f29c9ccb8952",
+  "profile": "p3",
+  "baselineBookings": 1000000,
+  "rooms": 50,
+  "users": 300,
+  "limits": {
+    "memoryBytes": 1073741824,
+    "cpus": 2,
+    "pool": 10,
+    "bcryptCost": 10
+  },
+  "results": [
+    {
+      "stage": "P3",
+      "method": "GET",
+      "path": "/admin/bookings",
+      "status": 200,
+      "count": 385,
+      "p95ServerMs": 41
+    },
+    {
+      "stage": "P3",
+      "method": "GET",
+      "path": "/api/v1/csrf",
+      "status": 200,
+      "count": 600,
+      "p95ServerMs": 4
+    },
+    {
+      "stage": "P3",
+      "method": "GET",
+      "path": "/api/v1/me/bookings",
+      "status": 200,
+      "count": 1887,
+      "p95ServerMs": 10
+    },
+    {
+      "stage": "P3",
+      "method": "GET",
+      "path": "/api/v1/occupancy",
+      "status": 200,
+      "count": 1811,
+      "p95ServerMs": 15
+    },
+    {
+      "stage": "P3",
+      "method": "GET",
+      "path": "/api/v1/rooms",
+      "status": 200,
+      "count": 1476,
+      "p95ServerMs": 5
+    },
+    {
+      "stage": "P3",
+      "method": "GET",
+      "path": "/fragments/room-day",
+      "status": 200,
+      "count": 739,
+      "p95ServerMs": 17
+    },
+    {
+      "stage": "P3",
+      "method": "GET",
+      "path": "/occupancy",
+      "status": 200,
+      "count": 1202,
+      "p95ServerMs": 88
+    },
+    {
+      "stage": "P3",
+      "method": "POST",
+      "path": "/api/v1/bookings",
+      "status": 201,
+      "count": 868,
+      "p95ServerMs": 101
+    },
+    {
+      "stage": "P3",
+      "method": "POST",
+      "path": "/api/v1/bookings",
+      "status": 409,
+      "count": 151,
+      "p95ServerMs": 6
+    },
+    {
+      "stage": "P3",
+      "method": "POST",
+      "path": "/api/v1/bookings/{id}/cancel",
+      "status": 200,
+      "count": 481,
+      "p95ServerMs": 102
+    },
+    {
+      "stage": "P3",
+      "method": "POST",
+      "path": "/login",
+      "status": 302,
+      "count": 300,
+      "p95ServerMs": 217
+    }
+  ],
+  "metrics": [
+    {
+      "stage": "warmup",
+      "minute": 1,
+      "heapUsed": 81709192.0,
+      "heapAfterGc": 51994624.0,
+      "activeConnections": 0.0,
+      "sessions": 51.0
+    },
+    {
+      "stage": "P3",
+      "minute": 1,
+      "heapUsed": 62353184.0,
+      "heapAfterGc": 51994624.0,
+      "activeConnections": 0.0,
+      "sessions": 351.0
+    },
+    {
+      "stage": "P3",
+      "minute": 2,
+      "heapUsed": 88813728.0,
+      "heapAfterGc": 51994624.0,
+      "activeConnections": 0.0,
+      "sessions": 351.0
+    },
+    {
+      "stage": "P3",
+      "minute": 3,
+      "heapUsed": 55847976.0,
+      "heapAfterGc": 51994624.0,
+      "activeConnections": 0.0,
+      "sessions": 351.0
+    },
+    {
+      "stage": "P3",
+      "minute": 4,
+      "heapUsed": 84056152.0,
+      "heapAfterGc": 51994624.0,
+      "activeConnections": 0.0,
+      "sessions": 351.0
+    }
+  ],
+  "p4Checks": [],
+  "commitProbeP95Ms": 52.351,
+  "invariantAudit": "PASS",
+  "errors5xx": 0,
+  "missingServerDurations": 0,
+  "boundary": "Separate app/DB containers and host generator share one Docker Desktop host. Diagnostic profile shortens durations and cannot satisfy TS-22. Heap-after-GC uses JVM metric; absent/zero measurements are inconclusive."
+}

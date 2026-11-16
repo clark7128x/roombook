@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Олена Коваль: Переговорні</title>
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/fonts.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/timeline.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">До змісту</a>
+  <header class="app-header">
+    <a class="app-name" href="occupancy.html">Переговорні</a>
+    <nav class="app-nav" aria-label="Основна навігація">
+      <a class="nav-link" href="occupancy.html">Зайнятість</a>
+      <a class="nav-link" href="rooms.html">Кімнати</a>
+      <a class="nav-link" href="my-bookings.html">Мої бронювання</a>
+      <div class="nav-admin">
+        <a class="nav-link" href="admin-bookings.html">Усі бронювання</a>
+        <a class="nav-link" href="admin-rooms.html">Керування кімнатами</a>
+        <a class="nav-link" href="admin-users.html" aria-current="page">Користувачі</a>
+      </div>
+    </nav>
+    <div class="app-user">
+      <span class="app-user-name">Андрій Мельник</span>
+      <button class="btn" type="button">Вийти</button>
+    </div>
+  </header>
+
+  <main id="main" class="page-shell">
+    <div class="page-head">
+      <h1>Олена Коваль</h1>
+    </div>
+    <div id="alerts" class="alerts" aria-live="polite"></div>
+
+    <section class="form-section" aria-labelledby="role-title">
+      <h2 id="role-title">Змінити роль</h2>
+      <form id="role-form" class="form-stack" action="admin-user.html?userId=302" method="post">
+        <input type="hidden" name="userId" value="302">
+        <div class="field">
+          <label class="field-label" for="user-role">Роль</label>
+          <select class="field-control" id="user-role" name="role" required>
+            <option value="employee" selected>Працівник</option>
+            <option value="admin">Адміністратор</option>
+          </select>
+        </div>
+        <div class="form-actions">
+          <button class="btn btn-primary" type="submit">Зберегти роль</button>
+        </div>
+      </form>
+    </section>
+
+    <section class="form-section" aria-labelledby="password-title">
+      <h2 id="password-title">Скинути пароль</h2>
+      <form id="password-form" class="form-stack" action="admin-user.html?userId=302" method="post">
+        <input type="hidden" name="userId" value="302">
+        <div class="field">
+          <label class="field-label" for="user-password">Пароль</label>
+          <input
+            class="field-control"
+            id="user-password"
+            name="password"
+            type="password"
+            autocomplete="new-password"
+            minlength="10"
+            aria-describedby="password-hint"
+            required
+          >
+          <span class="field-hint" id="password-hint">Від 10 символів.</span>
+        </div>
+        <div class="form-actions">
+          <button class="btn btn-primary" type="submit">Задати новий пароль</button>
+        </div>
+      </form>
+    </section>
+  </main>
+</body>
+</html>

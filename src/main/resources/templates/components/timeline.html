@@ -1,0 +1,30 @@
+<div xmlns:th="http://www.thymeleaf.org" th:fragment="timeline(timeline, single)">
+    <p class="tl-empty-note" th:if="${timeline.empty}">На цю дату бронювань немає.</p>
+    <div class="tl-scroll" th:classappend="${single ? 'tl-single' : ''}">
+        <table class="tl-table">
+            <caption th:text="'Зайнятість кімнат на ' + ${@uiFormat.date(timeline.date)}"></caption>
+            <thead>
+            <tr><th class="tl-corner" scope="col" rowspan="2">Час</th><th class="tl-floor-head" scope="colgroup" th:each="floor : ${timeline.floors}" th:colspan="${floor.count}" th:text="'Поверх ' + ${floor.number}"></th></tr>
+            <tr><th class="tl-room-head" scope="col" th:each="column : ${timeline.columns}" th:classappend="${column.floorStart ? 'tl-floor-start' : ''}">
+                <span class="tl-room-name" th:title="${column.room.equipment}" th:text="${column.room.name}"></span>
+                <span class="tl-room-meta" th:text="'місткість ' + ${column.room.capacity}"></span>
+                <a class="tl-room-action" th:if="${!single and timeline.bookableDate and column.room.active}" th:href="@{/bookings/new(roomId=${column.room.id},date=${timeline.date})}">Забронювати</a>
+            </th></tr>
+            </thead>
+            <tbody><tr th:each="row : ${timeline.rows}" th:class="${(row.past ? 'tl-past ' : '') + (row.now ? 'tl-now ' : '') + (row.hour ? 'tl-hour' : '')}">
+                <th th:if="${row.timeSpan > 0}" class="tl-time" scope="row" th:rowspan="${row.timeSpan}" th:text="${row.time}"></th>
+                <th:block th:each="cell : ${row.cells}">
+                    <td th:if="${cell.free}" class="tl-slot" th:classappend="${cell.floorStart ? 'tl-floor-start' : ''}"></td>
+                    <td th:if="${!cell.free and !cell.covered}" th:class="${'tl-booking tl-len-' + cell.cssSpan + (cell.mine ? ' tl-mine' : '') + (cell.floorStart ? ' tl-floor-start' : '') + (freshBookingId != null and freshBookingId == cell.bookingId ? ' fresh' : '')}" th:rowspan="${cell.span}" th:title="${cell.tooltip}">
+                        <div th:class="${'tl-booking-body tl-len-' + cell.cssSpan}">
+                            <span th:if="${cell.mine}" class="sr-only">Ваше бронювання</span>
+                            <span th:if="${cell.span >= 3}" class="tl-booking-time" th:text="${cell.interval}"></span>
+                            <span class="tl-booking-title" th:text="${cell.title}"></span>
+                            <span th:if="${cell.span >= 4}" class="tl-booking-author" th:text="${cell.author}"></span>
+                        </div>
+                    </td>
+                </th:block>
+            </tr></tbody>
+        </table>
+    </div>
+</div>

@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+  <symbol id="error" viewBox="0 0 16 16">
+    <path fill="currentColor" d="M8 0.7 15.3 8 8 15.3.7 8 8 .7Zm-.8 3.5v4.5h1.6V4.2H7.2Zm0 6v1.6h1.6v-1.6H7.2Z"/>
+  </symbol>
+  <symbol id="ok" viewBox="0 0 16 16">
+    <path fill="currentColor" d="M8 0.7a7.3 7.3 0 1 0 0 14.6A7.3 7.3 0 0 0 8 .7Zm-1 10.6L3.6 7.9l1.1-1.1L7 9l4.4-4.4 1.1 1.1L7 11.3Z"/>
+  </symbol>
+  <symbol id="info" viewBox="0 0 16 16">
+    <path fill="currentColor" d="M8 .7a7.3 7.3 0 1 0 0 14.6A7.3 7.3 0 0 0 8 .7Zm-.8 3v1.7h1.6V3.7H7.2Zm0 3v5.5h1.6V6.7H7.2Z"/>
+  </symbol>
+</svg>
